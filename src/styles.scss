@@ -1,0 +1,308 @@
+// ============================================================
+// SKYPILOT ACADEMY – GLOBAL DESIGN SYSTEM
+// ============================================================
+
+// ── Bootstrap ───────────────────────────────────────────────
+@import 'bootstrap/scss/bootstrap';
+
+// ── Google Fonts are loaded via index.html ──────────────────
+
+// ── Design Tokens ───────────────────────────────────────────
+:root {
+  --color-navy:        #0A1628;
+  --color-navy-mid:    #0D1E3A;
+  --color-navy-light:  #122340;
+  --color-gold:        #FFB300;
+  --color-gold-light:  #FFCA55;
+  --color-gold-dark:   #E09000;
+  --color-white:       #FFFFFF;
+  --color-gray-100:    #F8F9FA;
+  --color-gray-400:    #9CA3AF;
+  --color-gray-600:    #6B7280;
+  --color-text:        #E2E8F0;
+  --color-text-muted:  #94A3B8;
+
+  --glass-bg:          rgba(255,255,255,0.05);
+  --glass-border:      rgba(255,255,255,0.12);
+  --glass-bg-hover:    rgba(255,255,255,0.10);
+  --glass-shadow:      0 8px 32px rgba(0,0,0,0.4);
+
+  --gradient-gold:     linear-gradient(135deg, #FFB300 0%, #FF8C00 100%);
+  --gradient-navy:     linear-gradient(135deg, #0A1628 0%, #122340 100%);
+  --gradient-hero:     linear-gradient(135deg, #0A1628 0%, #0D1E3A 50%, #122340 100%);
+
+  --radius-sm:         8px;
+  --radius-md:         16px;
+  --radius-lg:         24px;
+  --radius-xl:         32px;
+  --radius-pill:       999px;
+
+  --shadow-sm:         0 2px 8px rgba(0,0,0,0.3);
+  --shadow-md:         0 4px 20px rgba(0,0,0,0.4);
+  --shadow-lg:         0 8px 40px rgba(0,0,0,0.5);
+  --shadow-gold:       0 0 30px rgba(255,179,0,0.35);
+  --shadow-glow:       0 0 60px rgba(255,179,0,0.2);
+
+  --transition-fast:   0.2s ease;
+  --transition-mid:    0.35s cubic-bezier(0.4,0,0.2,1);
+  --transition-slow:   0.6s cubic-bezier(0.4,0,0.2,1);
+
+  --font-primary:      'Poppins', sans-serif;
+  --font-heading:      'Montserrat', sans-serif;
+  --font-body:         'Inter', sans-serif;
+}
+
+// ── Reset & Base ─────────────────────────────────────────────
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-navy);
+  color: var(--color-text);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ── Typography ───────────────────────────────────────────────
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-white);
+}
+
+.display-hero {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+.text-gold { color: var(--color-gold) !important; }
+.text-muted-sky { color: var(--color-text-muted) !important; }
+
+// ── Buttons ──────────────────────────────────────────────────
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: var(--gradient-gold);
+  color: var(--color-navy);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-mid);
+  box-shadow: var(--shadow-gold);
+  letter-spacing: 0.02em;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 0 50px rgba(255,179,0,0.6);
+    color: var(--color-navy);
+    text-decoration: none;
+  }
+
+  &:active { transform: translateY(-1px); }
+}
+
+.btn-outline-sky {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  background: transparent;
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--glass-border);
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-mid);
+  backdrop-filter: blur(8px);
+
+  &:hover {
+    background: var(--glass-bg);
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+}
+
+// ── Glass Card ───────────────────────────────────────────────
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--glass-shadow);
+  transition: var(--transition-mid);
+
+  &:hover {
+    transform: translateY(-6px);
+    background: var(--glass-bg-hover);
+    border-color: rgba(255,179,0,0.3);
+    box-shadow: 0 16px 60px rgba(0,0,0,0.5), 0 0 30px rgba(255,179,0,0.15);
+  }
+}
+
+// ── Section Wrapper ──────────────────────────────────────────
+.section-pad {
+  padding: 100px 0;
+
+  @media (max-width: 768px) { padding: 60px 0; }
+}
+
+.section-pad-sm {
+  padding: 60px 0;
+
+  @media (max-width: 768px) { padding: 40px 0; }
+}
+
+// ── Gradient Text ────────────────────────────────────────────
+.gradient-text {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// ── Badge ────────────────────────────────────────────────────
+.badge-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: rgba(255,179,0,0.15);
+  color: var(--color-gold);
+  border: 1px solid rgba(255,179,0,0.3);
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-primary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+// ── Divider ──────────────────────────────────────────────────
+.divider-gold {
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-gold);
+  border-radius: 99px;
+  margin: 16px 0 24px;
+}
+
+.divider-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// ── Scrollbar ────────────────────────────────────────────────
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-navy); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 99px;
+}
+
+// ── AOS Custom Overrides ─────────────────────────────────────
+[data-aos] { transition-duration: 0.8s !important; }
+
+// ── Misc Helpers ─────────────────────────────────────────────
+.no-select { user-select: none; }
+.cursor-pointer { cursor: pointer; }
+
+.overlay-dark {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(10,22,40,0.85) 0%,
+    rgba(10,22,40,0.7) 50%,
+    rgba(10,22,40,0.95) 100%);
+}
+
+// ── Star field bg ────────────────────────────────────────────
+.star-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle var(--duration, 3s) infinite var(--delay, 0s);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50%       { opacity: 0.8; }
+}
+
+// ── Floating Particles ───────────────────────────────────────
+@keyframes float-up {
+  0%   { transform: translateY(0) translateX(0); opacity: 0.7; }
+  100% { transform: translateY(-120vh) translateX(30px); opacity: 0; }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-16px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255,179,0,0.3); }
+  50%       { box-shadow: 0 0 50px rgba(255,179,0,0.7); }
+}
+
+@keyframes slide-right {
+  0%   { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes counter-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+// ── Responsive Typography ─────────────────────────────────────
+@media (max-width: 576px) {
+  .display-hero { font-size: 2.2rem; }
+  .section-title { font-size: 1.6rem; }
+}

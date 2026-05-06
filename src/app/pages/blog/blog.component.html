@@ -1,0 +1,161 @@
+<!-- BLOG & NEWS PAGE -->
+
+<section class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="container text-center">
+    <div class="badge-gold mb-3" data-aos="fade-down">Aviation Knowledge Hub</div>
+    <h1 class="display-hero" data-aos="fade-up">Blog & <span class="gradient-text">Aviation News</span></h1>
+    <p class="hero-sub mt-3" data-aos="fade-up" data-aos-delay="100">
+      Stay updated with the latest aviation news, pilot career insights, DGCA updates, and real student success stories.
+    </p>
+  </div>
+</section>
+
+<!-- Featured Article Hero -->
+<section class="section-pad">
+  <div class="container">
+    <div class="featured-article glass-card" data-aos="fade-up">
+      <div class="featured-badge badge-gold">🔥 Featured Article</div>
+      <div class="featured-content">
+        <div class="featured-meta">
+          <span class="art-category">{{ featuredArticle.category }}</span>
+          <span class="art-date">{{ featuredArticle.date }}</span>
+          <span class="art-read">{{ featuredArticle.readTime }}</span>
+        </div>
+        <h2 class="featured-title">{{ featuredArticle.title }}</h2>
+        <p class="featured-excerpt">{{ featuredArticle.excerpt }}</p>
+        <div class="featured-footer">
+          <div class="author-info">
+            <div class="author-avatar-sm">{{ featuredArticle.author.charAt(0) }}</div>
+            <span>{{ featuredArticle.author }}</span>
+          </div>
+          <button class="btn-gold">Read Full Article →</button>
+        </div>
+      </div>
+      <div class="featured-visual">
+        <div class="featured-emoji">✈️</div>
+        <div class="featured-stat">
+          <div class="f-stat-val">600+</div>
+          <div class="f-stat-label">New Pilot Slots</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Cards Grid -->
+<section class="section-pad" style="background: var(--color-navy-mid)">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="badge-gold mb-3">Latest Articles</div>
+      <h2 class="section-title">Aviation <span class="gradient-text">Insights</span></h2>
+      <div class="divider-gold divider-center mt-3"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let b of blogCards; let i = index"
+           data-aos="fade-up" [attr.data-aos-delay]="i*80">
+        <div class="blog-card glass-card">
+          <div class="blog-emoji">{{ b.emoji }}</div>
+          <div class="blog-body p-4">
+            <div class="blog-meta">
+              <span class="blog-cat">{{ b.category }}</span>
+              <span class="blog-date">{{ b.date }}</span>
+            </div>
+            <h5 class="blog-title">{{ b.title }}</h5>
+            <p class="blog-excerpt">{{ b.excerpt }}</p>
+            <div class="blog-footer">
+              <span class="blog-read">⏱ {{ b.readTime }}</span>
+              <button class="read-more-btn">Read More →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Aviation News Ticker/List -->
+<section class="section-pad">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="badge-gold mb-3">Latest Updates</div>
+        <h2 class="section-title mb-4">Aviation <span class="gradient-text">News</span></h2>
+        <div class="news-list">
+          <div class="news-item glass-card" *ngFor="let n of newsItems; let i = index"
+               data-aos="fade-up" [attr.data-aos-delay]="i*60">
+            <span class="news-icon">{{ n.icon }}</span>
+            <div class="news-body">
+              <h6>{{ n.title }}</h6>
+              <div class="news-meta">
+                <span class="news-date">{{ n.date }}</span>
+                <span class="news-tag">{{ n.tag }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Student Stories -->
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="badge-gold mb-3">Success Stories</div>
+        <h2 class="section-title mb-4">Student <span class="gradient-text">Stories</span></h2>
+        <div class="stories-list">
+          <div class="story-card glass-card p-4" *ngFor="let s of studentStories">
+            <div class="story-header">
+              <div class="story-avatar">{{ s.avatar }}</div>
+              <div>
+                <div class="story-name">{{ s.name }}</div>
+                <div class="story-city">{{ s.city }}</div>
+              </div>
+            </div>
+            <p class="story-text">"{{ s.story }}"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YouTube Videos -->
+<section class="section-pad" style="background: var(--color-navy-mid)">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="badge-gold mb-3">Watch & Learn</div>
+      <h2 class="section-title">Aviation <span class="gradient-text">Videos</span></h2>
+      <div class="divider-gold divider-center mt-3"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let v of youtubeVideos; let i = index"
+           data-aos="zoom-in" [attr.data-aos-delay]="i*100">
+        <div class="video-card glass-card">
+          <div class="video-thumb">
+            <img [src]="'https://img.youtube.com/vi/' + v.id + '/hqdefault.jpg'"
+                 [alt]="v.title" loading="lazy">
+            <div class="video-overlay">
+              <div class="play-btn">
+                <svg width="28" height="28" fill="white" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <span class="video-duration">{{ v.duration }}</span>
+            </div>
+          </div>
+          <div class="video-info p-3">
+            <h6>{{ v.title }}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recruitment Updates Banner -->
+    <div class="recruitment-banner mt-5" data-aos="fade-up">
+      <div class="rec-icon">📢</div>
+      <div class="rec-content">
+        <h5>Latest Airline Recruitment Updates</h5>
+        <p>IndiGo, Air India, and Akasa Air currently hiring First Officers — Minimum 200 hrs TT required</p>
+      </div>
+      <a routerLink="/contact" class="btn-gold">Get Notified</a>
+    </div>
+  </div>
+</section>

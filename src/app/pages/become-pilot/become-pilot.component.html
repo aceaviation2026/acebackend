@@ -1,0 +1,326 @@
+<!-- BECOME A PILOT PAGE -->
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="container text-center">
+    <div class="badge-gold mb-3" data-aos="fade-down">Career Roadmap</div>
+    <h1 class="display-hero" data-aos="fade-up">How to Become a<br><span class="gradient-text">Commercial Pilot</span></h1>
+    <p class="hero-sub mt-3" data-aos="fade-up" data-aos-delay="100">
+      A complete, step-by-step guide to getting your DGCA CPL in India — from eligibility to airline placement.
+    </p>
+    <div class="hero-meta mt-4" data-aos="fade-up" data-aos-delay="150">
+      <span class="meta-tag">⏱ 3–4 Years Journey</span>
+      <span class="meta-tag">📋 7 Clear Steps</span>
+      <span class="meta-tag">✈️ DGCA Compliant</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROCESS OVERVIEW CARDS -->
+<section class="section-pad">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3" *ngFor="let c of processCards; let i = index"
+           data-aos="zoom-in" [attr.data-aos-delay]="i * 80">
+        <div class="process-card glass-card p-4 text-center">
+          <div class="process-icon mb-3" [style.--c]="c.color">{{ c.icon }}</div>
+          <h5>{{ c.title }}</h5>
+          <p>{{ c.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- INTERACTIVE TIMELINE -->
+<section class="section-pad timeline-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="badge-gold mb-3">Step-by-Step Roadmap</div>
+      <h2 class="section-title">Your Pilot Journey <span class="gradient-text">Timeline</span></h2>
+      <div class="divider-gold divider-center mt-3"></div>
+    </div>
+
+    <div class="timeline-wrapper">
+      <!-- Left: step tabs -->
+      <div class="timeline-nav" data-aos="fade-right">
+        <div class="timeline-tab"
+             *ngFor="let step of timelineSteps; let i = index"
+             [class.active]="activeStep === i"
+             (click)="setActiveStep(i)">
+          <div class="tab-icon" [style.background]="activeStep===i ? step.color+'22' : ''" [style.border-color]="activeStep===i ? step.color+'66' : ''">
+            {{ step.icon }}
+          </div>
+          <div class="tab-info">
+            <div class="tab-number">STEP {{ step.number }}</div>
+            <div class="tab-title">{{ step.title }}</div>
+          </div>
+          <div class="tab-duration" *ngIf="activeStep === i">{{ step.duration }}</div>
+        </div>
+      </div>
+
+      <!-- Right: detail panel -->
+      <div class="timeline-detail glass-card" data-aos="fade-left">
+        <ng-container *ngFor="let step of timelineSteps; let i = index">
+          <div class="detail-content" *ngIf="activeStep === i">
+            <div class="detail-header">
+              <div class="detail-icon" [style.background]="step.color+'22'" [style.border-color]="step.color+'44'">
+                {{ step.icon }}
+              </div>
+              <div>
+                <div class="detail-step-num">STEP {{ step.number }}</div>
+                <h3 class="detail-title">{{ step.title }}</h3>
+                <span class="detail-duration">⏱ {{ step.duration }}</span>
+              </div>
+            </div>
+            <p class="detail-desc">{{ step.desc }}</p>
+            <div class="detail-checklist">
+              <div class="check-item" *ngFor="let d of step.details">
+                <svg width="16" height="16" fill="none" stroke="#FFB300" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+                <span>{{ d }}</span>
+              </div>
+            </div>
+            <div class="detail-progress">
+              <div class="progress-label">Journey Progress</div>
+              <div class="progress-track">
+                <div class="progress-fill" [style.width.%]="((i+1) / timelineSteps.length) * 100" [style.background]="step.color"></div>
+              </div>
+              <div class="progress-pct">{{ ((i+1) / timelineSteps.length * 100) | number:'1.0-0' }}%</div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ELIGIBILITY CHECKER -->
+<section class="section-pad eligibility-section">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="badge-gold mb-3">Eligibility Quiz</div>
+        <h2 class="section-title">Are You <span class="gradient-text">Eligible?</span></h2>
+        <div class="divider-gold mt-3 mb-4"></div>
+        <p class="section-subtitle">
+          Answer 4 quick questions to instantly find out if you qualify for CPL training in India.
+        </p>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="quiz-card glass-card p-4 p-md-5">
+          <ng-container *ngIf="!quizResult">
+            <h5 class="quiz-title mb-4">Quick Eligibility Check</h5>
+
+            <div class="quiz-field">
+              <label class="quiz-label">Your Age</label>
+              <div class="quiz-options">
+                <button *ngFor="let opt of ageOptions" class="quiz-opt"
+                        [class.selected]="quiz.age === opt"
+                        (click)="quiz.age = opt">{{ opt }}</button>
+              </div>
+            </div>
+
+            <div class="quiz-field">
+              <label class="quiz-label">Education Level</label>
+              <div class="quiz-options">
+                <button *ngFor="let opt of educationOptions" class="quiz-opt"
+                        [class.selected]="quiz.education === opt"
+                        (click)="quiz.education = opt">{{ opt }}</button>
+              </div>
+            </div>
+
+            <div class="quiz-field">
+              <label class="quiz-label">Vision</label>
+              <div class="quiz-options">
+                <button *ngFor="let opt of visionOptions" class="quiz-opt"
+                        [class.selected]="quiz.vision === opt"
+                        (click)="quiz.vision = opt">{{ opt }}</button>
+              </div>
+            </div>
+
+            <div class="quiz-field">
+              <label class="quiz-label">Nationality</label>
+              <div class="quiz-options">
+                <button *ngFor="let opt of citizenshipOptions" class="quiz-opt"
+                        [class.selected]="quiz.citizenship === opt"
+                        (click)="quiz.citizenship = opt">{{ opt }}</button>
+              </div>
+            </div>
+
+            <div class="quiz-field mt-3">
+              <label class="quiz-label">English Proficiency</label>
+              <div class="quiz-options">
+                <button *ngFor="let opt of englishOptions" class="quiz-opt"
+                        [class.selected]="quiz.english === opt"
+                        (click)="quiz.english = opt">{{ opt }}</button>
+              </div>
+            </div>
+
+            <button class="btn-gold w-100 mt-4" (click)="checkEligibility()">
+              Check My Eligibility →
+            </button>
+          </ng-container>
+
+          <!-- Result -->
+          <div *ngIf="quizResult" class="quiz-result">
+            <div class="result-icon" [class]="quizResult">
+              <span *ngIf="quizResult === 'eligible'">✅</span>
+              <span *ngIf="quizResult === 'partial'">⚠️</span>
+              <span *ngIf="quizResult === 'not-eligible'">❌</span>
+            </div>
+            <h4 *ngIf="quizResult === 'eligible'" class="result-title text-success-custom">
+              You're Eligible! 🎉
+            </h4>
+            <h4 *ngIf="quizResult === 'partial'" class="result-title text-warning-custom">
+              Partially Eligible
+            </h4>
+            <h4 *ngIf="quizResult === 'not-eligible'" class="result-title text-danger-custom">
+              Not Yet Eligible
+            </h4>
+            <p class="result-desc">
+              <ng-container *ngIf="quizResult === 'eligible'">
+                Great news! Based on your inputs, you meet the basic eligibility criteria for CPL training in India. Book a free consultation to plan your next steps.
+              </ng-container>
+              <ng-container *ngIf="quizResult === 'partial'">
+                You meet some but not all criteria. You may need to improve on certain aspects. Our mentors can guide you through options available.
+              </ng-container>
+              <ng-container *ngIf="quizResult === 'not-eligible'">
+                Based on current inputs, you may not meet DGCA eligibility requirements. But don't worry — speak to our experts for alternative pathways.
+              </ng-container>
+            </p>
+            <div class="result-actions">
+              <a routerLink="/contact" class="btn-gold">Book Free Consultation</a>
+              <button class="btn-outline-sky" (click)="resetQuiz()">Try Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- COST CALCULATOR -->
+<section class="section-pad cost-calc-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="badge-gold mb-3">Cost Estimator</div>
+      <h2 class="section-title">CPL Training <span class="gradient-text">Cost Calculator</span></h2>
+      <div class="divider-gold divider-center mt-3"></div>
+      <p class="section-subtitle mx-auto mt-3">
+        Get a realistic estimate of your total pilot training investment based on country and school tier.
+      </p>
+    </div>
+
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="calc-form glass-card p-4 p-md-5">
+          <div class="calc-field">
+            <label class="calc-label">Training Country</label>
+            <div class="calc-options">
+              <button *ngFor="let c of ['india','usa','canada']"
+                      class="calc-opt" [class.active]="costInputs.country === c"
+                      (click)="costInputs.country = c">
+                <span *ngIf="c==='india'">🇮🇳 India</span>
+                <span *ngIf="c==='usa'">🇺🇸 USA</span>
+                <span *ngIf="c==='canada'">🇨🇦 Canada</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="calc-field">
+            <label class="calc-label">School Tier</label>
+            <div class="calc-options">
+              <button *ngFor="let s of [{v:'low',l:'Budget'},{v:'mid',l:'Mid-Range'},{v:'high',l:'Premium'}]"
+                      class="calc-opt" [class.active]="costInputs.school === s.v"
+                      (click)="costInputs.school = s.v">
+                {{ s.l }}
+              </button>
+            </div>
+          </div>
+
+          <div class="calc-toggle">
+            <label class="toggle-label">
+              <input type="checkbox" [(ngModel)]="costInputs.simulator"> Include Sim Hours (Extra ₹3L)
+            </label>
+          </div>
+
+          <button class="btn-gold w-100 mt-4" (click)="calculateCost()">
+            Calculate Cost →
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="cost-result" *ngIf="estimatedCost.low > 0">
+          <div class="cost-badge badge-gold mb-3">Estimated Investment</div>
+          <div class="cost-range">
+            <div class="cost-value">{{ formatCost(estimatedCost.low) }}</div>
+            <div class="cost-to">to</div>
+            <div class="cost-value">{{ formatCost(estimatedCost.high) }}</div>
+          </div>
+          <div class="cost-breakdown glass-card p-4 mt-4">
+            <h6 class="mb-3">What's Included</h6>
+            <div class="breakdown-item" *ngFor="let item of [
+              {label: 'Ground School + Exams', pct: 15},
+              {label: 'Flight Training (200 hrs)', pct: 70},
+              {label: 'Medical & Documentation', pct: 5},
+              {label: 'Living & Misc Expenses', pct: 10}
+            ]">
+              <div class="breakdown-row">
+                <span>{{ item.label }}</span>
+                <span class="pct">{{ item.pct }}%</span>
+              </div>
+              <div class="breakdown-bar"><div [style.width.%]="item.pct"></div></div>
+            </div>
+          </div>
+          <p class="cost-note mt-3">
+            * Estimates may vary. Book a free consultation for a detailed financial plan.
+          </p>
+        </div>
+        <div class="cost-placeholder text-center" *ngIf="estimatedCost.low === 0" data-aos="fade-in">
+          <div class="placeholder-icon">💰</div>
+          <p>Configure your preferences and click Calculate</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ ACCORDION -->
+<section class="section-pad pilot-faq-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="badge-gold mb-3">FAQ</div>
+      <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+      <div class="divider-gold divider-center mt-3"></div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="faq-list" data-aos="fade-up" data-aos-delay="100">
+          <div class="faq-item" *ngFor="let faq of pilotFaqs; let i = index"
+               [class.open]="faq.open" (click)="togglePilotFaq(i)">
+            <div class="faq-question">
+              <span>{{ faq.q }}</span>
+              <div class="faq-icon">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer"><p>{{ faq.a }}</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

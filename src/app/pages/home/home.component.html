@@ -1,0 +1,404 @@
+<!-- ============================================================ -->
+<!-- HOME PAGE                                                    -->
+<!-- ============================================================ -->
+
+<!-- ── HERO ──────────────────────────────────────────────────── -->
+<section class="hero-section">
+  <!-- Animated star field bg -->
+  <div class="star-field">
+    <div class="star" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]"
+         [style.left.%]="(i * 17) % 100"
+         [style.top.%]="(i * 23) % 100"
+         [style.--duration]="(2 + (i % 4)) + 's'"
+         [style.--delay]="(i * 0.3) + 's'">
+    </div>
+  </div>
+
+  <!-- Grid lines overlay -->
+  <div class="hero-grid"></div>
+
+  <div class="container hero-container">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-7 hero-content">
+
+        <!-- Badge -->
+        <div class="badge-gold mb-4" data-aos="fade-down" data-aos-delay="100">
+          <svg width="14" height="14" fill="#FFB300" viewBox="0 0 24 24">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+          </svg>
+          India's #1 Pilot Career Guidance Platform
+        </div>
+
+        <!-- Heading -->
+        <h1 class="display-hero mb-4" data-aos="fade-up" data-aos-delay="150">
+          Your Dream to Fly<br>
+          <span class="gradient-text">Starts Here.</span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="hero-subtext" data-aos="fade-up" data-aos-delay="200">
+          From eligibility to airline cockpit — SkyPilot Academy provides India's most comprehensive pilot training guidance, DGCA resources, and career mentorship.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero-ctas" data-aos="fade-up" data-aos-delay="250">
+          <a routerLink="/become-a-pilot" class="btn-gold">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+            Start Your Journey
+          </a>
+          <a routerLink="/contact" class="btn-outline-sky">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 9.7 19.79 19.79 0 011.45 1.1 2 2 0 013.43.01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.99 14l-.07 2.92z"/>
+            </svg>
+            Free Consultation
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="hero-trust" data-aos="fade-up" data-aos-delay="300">
+          <div class="trust-item">
+            <svg width="16" height="16" fill="#10B981" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+            DGCA Approved
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" fill="#10B981" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+            5000+ Students
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" fill="#10B981" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+            Expert Mentors
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Visual -->
+      <div class="col-lg-5 hero-visual" data-aos="fade-left" data-aos-delay="200">
+        <div class="hero-visual-inner">
+          <!-- Glow ring -->
+          <div class="glow-ring"></div>
+
+          <!-- Main Airplane SVG -->
+          <div class="airplane-container">
+            <svg class="airplane-svg" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Sky/clouds background -->
+              <ellipse cx="200" cy="200" rx="180" ry="80" fill="rgba(255,179,0,0.04)"/>
+
+              <!-- Airplane Body -->
+              <g class="plane-group">
+                <!-- Main fuselage -->
+                <ellipse cx="200" cy="150" rx="120" ry="24" fill="#1E3A5F" stroke="#2D5A8E" stroke-width="1.5"/>
+                <!-- Nose -->
+                <path d="M320 150 Q360 150 380 155 Q360 162 320 162 Z" fill="#2D5A8E"/>
+                <!-- Tail -->
+                <path d="M80 150 Q60 135 40 130 L40 145 Q60 148 80 162 Z" fill="#1E3A5F"/>
+                <!-- Vertical stabilizer -->
+                <path d="M80 150 L70 110 Q80 105 100 118 L100 150 Z" fill="#FFB300" opacity="0.9"/>
+                <!-- Horizontal stabilizer -->
+                <path d="M80 150 L60 170 L95 165 L95 155 Z" fill="#1E3A5F" stroke="#2D5A8E" stroke-width="1"/>
+                <path d="M80 150 L60 132 L95 137 L95 147 Z" fill="#1E3A5F" stroke="#2D5A8E" stroke-width="1"/>
+
+                <!-- Main wings -->
+                <path d="M160 150 L120 220 L230 195 L230 150 Z" fill="#FFB300" opacity="0.9" stroke="#E09000" stroke-width="1"/>
+                <path d="M160 152 L120 85 L230 108 L230 152 Z" fill="#FFB300" opacity="0.8" stroke="#E09000" stroke-width="1"/>
+
+                <!-- Wing detail lines -->
+                <line x1="150" y1="150" x2="130" y2="200" stroke="#E09000" stroke-width="0.8" opacity="0.6"/>
+                <line x1="175" y1="150" x2="155" y2="210" stroke="#E09000" stroke-width="0.8" opacity="0.6"/>
+                <line x1="200" y1="150" x2="185" y2="205" stroke="#E09000" stroke-width="0.8" opacity="0.6"/>
+
+                <!-- Cockpit windows -->
+                <ellipse cx="290" cy="148" rx="14" ry="9" fill="#A8D8EA" opacity="0.7"/>
+                <ellipse cx="270" cy="148" rx="10" ry="9" fill="#A8D8EA" opacity="0.5"/>
+
+                <!-- Cabin windows row -->
+                <ellipse cx="240" cy="147" rx="8" ry="5" fill="#A8D8EA" opacity="0.4"/>
+                <ellipse cx="220" cy="147" rx="8" ry="5" fill="#A8D8EA" opacity="0.4"/>
+                <ellipse cx="200" cy="147" rx="8" ry="5" fill="#A8D8EA" opacity="0.4"/>
+                <ellipse cx="180" cy="147" rx="8" ry="5" fill="#A8D8EA" opacity="0.4"/>
+                <ellipse cx="160" cy="147" rx="8" ry="5" fill="#A8D8EA" opacity="0.4"/>
+
+                <!-- Engine pods -->
+                <ellipse cx="185" cy="200" rx="25" ry="8" fill="#122340" stroke="#1E3A5F" stroke-width="1.5"/>
+                <ellipse cx="175" cy="100" rx="25" ry="8" fill="#122340" stroke="#1E3A5F" stroke-width="1.5"/>
+
+                <!-- Engine highlights -->
+                <ellipse cx="210" cy="200" rx="4" ry="6" fill="#FFB300" opacity="0.6"/>
+                <ellipse cx="200" cy="100" rx="4" ry="6" fill="#FFB300" opacity="0.6"/>
+              </g>
+
+              <!-- Contrail lines -->
+              <g class="contrails" opacity="0.3">
+                <line x1="40" y1="148" x2="-20" y2="148" stroke="white" stroke-width="2" stroke-dasharray="4,6"/>
+                <line x1="40" y1="155" x2="-30" y2="158" stroke="white" stroke-width="1.5" stroke-dasharray="3,8"/>
+              </g>
+
+              <!-- Floating cloud elements -->
+              <g class="cloud-1" opacity="0.15">
+                <ellipse cx="60" cy="240" rx="50" ry="20" fill="white"/>
+                <ellipse cx="85" cy="228" rx="35" ry="18" fill="white"/>
+                <ellipse cx="45" cy="232" rx="28" ry="14" fill="white"/>
+              </g>
+              <g class="cloud-2" opacity="0.1">
+                <ellipse cx="320" cy="270" rx="45" ry="16" fill="white"/>
+                <ellipse cx="340" cy="260" rx="30" ry="14" fill="white"/>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Floating stat cards -->
+          <div class="stat-card stat-card-1">
+            <span class="stat-emoji">✈️</span>
+            <div>
+              <div class="stat-value">200+ hrs</div>
+              <div class="stat-label">Flight Training</div>
+            </div>
+          </div>
+
+          <div class="stat-card stat-card-2">
+            <span class="stat-emoji">🎯</span>
+            <div>
+              <div class="stat-value">98%</div>
+              <div class="stat-label">Pass Rate</div>
+            </div>
+          </div>
+
+          <div class="stat-card stat-card-3">
+            <span class="stat-emoji">🏆</span>
+            <div>
+              <div class="stat-value">#1</div>
+              <div class="stat-label">In India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <span>Scroll to explore</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- ── PARTNERS STRIP ─────────────────────────────────────────── -->
+<section class="partners-strip">
+  <div class="container">
+    <p class="partners-label" data-aos="fade-up">Trusted by students now flying with</p>
+    <div class="partners-track">
+      <div class="partners-inner">
+        <div class="partner-logo" *ngFor="let p of partners">
+          <span>{{ p.short }}</span>
+        </div>
+        <!-- Duplicate for infinite scroll -->
+        <div class="partner-logo" *ngFor="let p of partners">
+          <span>{{ p.short }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── ANIMATED COUNTERS ─────────────────────────────────────── -->
+<section class="section-pad counters-section" #countersSection>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3" *ngFor="let c of counters; let i = index">
+        <div class="counter-card glass-card p-4 text-center" data-aos="zoom-in" [attr.data-aos-delay]="i * 100">
+          <div class="counter-icon mb-3">{{ c.icon }}</div>
+          <div class="counter-value">
+            <span class="counter-number">{{ c.value }}</span>
+            <span class="counter-suffix">{{ c.suffix }}</span>
+          </div>
+          <div class="counter-label">{{ c.label }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── FEATURES ───────────────────────────────────────────────── -->
+<section class="section-pad features-section">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="badge-gold mb-3">Why Choose Us</div>
+      <h2 class="section-title">Everything You Need to<br><span class="gradient-text">Take Off</span></h2>
+      <div class="divider-gold divider-center mt-3"></div>
+      <p class="section-subtitle mx-auto mt-3">
+        End-to-end pilot career support from eligibility check to airline placement — all in one platform.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let f of features; let i = index"
+           data-aos="fade-up" [attr.data-aos-delay]="i * 80">
+        <div class="feature-card glass-card p-4">
+          <div class="feature-icon" [style.--feat-color]="f.color">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path [attr.d]="f.icon"/>
+            </svg>
+          </div>
+          <h5 class="feature-title">{{ f.title }}</h5>
+          <p class="feature-desc">{{ f.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PILOT ROADMAP PREVIEW ──────────────────────────────────── -->
+<section class="section-pad roadmap-preview">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="badge-gold mb-3">Pilot Journey</div>
+        <h2 class="section-title">Your 6-Step Path to the <span class="gradient-text">Cockpit</span></h2>
+        <div class="divider-gold mt-3 mb-4"></div>
+        <p class="section-subtitle">
+          We've broken down India's CPL journey into 6 clear milestones so you always know what comes next.
+        </p>
+        <a routerLink="/become-a-pilot" class="btn-gold mt-4">
+          View Full Roadmap
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="roadmap-steps">
+          <div class="roadmap-step" *ngFor="let step of roadmapSteps; let i = index"
+               [class.active]="i === 0 || i === 1"
+               data-aos="fade-left" [attr.data-aos-delay]="i * 80">
+            <div class="step-icon">{{ step.icon }}</div>
+            <div class="step-connector" *ngIf="i < roadmapSteps.length - 1"></div>
+            <div class="step-content">
+              <div class="step-number">STEP {{ step.step }}</div>
+              <h6 class="step-title">{{ step.title }}</h6>
+              <p class="step-desc">{{ step.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── TESTIMONIALS ───────────────────────────────────────────── -->
+<section class="section-pad testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <div class="badge-gold mb-3">Success Stories</div>
+      <h2 class="section-title">Pilots Who Flew with <span class="gradient-text">SkyPilot</span></h2>
+      <div class="divider-gold divider-center mt-3"></div>
+    </div>
+
+    <div class="testimonial-container" data-aos="fade-up" data-aos-delay="100">
+      <div class="testimonial-card glass-card" *ngFor="let t of testimonials; let i = index"
+           [class.active]="i === activeTestimonial">
+        <!-- Quote icon -->
+        <div class="quote-icon">
+          <svg width="40" height="40" fill="#FFB300" opacity="0.3" viewBox="0 0 24 24">
+            <path d="M11.5 2C6.81 2 3 5.81 3 10.5c0 4.69 3.81 8.5 8.5 8.5v3l4-4c2.66-1.56 4.5-4.41 4.5-7.5C20 5.81 16.19 2 11.5 2z"/>
+          </svg>
+        </div>
+        <p class="testimonial-text">"{{ t.text }}"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">{{ t.avatar }}</div>
+          <div>
+            <div class="author-name">{{ t.name }}</div>
+            <div class="author-role">{{ t.role }}</div>
+          </div>
+          <div class="stars ms-auto">
+            <span *ngFor="let s of [1,2,3,4,5]">⭐</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="testimonial-dots mt-4">
+      <button *ngFor="let t of testimonials; let i = index"
+              class="dot" [class.active]="i === activeTestimonial"
+              (click)="setTestimonial(i)">
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── FAQ PREVIEW ────────────────────────────────────────────── -->
+<section class="section-pad faq-section">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-4" data-aos="fade-right">
+        <div class="badge-gold mb-3">FAQ</div>
+        <h2 class="section-title">Common <span class="gradient-text">Questions</span></h2>
+        <div class="divider-gold mt-3 mb-4"></div>
+        <p class="section-subtitle">
+          Everything you need to know about becoming a pilot in India. Still have questions? We're a message away.
+        </p>
+        <a routerLink="/contact" class="btn-outline-sky mt-4">Ask Our Experts</a>
+      </div>
+
+      <div class="col-lg-8" data-aos="fade-left">
+        <div class="faq-list">
+          <div class="faq-item" *ngFor="let faq of faqs; let i = index"
+               [class.open]="faq.open" (click)="toggleFaq(i)">
+            <div class="faq-question">
+              <span>{{ faq.q }}</span>
+              <div class="faq-icon">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <p>{{ faq.a }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── CONSULTATION CTA ───────────────────────────────────────── -->
+<section class="section-pad-sm cta-section">
+  <div class="container">
+    <div class="cta-banner" data-aos="zoom-in">
+      <div class="cta-bg-effect"></div>
+      <div class="cta-content">
+        <div class="badge-gold mb-3 mx-auto" style="width:fit-content;">Limited Slots Available</div>
+        <h2 class="section-title text-center">Ready to Fly?<br><span class="gradient-text">Book a Free Session.</span></h2>
+        <p class="section-subtitle text-center mx-auto mt-3">
+          Talk to a ATPL-certified mentor. Get your personalized roadmap, school recommendations, and cost breakdown — absolutely free.
+        </p>
+        <div class="cta-actions mt-4">
+          <a routerLink="/contact" class="btn-gold">
+            Book Free Consultation
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/919876543210" target="_blank" class="btn-outline-sky">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

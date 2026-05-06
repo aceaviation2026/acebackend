@@ -1,0 +1,134 @@
+.overview-card {
+  height: 100%;
+  border-radius: var(--radius-md) !important;
+  .overview-icon { font-size: 2.2rem; }
+  h5 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+  p { font-size: 0.87rem; color: var(--color-text-muted); margin: 0; line-height: 1.7; }
+}
+
+// Regulation Cards
+.regulation-card { border-radius: var(--radius-md) !important; height: 100%; }
+.reg-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.reg-code { font-family: 'Courier New', monospace; font-size: 0.8rem; font-weight: 700; color: #FFB300; }
+.reg-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+.reg-desc { font-size: 0.86rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 12px; }
+.reg-link { font-size: 0.82rem; color: #4A90E2; text-decoration: none; transition: color 0.2s;
+  &:hover { color: #FFB300; }
+}
+
+// Search
+.search-wrapper { max-width: 500px; margin: 0 auto; }
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill);
+  transition: all 0.25s;
+
+  &:focus-within { border-color: rgba(255,179,0,0.4); background: var(--glass-bg-hover); }
+
+  input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--color-white);
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    &::placeholder { color: var(--color-text-muted); }
+  }
+}
+
+// Schools Grid
+.schools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.school-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: var(--radius-md) !important;
+  flex-wrap: wrap;
+}
+.school-icon { font-size: 1.6rem; flex-shrink: 0; }
+.school-info { flex: 1; min-width: 0;
+  h6 { font-size: 0.88rem; font-weight: 700; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}
+.school-meta { display: flex; gap: 12px; font-size: 0.78rem; color: var(--color-text-muted); flex-wrap: wrap; }
+.school-type {
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.7rem;
+  font-weight: 700;
+  border: 1px solid;
+
+  &.government { color: #10B981; border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1); }
+  &.private     { color: #4A90E2; border-color: rgba(74,144,226,0.3); background: rgba(74,144,226,0.1); }
+  &.ppp         { color: #FFB300; border-color: rgba(255,179,0,0.3); background: rgba(255,179,0,0.1); }
+  &.international { color: #8B5CF6; border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.1); }
+}
+.no-results { grid-column: 1/-1; text-align: center; color: var(--color-text-muted); padding: 40px; }
+
+// Doctor Cards
+.doctor-card { border-radius: var(--radius-md) !important; height: 100%; }
+.doctor-avatar { font-size: 2.5rem; margin-bottom: 12px; }
+.doctor-card h6 { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; }
+.doctor-designation { font-size: 0.75rem; color: #FFB300; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.doctor-specialty { font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 8px; }
+.doctor-location { font-size: 0.82rem; color: var(--color-text-muted); }
+.btn-sm { padding: 6px 14px; font-size: 0.78rem; }
+
+// Resources
+.resource-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: var(--radius-md) !important;
+}
+.resource-icon { font-size: 2rem; flex-shrink: 0; }
+.resource-info { flex: 1; min-width: 0;
+  h6 { font-size: 0.88rem; font-weight: 700; margin-bottom: 6px; }
+}
+.resource-meta { display: flex; gap: 12px; align-items: center; }
+.res-type { font-size: 0.72rem; font-weight: 700; color: #FFB300; background: rgba(255,179,0,0.1); padding: 2px 8px; border-radius: 4px; }
+.res-size { font-size: 0.76rem; color: var(--color-text-muted); }
+.download-btn {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(255,179,0,0.12); border: 1px solid rgba(255,179,0,0.25);
+  color: #FFB300; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; flex-shrink: 0; transition: all 0.2s;
+  &:hover { background: rgba(255,179,0,0.25); transform: translateY(-2px); }
+}
+
+// External Links
+.links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.ext-link {
+  display: flex; align-items: center; gap: 12px;
+  padding: 18px 20px; border-radius: var(--radius-md) !important;
+  text-decoration: none; color: var(--color-text); transition: all 0.25s;
+  font-size: 0.88rem; font-weight: 600;
+
+  .ext-icon { font-size: 1.3rem; flex-shrink: 0; }
+
+  span:not(.ext-icon) { flex: 1; }
+
+  svg { flex-shrink: 0; color: var(--color-text-muted); }
+
+  &:hover { color: #FFB300; border-color: rgba(255,179,0,0.3); }
+}
+
+// Page hero (shared)
+.page-hero {
+  position: relative;
+  padding: 160px 0 100px;
+  background: var(--gradient-hero);
+  overflow: hidden;
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,179,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,179,0,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-sub { font-size: 1.05rem; color: var(--color-text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; }
+}
