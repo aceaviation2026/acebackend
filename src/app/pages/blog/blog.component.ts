@@ -71,13 +71,89 @@ export class BlogComponent {
     }
   ];
 
-  newsItems = [
-    { icon: '📰', title: 'Air India expands B787 Dreamliner fleet — 45 new Dreamliners on order', date: 'May 5, 2025', tag: 'Fleet' },
-    { icon: '🏆', title: 'DGCA introduces new RTR exam format from June 2025', date: 'May 3, 2025', tag: 'Regulatory' },
-    { icon: '✈️', title: 'Akasa Air to open 20 new domestic routes by December 2025', date: 'Apr 30, 2025', tag: 'Growth' },
-    { icon: '💼', title: 'Vistara-Air India merger: What it means for pilots & recruitment', date: 'Apr 27, 2025', tag: 'Industry' },
-    { icon: '🛫', title: 'SpiceJet resumes full operations after DGCA aircraft restoration', date: 'Apr 25, 2025', tag: 'Regulatory' },
-  ];
+ newsItems = [
+
+  {
+    icon: '📋',
+    title: 'DGCA Issues New Examination Guidelines',
+    date: 'May 2026',
+    tag: 'DGCA Update'
+  },
+
+  {
+    icon: '✈️',
+    title: 'Major Airlines Continue Pilot Recruitment',
+    date: 'May 2026',
+    tag: 'Airline Hiring'
+  },
+
+  {
+    icon: '📝',
+    title: 'Commercial Pilot Licence Exam Schedule Released',
+    date: 'May 2026',
+    tag: 'Exam Notification'
+  },
+
+  {
+    icon: '🛫',
+    title: 'Indian Airlines Expand Domestic & International Routes',
+    date: 'Apr 2026',
+    tag: 'Fleet Expansion'
+  }
+
+];
+
+industryUpdates = [
+
+  {
+    icon: '🏛️',
+    title: 'DGCA',
+    source: 'Regulatory Authority',
+    description:
+      'Updates on licensing, examinations, medical standards and aviation regulations.'
+  },
+
+  {
+    icon: '✈️',
+    title: 'Air India',
+    source: 'Airline Expansion',
+    description:
+      'Fleet modernization, international route growth and pilot hiring initiatives.'
+  },
+
+  {
+    icon: '🛫',
+    title: 'IndiGo',
+    source: 'Market Leader',
+    description:
+      'Network expansion, aircraft deliveries and increasing pilot demand.'
+  },
+
+  {
+    icon: '🌤️',
+    title: 'Akasa Air',
+    source: 'Growing Airline',
+    description:
+      'Fleet growth, recruitment drives and operational expansion plans.'
+  },
+
+  {
+    icon: '🛩️',
+    title: 'Boeing',
+    source: 'Aircraft Manufacturer',
+    description:
+      'Commercial aircraft deliveries and future aviation technology developments.'
+  },
+
+  {
+    icon: '🌍',
+    title: 'Airbus',
+    source: 'Aircraft Manufacturer',
+    description:
+      'Aircraft orders, sustainability initiatives and aviation innovation projects.'
+  }
+
+];
 
   youtubeVideos = [
     { id: 'kCwHcVaIRGg', title: 'A Day in the Life of an Indian Commercial Pilot', duration: '14:32' },
@@ -105,4 +181,5 @@ export class BlogComponent {
       avatar: 'AB'
     }
   ];
+// industryUpdates: any;
 }

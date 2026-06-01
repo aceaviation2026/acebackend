@@ -4,6 +4,7 @@
   .hero-sub { font-size: 1.05rem; color: var(--color-text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; }
 }
 
+
 // Featured
 .featured-article {
   display: grid;
@@ -170,4 +171,1308 @@
 .rec-content { flex: 1;
   h5 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
   p { font-size: 0.86rem; color: var(--color-text-muted); margin: 0; }
+}
+
+
+
+  
+/* =========================================================
+   BLOG & NEWS PAGE — WHITE THEME
+   Logo Color Theme:#0e273d 
+   Accent Gold: #E09000
+========================================================= */
+
+:root{
+  --primary:#0e273d ;
+  --accent: #E09000;
+  --white: #ffffff;
+  --text:#0e273d ;
+  --text-light: #314056;
+  --border: rgba(10,22,40,0.08);
+
+  --shadow-sm: 0 6px 18px rgba(10,22,40,0.05);
+  --shadow-md: 0 14px 40px rgba(10,22,40,0.08);
+  --shadow-lg: 0 20px 55px rgba(10,22,40,0.12);
+}
+
+/* =========================================================
+   FULL PAGE WHITE BACKGROUND
+========================================================= */
+
+body,
+.page-hero,
+.section-pad,
+.section-pad-sm,
+.featured-article,
+.blog-card,
+.news-item,
+.story-card,
+.video-card,
+.recruitment-banner{
+  background: #ffffff !important;
+  color:#0e273d ;
+}
+
+/* Remove dark section backgrounds */
+section[style*="background: var(--color-navy-mid)"]{
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   HERO GRID LIGHT EFFECT
+========================================================= */
+
+.hero-grid{
+  opacity: 0.05;
+  background-image:
+    linear-gradient(rgba(10,22,40,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,22,40,0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* =========================================================
+   TITLES & TEXT COLORS
+========================================================= */
+
+.display-hero,
+.section-title,
+.featured-title,
+.blog-title,
+.news-body h6,
+.story-name,
+.video-info h6,
+.recruitment-banner h5,
+h1,h2,h3,h4,h5,h6{
+  color:#0e273d  !important;
+  font-weight: 700;
+}
+
+/* ALL Paragraphs */
+p,
+.hero-sub,
+.featured-excerpt,
+.blog-excerpt,
+.story-text,
+.news-meta,
+.story-city,
+.video-info,
+.recruitment-banner p,
+.art-date,
+.art-read,
+.blog-date,
+.blog-read{
+  color:#0e273d  !important;
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   GRADIENT TEXT
+========================================================= */
+
+.gradient-text{
+  background: linear-gradient(135deg, #0A1628 0%, #E09000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   WHITE GLASS CARDS
+========================================================= */
+
+.glass-card,
+.featured-article,
+.blog-card,
+.news-item,
+.story-card,
+.video-card,
+.ext-link{
+  background: #ffffff !important;
+  border: 1px solid rgba(10,22,40,0.08);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: none;
+  border-radius: 22px;
+  transition: all 0.35s ease;
+}
+
+/* =========================================================
+   HOVER EFFECTS
+========================================================= */
+
+.featured-article:hover,
+.blog-card:hover,
+.news-item:hover,
+.story-card:hover,
+.video-card:hover,
+.ext-link:hover{
+  transform: translateY(-6px);
+  border-color: rgba(224,144,0,0.35);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Blog Card Hover */
+.blog-card:hover .blog-title,
+.news-item:hover h6,
+.story-card:hover .story-name{
+  color: #E09000 !important;
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge-gold,
+.featured-badge{
+  background: rgba(224,144,0,0.12);
+  color: #0A1628;
+  border: 1px solid rgba(224,144,0,0.25);
+  font-weight: 700;
+}
+
+/* =========================================================
+   CATEGORY TAGS
+========================================================= */
+
+.art-category,
+.blog-cat,
+.news-tag{
+  background: rgba(224,144,0,0.10);
+  color: #0A1628;
+  border: 1px solid rgba(224,144,0,0.22);
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn-gold{
+  background: #E09000;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 30px rgba(224,144,0,0.25);
+}
+
+.btn-gold:hover{
+  background:#0e273d ;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Read More Button */
+.read-more-btn{
+  background: transparent;
+  border: none;
+  color:#0e273d ;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover{
+  color: #E09000;
+}
+
+/* =========================================================
+   FEATURED ARTICLE
+========================================================= */
+
+.featured-meta span{
+  color: #0e273d ;
+  opacity: 0.8;
+}
+
+.author-avatar-sm{
+  background: linear-gradient(135deg,#0e273d ,#c49440);
+  color: #ffffff;
+}
+
+/* =========================================================
+   BLOG EMOJIS
+========================================================= */
+
+.blog-emoji,
+.featured-emoji,
+.rec-icon{
+  background: rgba(224,144,0,0.10);
+  color:#0e273d ;
+  border: 1px solid rgba(224,144,0,0.20);
+}
+
+/* =========================================================
+   NEWS LIST
+========================================================= */
+
+.news-item{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.news-icon{
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background: rgba(224,144,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* =========================================================
+   STUDENT STORIES
+========================================================= */
+
+.story-avatar{
+  background: linear-gradient(135deg,#0e273d ,#c49440);
+  color: white;
+  font-weight: 700;
+}
+
+/* =========================================================
+   VIDEO SECTION
+========================================================= */
+
+.video-thumb{
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.video-thumb img{
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.video-card:hover img{
+  transform: scale(1.05);
+}
+
+.video-overlay{
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,22,40,0.75), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn{
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #c49440(224,144,0,0.90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+}
+
+.video-card:hover .play-btn{
+  transform: scale(1.08);
+  background: #0e273d ;
+}
+
+/* =========================================================
+   RECRUITMENT BANNER
+========================================================= */
+
+.recruitment-banner{
+  border: 1px solid rgba(224,144,0,0.18);
+  box-shadow: var(--shadow-md);
+  border-radius: 26px;
+  padding: 30px;
+}
+
+.rec-content h5{
+  margin-bottom: 8px;
+}
+
+/* =========================================================
+   DIVIDERS
+========================================================= */
+
+.divider-gold{
+  width: 100px;
+  height: 4px;
+  border-radius: 30px;
+  background: linear-gradient(90deg,#0e273d ,#c49440);
+}
+
+/* =========================================================
+   SMOOTH UI
+========================================================= */
+
+*{
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+
+/* =========================
+   TRENDING ARTICLES SECTION
+========================= */
+
+
+
+/* =========================
+   TRENDING STRIP SECTION
+========================= */
+
+.trending-strip-section{
+    padding: 100px 0 40px;
+    background: #ffffff;
+}
+
+/* HEADER */
+
+.trend-strip-head{
+    margin-bottom: 60px;
+}
+
+.trend-main-title{
+    font-size: 58px;
+    font-weight: 800;
+    color: #0e273d ;
+    margin-bottom: 18px;
+}
+
+.trend-main-title span{
+    color: #F4C542;
+}
+
+.trend-main-sub{
+    max-width: 760px;
+    margin: auto;
+    color: #6B7280;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+/* STRIP WRAP */
+
+.trend-strip-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+/* STRIP */
+
+.trend-strip{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(10,22,40,0.08);
+
+    border-radius: 28px;
+
+    padding: 35px;
+
+    transition: 0.35s ease;
+
+    box-shadow:
+    0 10px 30px rgba(10,22,40,0.04);
+}
+
+/* HOVER */
+
+.trend-strip:hover{
+    transform: translateY(-6px);
+
+    border-color: #c49440(244,197,66,0.4);
+
+    box-shadow:
+    0 20px 45px rgba(10,22,40,0.08);
+}
+
+/* LEFT SIDE */
+
+.trend-left{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* NUMBER */
+
+.trend-no{
+    font-size: 62px;
+    font-weight: 800;
+    color: rgba(10,22,40,0.08);
+    line-height: 1;
+}
+
+/* TAG */
+
+.trend-tag{
+    display: inline-block;
+
+    background: rgba(244,197,66,0.15);
+
+    color: #c49440;
+
+    padding: 8px 16px;
+
+    border-radius: 40px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 16px;
+}
+
+/* TITLE */
+
+.trend-info h3{
+    font-size: 28px;
+
+    color: #0e273d ;
+
+    line-height: 1.4;
+
+    margin-bottom: 14px;
+
+    font-weight: 800;
+}
+
+/* TEXT */
+
+.trend-info p{
+    color: #0e273d ;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+}
+
+/* BUTTON */
+
+.trend-btn{
+    min-width: 170px;
+
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #0e273d ;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 60px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+/* BUTTON HOVER */
+
+.trend-btn:hover{
+    background: #F4C542;
+
+    color: #0e273d ;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+    .trend-strip{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .trend-main-title{
+        font-size: 42px;
+    }
+
+    .trend-info h3{
+        font-size: 22px;
+    }
+
+}
+
+@media(max-width:576px){
+
+    .trend-left{
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .trend-no{
+        font-size: 44px;
+    }
+
+    .trend-main-title{
+        font-size: 34px;
+    }
+
+}
+
+
+
+
+/* =========================================================
+   UPDATED COLOR REPLACEMENT
+   REPLACE:
+   #0A1628  →  #0e273d
+   #E09000  →  #c49440
+========================================================= */
+
+:root{
+  --primary:#0e273d;
+  --accent:#c49440;
+  --white:#ffffff;
+  --text:#0e273d;
+  --text-light:#314056;
+  --border:rgba(14,39,61,0.08);
+
+  --shadow-sm:0 6px 18px rgba(14,39,61,0.05);
+  --shadow-md:0 14px 40px rgba(14,39,61,0.08);
+  --shadow-lg:0 20px 55px rgba(14,39,61,0.12);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.gradient-text{
+  background:linear-gradient(
+    135deg,
+    #0e273d 0%,
+    #c49440 100%
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero-grid{
+  opacity:0.05;
+
+  background-image:
+    linear-gradient(rgba(14,39,61,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,39,61,0.08) 1px, transparent 1px);
+
+  background-size:40px 40px;
+}
+
+/* =========================================================
+   ALL TEXT
+========================================================= */
+
+h1,h2,h3,h4,h5,h6,
+.display-hero,
+.section-title,
+.featured-title,
+.blog-title,
+.news-body h6,
+.story-name,
+.video-info h6,
+.rec-content h5{
+  color:#0e273d !important;
+}
+
+p,
+.hero-sub,
+.featured-excerpt,
+.blog-excerpt,
+.story-text,
+.news-meta,
+.story-city,
+.video-info,
+.recruitment-banner p,
+.art-date,
+.art-read,
+.blog-date,
+.blog-read,
+.trend-main-sub,
+.trend-info p{
+  color:#0e273d !important;
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge-gold,
+.featured-badge{
+  background:rgba(196,148,64,0.12);
+
+  color:#0e273d;
+
+  border:1px solid rgba(196,148,64,0.25);
+}
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.art-category,
+.blog-cat,
+.news-tag,
+.trend-tag{
+  background:rgba(196,148,64,0.10);
+
+  color:#0e273d;
+
+  border:1px solid rgba(196,148,64,0.22);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn-gold,
+.trend-btn{
+  background:#c49440;
+
+  color:#ffffff;
+
+  border:none;
+
+  box-shadow:
+  0 12px 30px rgba(196,148,64,0.25);
+}
+
+.btn-gold:hover,
+.trend-btn:hover{
+  background:#0e273d;
+
+  color:#ffffff;
+}
+
+/* =========================================================
+   READ MORE
+========================================================= */
+
+.read-more-btn{
+  color:#0e273d;
+}
+
+.read-more-btn:hover{
+  color:#c49440;
+}
+
+/* =========================================================
+   AVATARS
+========================================================= */
+
+.author-avatar-sm,
+.story-avatar{
+  background:
+  linear-gradient(
+    135deg,
+    #0e273d,
+    #c49440
+  );
+
+  color:#ffffff;
+}
+
+/* =========================================================
+   ICON BACKGROUNDS
+========================================================= */
+
+.blog-emoji,
+.featured-emoji,
+.rec-icon,
+.news-icon{
+  background:rgba(196,148,64,0.10);
+
+  color:#0e273d;
+
+  border:1px solid rgba(196,148,64,0.20);
+}
+
+/* =========================================================
+   VIDEO SECTION
+========================================================= */
+
+.video-overlay{
+  background:
+  linear-gradient(
+    to top,
+    rgba(14,39,61,0.75),
+    transparent
+  );
+}
+
+.play-btn{
+  background:rgba(196,148,64,0.90);
+}
+
+.video-card:hover .play-btn{
+  background:#0e273d;
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider-gold{
+  background:
+  linear-gradient(
+    90deg,
+    #0e273d,
+    #c49440
+  );
+}
+
+/* =========================================================
+   TRENDING SECTION
+========================================================= */
+
+.trend-main-title{
+  color:#0e273d;
+}
+
+.trend-main-title span{
+  color:#c49440;
+}
+
+.trend-tag{
+  background:rgba(196,148,64,0.15);
+
+  color:#c49440;
+}
+
+.trend-info h3{
+  color:#0e273d;
+}
+
+.trend-btn{
+  background:#0e273d;
+}
+
+.trend-btn:hover{
+  background:#c49440;
+
+  color:#0e273d;
+}
+
+.trend-strip:hover{
+  border-color:rgba(196,148,64,0.4);
+}
+
+/* =========================================================
+   WHITE CARDS
+========================================================= */
+
+.glass-card,
+.featured-article,
+.blog-card,
+.news-item,
+.story-card,
+.video-card,
+.ext-link,
+.trend-strip{
+  background:#ffffff !important;
+
+  border:1px solid rgba(14,39,61,0.08);
+
+  box-shadow:var(--shadow-md);
+}
+
+
+
+
+
+/* ==========================
+   BLOG CATEGORY SECTION
+========================== */
+
+.categories-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+.category-card{
+    background:#fff;
+    border:1px solid #efe4cf;
+    border-radius:20px;
+    padding:28px 22px;
+    text-align:center;
+    transition:all .35s ease;
+    box-shadow:0 10px 30px rgba(15,37,69,.06);
+    position:relative;
+    overflow:hidden;
+}
+
+/* GOLD TOP BORDER */
+
+.category-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(
+        90deg,
+        #c89b3c,
+        #e6bf6b
+    );
+}
+
+/* REMOVE ALL UNDERLINES */
+
+.category-card *,
+.category-card a,
+.category-card h3,
+.category-card p,
+.category-card span{
+    text-decoration:none !important;
+    border-bottom:none !important;
+}
+
+/* REMOVE PSEUDO UNDERLINES */
+
+.category-card *::before,
+.category-card *::after,
+.category-card h3::before,
+.category-card h3::after{
+    text-decoration:none !important;
+}
+
+.category-card h3::before,
+.category-card h3::after{
+    display:none !important;
+    content:none !important;
+}
+
+/* HOVER EFFECT */
+
+.category-card:hover{
+    transform:translateY(-8px);
+    border-color:#c89b3c;
+    box-shadow:0 18px 40px rgba(15,37,69,.12);
+}
+
+/* ICON */
+
+.category-icon{
+    width:70px;
+    height:70px;
+    margin:auto;
+    margin-bottom:18px;
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        #fff8ea,
+        #fff3d6
+    );
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    color:#c89b3c;
+    transition:.35s ease;
+}
+
+.category-card:hover .category-icon{
+    transform:scale(1.1) rotate(5deg);
+}
+
+/* TITLE */
+
+.category-card h3{
+    font-size:18px;
+    font-weight:700;
+    color:#0f2545;
+    margin-bottom:12px;
+    line-height:1.4;
+    text-decoration:none !important;
+    border:none !important;
+}
+
+/* DESCRIPTION */
+
+.category-card p{
+    font-size:14px;
+    color:#6b7280;
+    line-height:1.7;
+    margin-bottom:0;
+}
+
+/* ARTICLE COUNT */
+
+.category-count{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:16px;
+    padding:7px 14px;
+    border-radius:50px;
+    background:#fff8ea;
+    color:#c89b3c;
+    font-size:12px;
+    font-weight:600;
+    border:1px solid #f2dfb3;
+}
+
+/* LINK HOVER */
+
+.category-card a:hover,
+.category-card h3:hover,
+.category-card p:hover{
+    text-decoration:none !important;
+}
+
+/* TABLET */
+
+@media(max-width:991px){
+
+    .categories-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:576px){
+
+    .categories-grid{
+        grid-template-columns:1fr;
+    }
+
+    .category-card{
+        padding:24px 20px;
+    }
+
+    .category-icon{
+        width:65px;
+        height:65px;
+        font-size:24px;
+    }
+
+}
+
+/* REMOVE ALL LINK UNDERLINES */
+
+.category-card,
+.category-card:hover,
+.category-card:focus,
+.category-card:active{
+    text-decoration:none !important;
+}
+
+/* REMOVE UNDERLINE FROM ALL CHILD ELEMENTS */
+
+.category-card *,
+.category-card h3,
+.category-card p,
+.category-card span,
+.category-card div{
+    text-decoration:none !important;
+    border-bottom:none !important;
+}
+
+/* REMOVE UNDERLINE ON HOVER */
+
+.category-card:hover *,
+.category-card:hover h3,
+.category-card:hover p{
+    text-decoration:none !important;
+}
+
+/* REMOVE ICON UNDERLINE */
+
+.category-icon{
+    text-decoration:none !important;
+    border:none !important;
+    line-height:1;
+}
+
+/* REMOVE ANY THEME GENERATED LINES */
+
+.category-card h3::before,
+.category-card h3::after,
+.category-card p::before,
+.category-card p::after{
+    content:none !important;
+    display:none !important;
+}
+
+/* REMOVE LINK COLOR EFFECT */
+
+.category-card{
+    color:inherit;
+}
+
+.category-card:hover{
+    color:inherit;
+}
+
+.category-card a{
+    text-decoration:none !important;
+    color:#0f2545;
+}
+
+.category-card a:hover{
+    text-decoration:none !important;
+    color:#c89b3c;
+}
+/* ===========================
+   AVIATION JOBS SECTION
+=========================== */
+
+.job-card{
+    background:#fff;
+    border:1px solid #efe4cf;
+    border-radius:22px;
+    padding:28px;
+    height:100%;
+    transition:.35s ease;
+    box-shadow:0 10px 25px rgba(15,37,69,.06);
+}
+
+.job-card:hover{
+    transform:translateY(-8px);
+    border-color:#c89b3c;
+    box-shadow:0 18px 40px rgba(15,37,69,.12);
+}
+
+.job-logo{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#fff7e6;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+.job-card h3{
+    color:#0f2545;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.job-position{
+    color:#c89b3c;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.job-card ul{
+    padding-left:18px;
+    margin-bottom:20px;
+}
+
+.job-card ul li{
+    color:#5f6675;
+    margin-bottom:8px;
+}
+
+.job-date{
+    font-size:14px;
+    color:#8b95a7;
+    margin-bottom:18px;
+}
+
+
+
+/* =========================
+   AVIATION NEWS HUB
+========================= */
+
+.aviation-news-hub{
+    background:#fff;
+}
+
+.news-subtitle{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+.news-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.news-row{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    padding:28px;
+    background:#fff;
+    border:1px solid #eee3cf;
+    border-radius:18px;
+    transition:.3s ease;
+}
+
+.news-row:hover{
+    border-color:#c89b3c;
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(15,37,69,.08);
+}
+
+.news-left{
+    min-width:140px;
+}
+
+.news-source{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.news-source.dgca{
+    background:#fff4dc;
+    color:#b98620;
+}
+
+.news-source.airline{
+    background:#eef5ff;
+    color:#0f2545;
+}
+
+.news-source.manufacturer{
+    background:#e8fff5;
+    color:#15803d;
+}
+
+.news-center{
+    flex:1;
+}
+
+.news-center h3{
+    margin-bottom:8px;
+    font-size:20px;
+    color:#0f2545;
+}
+
+.news-center p{
+    margin:0;
+    color:#6b7280;
+    line-height:1.7;
+}
+
+.news-right a{
+    color:#c89b3c;
+    font-weight:700;
+    text-decoration:none;
+}
+
+.news-right a:hover{
+    color:#0f2545;
+}
+
+@media(max-width:768px){
+
+    .news-row{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .news-left{
+        min-width:auto;
+    }
+
+    .news-right{
+        width:100%;
+    }
+}
+
+
+/* =========================
+   PILOT SHORTAGE SECTION
+========================= */
+
+.pilot-shortage-section{
+    background:#f8fafc;
+}
+
+.pilot-shortage-box{
+    background:#fff;
+    border:1px solid #eee3cf;
+    border-radius:24px;
+    padding:50px;
+    box-shadow:0 15px 40px rgba(15,37,69,.06);
+}
+
+.shortage-text{
+    color:#6b7280;
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+.shortage-stats{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.stat-item{
+    background:#fff8ea;
+    border-left:5px solid #c89b3c;
+    padding:22px;
+    border-radius:16px;
+}
+
+.stat-item h3{
+    font-size:34px;
+    font-weight:800;
+    color:#0f2545;
+    margin-bottom:5px;
+}
+
+.stat-item span{
+    color:#6b7280;
+    font-size:14px;
+}
+
+@media(max-width:991px){
+
+    .pilot-shortage-box{
+        padding:30px;
+    }
+
+    .shortage-stats{
+        margin-top:30px;
+    }
+
+} 
+.trend-no{
+    color: #c49440;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
 }

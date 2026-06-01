@@ -222,3 +222,1488 @@
   .footer-legal { flex-wrap: wrap; justify-content: center; }
   .newsletter-form { flex-direction: column; }
 }
+
+
+
+/* =========================================================
+   GLOBAL THEME COLORS
+========================================================= */
+:root{
+  --color-primary: white;
+  --color-accent: #E09000;
+  --color-white: #ffffff;
+  --color-light: #F8FAFC;
+  --color-border: #E2E8F0;
+  --color-text: #0A1628;
+  --color-muted: #64748B;
+
+  --shadow-soft: 0 10px 30px rgba(10,22,40,0.08);
+  --transition: all .3s ease;
+}
+
+/* =========================================================
+   GLOBAL PAGE BACKGROUND
+========================================================= */
+body,
+.page-hero,
+.section-pad,
+.section-pad-sm,
+.timeline-section,
+.eligibility-section,
+.cost-calc-section,
+.pilot-faq-section,
+.site-footer,
+.footer-body,
+.footer-bottom {
+  background: #ffffff !important;
+  color: #0A1628 !important;
+}
+
+/* REMOVE DARK BACKGROUNDS */
+section[style*="var(--color-navy-mid)"]{
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   TEXT COLORS
+========================================================= */
+h1,h2,h3,h4,h5,h6,
+p,span,div,label,a,
+.section-title,
+.hero-sub,
+.footer-desc,
+.footer-brand-sub,
+.footer-links a,
+.contact-item span,
+.reg-desc,
+.reg-title,
+.school-meta,
+.resource-meta,
+.doctor-designation,
+.doctor-specialty,
+.doctor-location {
+  color: #0A1628 !important;
+}
+
+/* =========================================================
+   GOLD / ACCENT COLOR REPLACEMENT
+========================================================= */
+.badge-gold,
+.btn-gold,
+.divider-gold,
+.reg-type,
+.meta-tag,
+.process-icon,
+.result-icon,
+.cost-badge {
+  background: #E09000 !important;
+  color: #ffffff !important;
+  border-color: #E09000 !important;
+}
+
+/* =========================================================
+   GRADIENT TEXT
+========================================================= */
+.gradient-text{
+  background: linear-gradient(135deg,#0A1628 0%, #E09000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   GLASS / CARD DESIGN
+========================================================= */
+.glass-card,
+.overview-card,
+.regulation-card,
+.school-card,
+.doctor-card,
+.resource-card,
+.ext-link,
+.process-card,
+.timeline-detail,
+.quiz-card,
+.calc-form,
+.cost-breakdown {
+  background: #ffffff !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 10px 30px rgba(10,22,40,0.06);
+  transition: all .35s ease;
+  color: #0A1628 !important;
+}
+
+/* =========================================================
+   CARD HOVER EFFECT
+========================================================= */
+.glass-card:hover,
+.overview-card:hover,
+.regulation-card:hover,
+.school-card:hover,
+.doctor-card:hover,
+.resource-card:hover,
+.ext-link:hover,
+.process-card:hover {
+  transform: translateY(-6px);
+  border-color: #E09000 !important;
+  box-shadow: 0 18px 40px rgba(224,144,0,0.18);
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(224,144,0,0.05) 100%
+  ) !important;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.btn-gold{
+  background: #E09000 !important;
+  border: 1px solid #E09000 !important;
+  color: #fff !important;
+  transition: var(--transition);
+}
+
+.btn-gold:hover{
+  background: #0A1628 !important;
+  border-color: #0A1628 !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+.btn-outline-sky{
+  border: 1px solid #0A1628 !important;
+  color: #0A1628 !important;
+  background: transparent !important;
+}
+
+.btn-outline-sky:hover{
+  background: #0A1628 !important;
+  color: #fff !important;
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+a{
+  transition: var(--transition);
+}
+
+a:hover{
+  color: #E09000 !important;
+}
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+.search-box{
+  background: #fff !important;
+  border: 1px solid #CBD5E1;
+}
+
+.search-box:focus-within{
+  border-color: #E09000 !important;
+  box-shadow: 0 0 0 4px rgba(224,144,0,.12);
+}
+
+.search-box input{
+  color: #0A1628 !important;
+}
+
+/* =========================================================
+   FOOTER STYLING
+========================================================= */
+.site-footer{
+  border-top: 1px solid #E2E8F0;
+}
+
+.footer-accent-line{
+  height: 4px;
+  background: linear-gradient(90deg,#0A1628,#E09000);
+}
+
+.footer-heading{
+  color: #0A1628 !important;
+}
+
+.footer-links a:hover{
+  color: #E09000 !important;
+  padding-left: 4px;
+}
+
+.footer-bottom{
+  border-top: 1px solid #E2E8F0;
+}
+
+/* =========================================================
+   SOCIAL BUTTONS
+========================================================= */
+.social-btn{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #E2E8F0;
+  color: #0A1628;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition: var(--transition);
+}
+
+.social-btn:hover{
+  background: #E09000 !important;
+  border-color: #E09000 !important;
+  color: #ffffff !important;
+  transform: translateY(-4px);
+}
+
+/* =========================================================
+   ICON COLORS
+========================================================= */
+svg{
+  stroke: currentColor;
+}
+
+.overview-icon,
+.process-icon,
+.doctor-avatar,
+.school-icon,
+.resource-icon,
+.ext-icon {
+  color: #E09000 !important;
+}
+
+/* =========================================================
+   TIMELINE ACTIVE
+========================================================= */
+.timeline-tab.active{
+  border-color: #E09000 !important;
+  background: rgba(224,144,0,0.06);
+}
+
+.progress-fill{
+  background: #E09000 !important;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+.faq-item{
+  background: #ffffff;
+  border: 1px solid #E2E8F0;
+}
+
+.faq-item.open{
+  border-color: #E09000;
+}
+
+.faq-question:hover{
+  color: #E09000;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+input,
+textarea,
+select{
+  background: #fff !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #132040 !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-color: #E09000 !important;
+  box-shadow: 0 0 0 4px rgba(224,144,0,.12);
+  outline: none;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+.page-hero{
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(224,144,0,0.03) 100%
+  ) !important;
+}
+
+.hero-grid{
+  opacity: .04;
+}
+
+/* =========================================================
+   SMALL LABELS / TAGS
+========================================================= */
+.meta-tag,
+.reg-code,
+.school-type{
+  background: rgba(224,144,0,.12);
+  color: #E09000 !important;
+  border: 1px solid rgba(224,144,0,.25);
+}
+
+/* =========================================================
+   DOWNLOAD BUTTON
+========================================================= */
+.download-btn{
+  background: #0A1628;
+  color: #fff;
+  border: none;
+}
+
+.download-btn:hover{
+  background: #E09000;
+}
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+.newsletter-form input{
+  border-radius: 10px;
+}
+
+.newsletter-form .btn-gold{
+  border-radius: 10px;
+}
+
+/* =========================
+   GLOBAL FOOTER THEME
+========================= */
+
+.site-footer {
+  background: #ffffff !important;
+  color: #0e273d !important;
+  border-top: 1px solid rgba(14, 39, 61, 0.08);
+}
+
+.footer-body {
+  background: #ffffff !important;
+}
+
+.footer-bottom {
+  background: #ffffff !important;
+  border-top: 1px solid rgba(14, 39, 61, 0.08);
+}
+
+.footer-accent-line {
+  height: 4px;
+  background: #c49440;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-brand-name,
+.footer-heading,
+.footer-bottom span,
+.footer-links a,
+.footer-contact span,
+.footer-brand-sub,
+.footer-desc,
+.footer-newsletter p,
+.social-platform,
+.social-handle {
+  color: #0e273d !important;
+}
+
+.footer-brand-sub {
+  opacity: 0.7;
+}
+
+.footer-desc {
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.footer-links a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #c49440 !important;
+  padding-left: 4px;
+}
+
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+
+.social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(14, 39, 61, 0.12);
+  color: #0e273d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #c49440;
+  color: #ffffff;
+  border-color: #c49440;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   CONTACT ITEMS
+========================= */
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: #0e273d;
+}
+
+.contact-item svg {
+  stroke: #c49440 !important;
+}
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid rgba(14, 39, 61, 0.15);
+  background: #ffffff;
+  color: #132040;
+  padding: 0 16px;
+  outline: none;
+}
+
+.newsletter-form input:focus {
+  border-color: #c49440;
+  box-shadow: 0 0 0 3px rgba(196, 148, 64, 0.15);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-gold {
+  background: #c49440 !important;
+  color: #ffffff !important;
+  border: 1px solid #c49440 !important;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: #a9782f !important;
+  border-color: #a9782f !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(196, 148, 64, 0.25);
+}
+
+/* =========================
+   LEGAL LINKS
+========================= */
+
+.footer-legal a {
+  color: #132040 !important;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #c49440 !important;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+
+
+.logo-img{
+  margin-top: -40px;
+}
+
+
+
+
+  /* =========================================================
+   FIX FOOTER BOTTOM MOBILE OVERFLOW
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .footer-bottom {
+    padding: 18px 14px;
+    overflow: hidden;
+  }
+
+  .footer-bottom-inner {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-bottom span {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+
+    font-size: 0.78rem;
+    line-height: 1.7;
+
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .footer-legal {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+
+  .footer-legal a {
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL MOBILE FIX
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .footer-bottom {
+    padding: 16px 10px;
+  }
+
+  .footer-bottom span {
+    font-size: 0.72rem;
+    line-height: 1.6;
+  }
+
+  .footer-legal {
+    gap: 8px;
+  }
+
+  .footer-legal a {
+    font-size: 0.72rem;
+  }
+}
+
+
+
+
+/* =========================================================
+   FOOTER FULL RESPONSIVE FIX
+   Desktop + Tablet + Mobile
+========================================================= */
+
+.site-footer {
+  position: relative;
+  background: #0A1628;
+  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #fff;
+}
+
+/* REMOVE EXTRA WHITE SPACE */
+html,
+body {
+  overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* =========================================================
+   DESKTOP VIEW
+========================================================= */
+
+.footer-body {
+  padding: 80px 0 50px;
+}
+
+.footer-brand {
+  text-align: left;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo-img {
+  height: 140px;
+  width: auto;
+}
+
+.footer-brand-sub {
+  margin-top: -8px;
+  font-size: 0.9rem;
+  color: #cfd8e3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-desc {
+  margin-top: 18px;
+  max-width: 340px;
+  color: #c4ced8;
+  line-height: 1.9;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  transition: 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #FFB300;
+  color: #0A1628;
+}
+
+.footer-heading {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 36px;
+  height: 2px;
+  background: #FFB300;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.footer-links li {
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  color: #c4ced8;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #FFB300;
+  padding-left: 4px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #d4dde7;
+  text-align: left;
+}
+
+.footer-newsletter {
+  margin-top: 28px;
+  text-align: left;
+}
+
+.footer-newsletter p {
+  margin-bottom: 14px;
+  color: #d5dee8;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
+  padding: 0 16px;
+  color: white;
+}
+
+.newsletter-form input::placeholder {
+  color: #94a3b8;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 22px 0;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom span {
+  color: #b8c2cc;
+  font-size: 0.84rem;
+}
+
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-legal a {
+  color: #c4ced8;
+  text-decoration: none;
+  font-size: 0.84rem;
+}
+
+.footer-legal a:hover {
+  color: #FFB300;
+}
+
+/* =========================================================
+   TABLET VIEW (MD)
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .footer-body {
+    padding: 60px 0 35px;
+  }
+
+  .logo-img {
+    height: 110px;
+  }
+
+  .footer-desc {
+    max-width: 100%;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+  }
+
+  .footer-heading {
+    margin-top: 10px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input,
+  .newsletter-form .btn-gold {
+    width: 100%;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer-legal {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE + iPAD RESPONSIVE INPUT FIX
+   Desktop remains unchanged
+========================================================= */
+
+/* =========================================================
+   TABLET / iPAD VIEW
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+  .newsletter-form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  #footerEmailInput{
+    width: 100%;
+    height: 58px !important;
+    min-height: 58px !important;
+    padding: 0 20px !important;
+
+    font-size: 1rem;
+    line-height: 58px;
+
+    border: 1.5px solid #d7dce5;
+    border-radius: 14px;
+
+    background: #fff;
+    color: #0A1628;
+
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  #footerEmailInput::placeholder{
+    color: #8b93a7;
+    font-size: 0.96rem;
+  }
+
+  .newsletter-form .btn-gold{
+    width: 100%;
+    height: 52px;
+    border-radius: 14px;
+    font-size: 0.92rem !important;
+  }
+}
+
+/* =========================================================
+   MOBILE VIEW
+========================================================= */
+
+@media (max-width: 767px){
+
+  .newsletter-form{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+  }
+
+  #footerEmailInput{
+    width: 100%;
+    height: 54px !important;
+    min-height: 54px !important;
+    padding: 0 18px !important;
+
+    font-size: 0.95rem;
+    line-height: 54px;
+
+    border: 1.5px solid #d7dce5;
+    border-radius: 12px;
+
+    background: #fff;
+    color: #0A1628;
+
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  #footerEmailInput::placeholder{
+    color: #8b93a7;
+    font-size: 0.92rem;
+    line-height: normal;
+  }
+
+  .newsletter-form .btn-gold{
+    width: 100%;
+    height: 48px;
+    border-radius: 12px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px){
+
+  #footerEmailInput{
+    height: 52px !important;
+    min-height: 52px !important;
+    padding: 0 16px !important;
+    font-size: 0.92rem;
+  }
+
+  .newsletter-form .btn-gold{
+    height: 46px;
+    font-size: 0.85rem !important;
+  }
+}
+
+// /* =========================================================
+//    MOBILE VIEW
+// ========================================================= */
+
+// @media (max-width: 767px) {
+
+//   .site-footer,
+//   .footer-body,
+//   .footer-bottom {
+//     margin-bottom: 0 !important;
+//     padding-bottom: 0 !important;
+//   }
+
+//   .footer-body {
+//     padding: 45px 0 20px !important;
+//   }
+
+//   .footer-body .row {
+//     row-gap: 34px !important;
+//     margin-bottom: 0 !important;
+//   }
+
+//   /* SIDE ALIGNMENT */
+//   .footer-brand,
+//   .footer-links,
+//   .footer-contact,
+//   .footer-newsletter,
+//   .footer-bottom,
+//   .footer-bottom-inner {
+//     text-align: left;
+//   }
+
+//   .footer-logo {
+//     justify-content: flex-start;
+//   }
+
+//   .logo-img {
+//     height: 92px !important;
+//   }
+
+//   .footer-brand-sub {
+//     font-size: 0.82rem;
+//   }
+
+//   .footer-desc {
+//     font-size: 0.9rem;
+//     line-height: 1.8;
+//     margin-top: 14px;
+//   }
+
+//   .footer-social {
+//     justify-content: flex-start;
+//     margin-top: 20px;
+//   }
+
+//   .social-btn {
+//     width: 40px;
+//     height: 40px;
+//   }
+
+//   .footer-heading {
+//     text-align: left;
+//     margin-bottom: 18px;
+//   }
+
+//   .footer-heading::after {
+//     left: 0;
+//     transform: none;
+//   }
+
+//   .footer-links li {
+//     margin-bottom: 10px;
+//   }
+
+//   .footer-links a {
+//     font-size: 0.92rem;
+//   }
+
+//   .footer-contact {
+//     align-items: flex-start;
+//     gap: 14px;
+//   }
+
+//   .contact-item {
+//     justify-content: flex-start;
+//     text-align: left;
+//     font-size: 0.88rem;
+//   }
+
+//   .footer-newsletter {
+//     margin-top: 20px;
+//   }
+
+//   .newsletter-form {
+//     flex-direction: column;
+//     gap: 12px;
+//   }
+
+//   .newsletter-form input,
+//   .newsletter-form .btn-gold {
+//     width: 100%;
+//     height: 46px;
+//   }
+
+//   .footer-bottom {
+//     padding: 18px 0 14px !important;
+//   }
+
+//   .footer-bottom-inner {
+//     flex-direction: column;
+//     align-items: flex-start;
+//     gap: 10px;
+//   }
+
+//   .footer-bottom span {
+//     font-size: 0.72rem;
+//     line-height: 1.6;
+//   }
+
+//   .footer-legal {
+//     justify-content: flex-start;
+//     gap: 12px;
+//     flex-wrap: wrap;
+//   }
+
+//   .footer-legal a {
+//     font-size: 0.72rem;
+//   }
+
+//   /* FLOATING BUTTON FIX */
+
+//   .whatsapp-float,
+//   .scroll-top-btn,
+//   .floating-icons {
+//     position: fixed !important;
+//     right: 10px !important;
+//     z-index: 999 !important;
+//   }
+
+//   .whatsapp-float {
+//     bottom: 12px !important;
+//     width: 48px !important;
+//     height: 48px !important;
+//   }
+
+//   .scroll-top-btn {
+//     bottom: 68px !important;
+//     width: 42px !important;
+//     height: 42px !important;
+//   }
+// }
+
+// /* =========================================================
+//    EXTRA SMALL MOBILE
+// ========================================================= */
+
+// // @media (max-width: 480px) {
+
+// //   .footer-body {
+// //     padding: 38px 0 14px !important;
+// //   }
+
+// //   .logo-img {
+// //     height: 82px !important;
+// //   }
+
+// //   .footer-desc {
+// //     font-size: 0.86rem;
+// //   }
+
+// //   .footer-bottom span,
+// //   .footer-legal a {
+// //     font-size: 0.68rem;
+// //   }
+
+// //   .social-btn {
+// //     width: 38px;
+// //     height: 38px;
+// //   }
+// // }
+
+// // .footer-body {
+// //   padding: 45px 0 20px !important;
+// // }
+
+
+// /* =========================================================
+//    FOOTER NEWSLETTER RESPONSIVE
+//    Desktop unchanged
+// ========================================================= */
+
+// .newsletter-form{
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+// }
+
+// /* =========================================================
+//    MOBILE VIEW
+// ========================================================= */
+
+// @media (max-width: 767px){
+
+//   .footer-newsletter{
+//     width: 100%;
+//     margin-top: 28px;
+//   }
+
+//   .footer-newsletter p{
+//     font-size: 0.95rem;
+//     margin-bottom: 14px;
+//   }
+
+//   .newsletter-form{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: stretch;
+//     gap: 14px;
+//     width: 100%;
+//   }
+
+//   /* INPUT FIELD */
+//   #footerEmailInput{
+//     width: 100%;
+//     height: 58px;
+//     padding: 0 18px;
+//     font-size: 0.96rem;
+//     border-radius: 14px;
+//     box-sizing: border-box;
+//   }
+
+//   #footerEmailInput::placeholder{
+//     font-size: 0.92rem;
+//     color: #8a8a8a;
+//   }
+
+//   /* BUTTON BELOW INPUT */
+//   .subscribe-btn{
+//     width: 100%;
+//     height: 52px;
+//     border-radius: 14px;
+//     font-size: 0.9rem !important;
+//     padding: 0 18px !important;
+//   }
+// }
+
+// /* =========================================================
+//    SMALL MOBILE
+// ========================================================= */
+
+// // @media (max-width: 480px){
+
+// //   #footerEmailInput{
+// //     height: 56px;
+// //     padding: 0 16px;
+// //     font-size: 0.92rem;
+// //   }
+
+// //   .subscribe-btn{
+// //     height: 50px;
+// //     font-size: 0.85rem !important;
+// //   }
+// // }
+
+// /* =========================================================
+//    FOOTER RESPONSIVE FIX
+//    Mobile + Tablet Optimized
+// ========================================================= */
+
+// .site-footer{
+//   overflow: hidden;
+// }
+
+// .footer-body{
+//   padding: 70px 0 40px;
+// }
+
+// .footer-logo img{
+//   max-width: 100%;
+//   height: auto !important;
+//   display: block;
+// }
+
+// /* =========================================================
+//    NEWSLETTER FORM DEFAULT
+// ========================================================= */
+
+// .newsletter-form{
+//   display: flex;
+//   align-items: center;
+//   gap: 12px;
+//   width: 100%;
+// }
+
+// #footerEmailInput{
+//   flex: 1;
+//   min-width: 0;
+//   height: 52px;
+//   padding: 0 18px;
+//   border-radius: 12px;
+//   border: 1px solid rgba(255,255,255,0.12);
+//   font-size: 0.95rem;
+//   outline: none;
+//   width: 100%;
+//   box-sizing: border-box;
+// }
+
+// #footerEmailInput::placeholder{
+//   color: #8f8f8f;
+//   font-size: 0.92rem;
+// }
+
+// .newsletter-form .btn-gold{
+//   height: 52px;
+//   padding: 0 20px !important;
+//   border-radius: 12px;
+//   white-space: nowrap;
+//   flex-shrink: 0;
+// }
+
+// /* =========================================================
+//    TABLET VIEW
+// ========================================================= */
+
+// @media (max-width: 991px){
+
+//   .footer-body{
+//     padding: 60px 0 35px;
+//   }
+
+//   .footer-logo img{
+//     height: 120px !important;
+//     margin: auto;
+//   }
+
+//   .footer-brand{
+//     text-align: center;
+//   }
+
+//   .footer-social{
+//     justify-content: center;
+//     flex-wrap: wrap;
+//   }
+
+//   .footer-desc{
+//     max-width: 100%;
+//     margin-inline: auto;
+//   }
+// }
+
+// /* =========================================================
+//    MOBILE VIEW
+// ========================================================= */
+
+// @media (max-width: 767px){
+
+//   .site-footer{
+//     text-align: left;
+//   }
+
+//   .footer-body{
+//     padding: 50px 0 28px;
+//   }
+
+//   .footer-logo img{
+//     height: 100px !important;
+//     margin: 0 auto 10px;
+//   }
+
+//   .footer-brand{
+//     text-align: center;
+//     margin-bottom: 10px;
+//   }
+
+//   .footer-brand-sub{
+//     font-size: 0.88rem;
+//   }
+
+//   .footer-desc{
+//     font-size: 0.92rem;
+//     line-height: 1.7;
+//     text-align: center;
+//     margin-bottom: 24px;
+//   }
+
+//   .footer-social{
+//     display: flex;
+//     justify-content: center;
+//     gap: 12px;
+//     flex-wrap: wrap;
+//     margin-bottom: 28px;
+//   }
+
+//   .social-btn{
+//     width: 42px;
+//     height: 42px;
+//   }
+
+//   /* FOOTER HEADINGS */
+//   .footer-heading{
+//     font-size: 1rem;
+//     margin-bottom: 14px;
+//     margin-top: 10px;
+//   }
+
+//   .footer-links li{
+//     margin-bottom: 10px;
+//   }
+
+//   .footer-links a{
+//     font-size: 0.92rem;
+//   }
+
+//   /* CONTACT ITEMS */
+//   .contact-item{
+//     display: flex;
+//     align-items: flex-start;
+//     gap: 10px;
+//     margin-bottom: 14px;
+//     font-size: 0.9rem;
+//     line-height: 1.5;
+//   }
+
+//   /* =========================================================
+//      MOBILE NEWSLETTER
+//   ========================================================= */
+
+//   .footer-newsletter{
+//     margin-top: 28px;
+//     width: 100%;
+//   }
+
+//   .footer-newsletter p{
+//     font-size: 0.95rem;
+//     margin-bottom: 14px;
+//   }
+
+//   .newsletter-form{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: stretch;
+//     gap: 14px;
+//     width: 100%;
+//   }
+
+//   /* BIG INPUT BOX */
+//   #footerEmailInput{
+//     width: 100%;
+//     height: 58px;
+//     padding: 0 20px;
+//     font-size: 1rem;
+//     border-radius: 14px;
+//   }
+
+//   #footerEmailInput::placeholder{
+//     font-size: 0.95rem;
+//   }
+
+//   /* BUTTON BELOW INPUT */
+//   .newsletter-form .btn-gold{
+//     width: 100%;
+//     height: 52px;
+//     font-size: 0.92rem !important;
+//     border-radius: 14px;
+//     padding: 0 18px !important;
+//   }
+
+//   /* =========================================================
+//      FOOTER BOTTOM
+//   ========================================================= */
+
+//   .footer-bottom{
+//     padding: 18px 0;
+//   }
+
+//   .footer-bottom-inner{
+//     display: flex;
+//     flex-direction: column;
+//     gap: 12px;
+//     text-align: center;
+//   }
+
+//   .footer-bottom-inner span{
+//     font-size: 0.82rem;
+//     line-height: 1.6;
+//   }
+
+//   .footer-legal{
+//     display: flex;
+//     justify-content: center;
+//     flex-wrap: wrap;
+//     gap: 14px;
+//   }
+
+//   .footer-legal a{
+//     font-size: 0.82rem;
+//   }
+// }
+
+/* =========================================================
+   SMALL MOBILE
+// ========================================================= */

@@ -1,34 +1,78 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, } from '@angular/core';
+import { CommonModule, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { OnInit } from '@angular/core';
+import key from 'lucide-angular/icons/key';
+
+
+
 
 @Component({
   selector: 'app-become-pilot',
   standalone: true,
-  imports: [CommonModule, RouterLink, FormsModule],
+  imports: [CommonModule, RouterLink, FormsModule,NgIf],
   templateUrl: './become-pilot.component.html',
   styleUrls: ['./become-pilot.component.scss']
 })
 export class BecomePilotComponent implements OnInit {
+emiResult: any;
+showLoanResult: any;
+toggleEmi() {
+throw new Error('Method not implemented.');
+}
+emiInputs: any;
+showEmi: any;
+toggleExtra(arg0: any) {
+throw new Error('Method not implemented.');
+}
+
+
+
 
   // Eligibility Quiz
-  quiz = {
+
+  streamOptions = [
+    'Science',
+    'Non-Science'
+  ];
+
+  heightOptions = [
+    'Below 152 cm',
+    '152 - 165 cm',
+    'Above 165 cm'
+  ];
+
+  quiz: any = {
     age: '',
     education: '',
+    stream: '',
+    height: '',
     vision: '',
     citizenship: '',
     english: ''
-  };
+  }
+  // quiz = {
+  //   age: '',
+  //   education: '',
+  //   vision: '',
+  //   citizenship: '',
+  //   english: ''
+  // };
   quizResult: 'eligible' | 'not-eligible' | 'partial' | null = null;
 
   // Cost Calculator
-  costInputs = {
-    country: 'india',
-    school: 'mid',
-    simulator: false
-  };
-  estimatedCost = { low: 0, high: 0 };
+costInputs = { country: 'india', school: 'mid', simulator: false, typeRating: false,  extraOptions,extras: [] as string[]
+
+  
+ };
+
+estimatedCost = { low: 0, high: 0 };
+
+
+
+   
+  // estimatedCost = { low: 0, high: 0 };
 
   // Timeline
   timelineSteps = [
@@ -48,27 +92,47 @@ export class BecomePilotComponent implements OnInit {
       ],
       active: false
     },
+
     {
       number: '02',
-      title: 'DGCA Class 1 Medical',
-      icon: '🏥',
-      color: '#10B981',
-      duration: '1–2 Weeks',
-      desc: 'Get a Class 1 medical certificate from DGCA-authorised Aviation Medical Examiners (AMEs).',
+      title: 'DGCA Computer Number',
+      icon: '🖥️',
+      color: '#FFB300',
+      duration: '3–7 Days',
+      desc: 'Apply for your DGCA Computer Number required for DGCA pilot examinations and licensing records.',
       details: [
-        'Visit DGCA-authorised AME doctor',
-        'Tests: ECG, vision, hearing, blood work',
-        'Class 1 medical valid for 6 months initially',
-        'Must be renewed every 12 months after 40 years',
-        'Colour vision test is mandatory'
+        'Mandatory before appearing for DGCA theory exams',
+        'Acts as your official DGCA student ID',
+        'Documents: 10th & 12th marksheets, passport, photo, signature',
+        'Name and documents must exactly match',
+        'Incorrect photo or incomplete forms may lead to rejection'
       ],
       active: false
     },
+
+
     {
       number: '03',
+      title: 'DGCA Medical System',
+      icon: '🏥',
+      color: '#FFB300',
+      duration: '1–3 Weeks',
+      desc: 'Complete DGCA medical clearance required before flying training and CPL issuance.',
+      details: [
+        'Class 2 Medical required for SPL and flying school admission',
+        'Basic eyesight, hearing, and fitness tests by DGCA-approved doctors',
+        'Class 1 Medical mandatory before Commercial Pilot License (CPL) issue',
+        'Includes ECG, blood tests, vision, hearing, and overall fitness assessment',
+        'Colour vision test is compulsory'
+      ],
+      active: false
+    },
+
+    {
+      number: '04',
       title: 'Student Pilot License (SPL)',
       icon: '📜',
-      color: '#4A90E2',
+      color: '#FFB300',
       duration: '1 Month',
       desc: 'Apply for SPL through DGCA\'s AADC portal. This is your gateway to begin solo flight training.',
       details: [
@@ -81,10 +145,10 @@ export class BecomePilotComponent implements OnInit {
       active: false
     },
     {
-      number: '04',
+      number: '05',
       title: 'Ground School Training',
       icon: '📚',
-      color: '#8B5CF6',
+      color: '#FFB300',
       duration: '12–18 Months',
       desc: 'Clear all 6 DGCA theoretical subjects. You need min. 70% in each to qualify for CPL.',
       details: [
@@ -98,7 +162,7 @@ export class BecomePilotComponent implements OnInit {
       active: false
     },
     {
-      number: '05',
+      number: '06',
       title: 'Flight Training (200 Hours)',
       icon: '✈️',
       color: '#F59E0B',
@@ -115,10 +179,10 @@ export class BecomePilotComponent implements OnInit {
       active: false
     },
     {
-      number: '06',
+      number: '07',
       title: 'CPL License',
       icon: '🪪',
-      color: '#EC4899',
+      color: '#FFB300',
       duration: '1–3 Months',
       desc: 'Apply for your CPL at the DGCA AADC portal after clearing all written exams and flight hours.',
       details: [
@@ -130,11 +194,12 @@ export class BecomePilotComponent implements OnInit {
       ],
       active: false
     },
+
     {
-      number: '07',
+      number: '08',
       title: 'Airline Placement',
       icon: '🏢',
-      color: '#06B6D4',
+      color: '#FFB300',
       duration: 'Ongoing',
       desc: 'Join IndiGo, Air India, Vistara, AkasaAir or international carriers. Type rating comes next.',
       details: [
@@ -144,8 +209,11 @@ export class BecomePilotComponent implements OnInit {
         'Type Rating on Boeing 737 / Airbus A320',
         'Join as First Officer (FO)'
       ],
+
       active: false
     }
+
+
   ];
 
   activeStep = 0;
@@ -166,15 +234,61 @@ export class BecomePilotComponent implements OnInit {
   englishOptions = ['Fluent/Advanced', 'Intermediate', 'Beginner/Basic'];
 
   pilotFaqs = [
-    { q: 'Can I become a pilot after PCB (Biology) stream?', a: 'No. DGCA requires Physics and Mathematics at the 10+2 level with a minimum of 50%. However, students who cleared Math & Physics as additional subjects may qualify.', open: false },
-    { q: 'Is there an age limit to become a pilot?', a: 'The minimum age is 17 to apply for SPL and 18 for CPL. There is no strict upper age limit, but airlines generally prefer candidates under 35 for first officer positions.', open: false },
-    { q: 'Can I do CPL training abroad and apply in India?', a: 'Yes! You can complete flight training in the USA, Canada, or UK and convert your license to DGCA CPL. However, additional skill tests and theory papers may be required.', open: false },
-    { q: 'What is the difference between CPL and ATPL?', a: 'CPL (Commercial Pilot License) allows you to fly as a First Officer (co-pilot) in airlines. ATPL (Airline Transport Pilot License) is required to become a Captain and requires 1,500 hours of flying experience.', open: false },
-    { q: 'Is pilot training possible with loan assistance?', a: 'Yes. Several banks like SBI, Bank of Baroda, and Axis Bank offer aviation loans up to ₹1 Crore. Speak to our counselors for loan linkage support.', open: false },
+
+    {
+      q: 'What is the minimum required qualification to commence Pilot training?',
+      a: 'You must complete 10+2 with Physics and Mathematics from a recognized board. Students from Commerce or Arts can also qualify through bridge courses or NIOS.',
+      open: true
+    },
+
+    {
+      q: 'How long does it take to train to become a Pilot?',
+      a: 'Commercial Pilot training usually takes around 18 to 24 months depending on weather conditions, flying hours, exams, and training progress.',
+      open: false
+    },
+
+    {
+      q: 'What are the regulatory requirements to obtain a Commercial Pilot Licence (CPL)?',
+      a: 'You must complete 200 flying hours, clear DGCA theory exams, pass RTR, obtain Class 1 Medical, and complete all DGCA documentation requirements.',
+      open: false
+    },
+
+    {
+      q: 'Can I become a Pilot with Commerce or Arts background?',
+      a: 'Yes. Students from Commerce or Arts backgrounds can become pilots by completing Physics and Mathematics through NIOS or equivalent recognized boards.',
+      open: false
+    },
+
+    {
+      q: 'What are the medical requirements to become a pilot?',
+      a: 'Candidates must pass DGCA Class 2 and later Class 1 medical examinations. Good eyesight, hearing, mental fitness, and overall health are important.',
+      open: false
+    }
+
   ];
+extraOptions: any;
 
 
-  ngOnInit(): void {}
+
+  PilotFaq(index: number): void {
+
+    this.pilotFaqs.forEach((faq, i) => {
+
+      faq.open = i === index
+        ? !faq.open
+        : false;
+
+    });
+
+  }
+
+
+
+
+
+
+
+  ngOnInit(): void { }
 
   setActiveStep(i: number): void {
     this.activeStep = i;
@@ -227,8 +341,162 @@ export class BecomePilotComponent implements OnInit {
     return `₹${val.toLocaleString('en-IN')}`;
   }
 
+  
+
   togglePilotFaq(index: number): void {
     this.pilotFaqs[index].open = !this.pilotFaqs[index].open;
   }
+
+  /* =====================================
+   BANK DATA
+===================================== */
+
+  loanBanks = {
+
+    sbi: {
+      interest: '8.15% - 10.25%',
+      collateral: 'Required above ₹7.5L',
+      loan: 'Up to ₹1.5 Cr',
+      emi: '₹1.28L/month'
+    },
+
+    bob: {
+      interest: '8.40% - 10.50%',
+      collateral: 'Property / FD',
+      loan: 'Up to ₹1 Cr',
+      emi: '₹1.30L/month'
+    },
+
+    hdfc: {
+      interest: '9.20% - 11.25%',
+      collateral: 'Flexible options',
+      loan: 'Up to ₹1.5 Cr',
+      emi: '₹1.35L/month'
+    },
+
+    icici: {
+      interest: '9.50% - 11.50%',
+      collateral: 'Usually required',
+      loan: 'Up to ₹1 Cr',
+      emi: '₹1.34L/month'
+    }
+
+  };
+
+  /* =====================================
+     EMI CALCULATOR
+  ===================================== */
+
+  loanAmount: number = 8000000;
+  interestRate: number = 9.5;
+  loanYears: number = 10;
+
+  monthlyEMI: number = 0;
+  totalInterest: number = 0;
+  totalAmount: number = 0;
+
+  /* =====================================
+     CALCULATE EMI
+  ===================================== */
+
+  calculateEMI() {
+
+    const principal = this.loanAmount;
+
+    const monthlyRate =
+      this.interestRate / 12 / 100;
+
+    const months =
+      this.loanYears * 12;
+
+    const emi =
+      (principal * monthlyRate *
+        Math.pow(1 + monthlyRate, months)) /
+      (Math.pow(1 + monthlyRate, months) - 1);
+
+    this.monthlyEMI = emi;
+
+    this.totalAmount = emi * months;
+
+    this.totalInterest =
+      this.totalAmount - principal;
+  }
+
+  /* =====================================
+     BANK SELECT
+  ===================================== */
+
+  selectedBank: string = '';
+
+  selectBank(bank: string) {
+
+    this.selectedBank = bank;
+
+    alert(`You selected ${bank} for loan guidance.`);
+  }
+
+  /* =====================================
+     AUTO CALCULATE ON LOAD
+  ===================================== */
+
+  // ngOnInit(): void {
+
+  //   this.calculateEMI();
+
+  // }
+
+
+
+
 }
+
+
+
+
+const extraOptions = [
+  {
+    key: 'typeRating',
+    label: 'Type Rating',
+    cost: 2500000
+  },
+  {
+    key: 'dgcaConversion',
+    label: 'DGCA Conversion Cost',
+    cost: 400000
+  },
+  {
+    key: 'examFees',
+    label: 'Exam Fees',
+    cost: 80000
+  },
+  {
+    key: 'extraHours',
+    label: 'Extra Flight Hours',
+    cost: 600000
+  },
+  {
+    key: 'livingExpenses',
+    label: 'Living Expenses',
+    cost: 500000
+  },
+  {
+    key: 'medicalRenewals',
+    label: 'Medical Renewals',
+    cost: 50000
+  }
+
+  
+
+  
+];
+
+
+
+
+
+
+
+
+
+
 

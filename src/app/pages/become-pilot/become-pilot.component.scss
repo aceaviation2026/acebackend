@@ -5,7 +5,11 @@
   background: var(--gradient-hero);
   overflow: hidden;
   text-align: center;
+  margin-top: 80px;
 
+  
+
+  
   .hero-grid {
     position: absolute;
     inset: 0;
@@ -42,6 +46,32 @@
 }
 
 // PROCESS CARDS
+.timeline-icon{
+  width: 72px;
+  height: 72px;
+
+  border-radius: 20px;
+
+  background: #FFB300;   /* same yellow for all icons */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 34px;
+  color: #0A1628;
+
+  box-shadow: 0 10px 25px rgba(255,179,0,0.25);
+
+  transition: all 0.35s ease;
+}
+
+/* Active step */
+.timeline-step.active .timeline-icon{
+  background: #FFB300;
+  transform: scale(1.05);
+}
+
 .process-card {
   border-radius: var(--radius-md) !important;
   height: 100%;
@@ -85,7 +115,7 @@
   padding-right: 8px;
 
   &::-webkit-scrollbar { width: 4px; }
-  &::-webkit-scrollbar-thumb { background: var(--color-gold); border-radius: 99px; }
+  &::-webkit-scrollbar-thumb { background: var(#c49440); border-radius: 99px; }
 }
 
 .timeline-tab {
@@ -447,5 +477,3667 @@
   p { color: var(--color-text-muted); }
 }
 
-// PILOT FAQ (reuse styles from home)
-.pilot-faq-section { background: var(--color-navy); }
+
+
+
+
+
+
+/* =========================================================
+   GLOBAL WHITE + BRAND THEME
+========================================================= */
+
+:root{
+  --primary: #0A1628;
+  --primary-light: #13233d;
+  --gold: #c49440;
+  --gold-light: #c49440;
+  --white: #ffffff;
+
+  --text: #0A1628;
+  --text-light: #42526b;
+
+  --border: rgba(10,22,40,0.08);
+
+  --card-shadow: 0 12px 35px rgba(10,22,40,0.06);
+  --hover-shadow: 0 18px 45px rgba(10,22,40,0.12);
+}
+
+/* =========================================================
+   GLOBAL BACKGROUND
+========================================================= */
+
+html,
+body,
+.hero-section,
+.page-hero,
+.section-pad,
+.section-pad-sm,
+.timeline-section,
+.eligibility-section,
+.cost-calc-section,
+.pilot-faq-section,
+.features-section,
+.roadmap-preview,
+.testimonials-section,
+.faq-section,
+.cta-section,
+.partners-strip,
+.counters-section,
+.map-section,
+.cta-top-banner{
+  background: #ffffff !important;
+  color: var(--text);
+}
+
+/* Remove dark backgrounds everywhere */
+[style*="background: var(--color-navy-mid)"]{
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   GRID + HERO EFFECTS
+========================================================= */
+
+.hero-grid{
+  opacity: 0.05;
+  background-image:
+    linear-gradient(rgba(10,22,40,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,22,40,0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Star field softer */
+.star{
+  background: rgba(224,144,0,0.5);
+}
+
+/* Glow ring */
+.glow-ring{
+  background:
+    radial-gradient(circle,
+    rgba(224,144,0,0.15) 0%,
+    rgba(10,22,40,0.05) 50%,
+    transparent 70%);
+}
+
+/* =========================================================
+   HEADINGS & TEXT
+========================================================= */
+
+h1,h2,h3,h4,h5,h6,
+.display-hero,
+.section-title,
+.feature-title,
+.blog-title,
+.detail-title,
+.quiz-title,
+.form-heading,
+.featured-title{
+  color: #0A1628 !important;
+  font-weight: 700;
+}
+
+p,
+.hero-sub,
+.hero-subtext,
+.section-subtitle,
+.detail-desc,
+.feature-desc,
+.blog-excerpt,
+.story-text,
+.testimonial-text,
+.faq-answer p,
+.cost-note,
+.ci-value,
+.ci-sub,
+.author-role,
+.step-desc,
+.news-meta,
+.reg-desc{
+  color: #0A1628 !important;
+  opacity: 0.82;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   GRADIENT TEXT
+========================================================= */
+
+.gradient-text{
+  background: linear-gradient(
+    135deg,
+    #0A1628 0%,
+    #E09000 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.glass-card,
+.feature-card,
+.process-card,
+.timeline-detail,
+.quiz-card,
+.calc-form,
+.cost-breakdown,
+.faq-item,
+.counter-card,
+.blog-card,
+.story-card,
+.video-card,
+.contact-form,
+.contact-item,
+.social-card,
+.resource-card,
+.regulation-card,
+.school-card,
+.doctor-card,
+.news-item,
+.featured-article,
+.cta-banner{
+  background: #ffffff !important;
+  border: 1px solid rgba(10,22,40,0.08);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: none !important;
+  border-radius: 22px;
+}
+
+/* =========================================================
+   CARD HOVER EFFECTS
+========================================================= */
+
+.glass-card:hover,
+.feature-card:hover,
+.process-card:hover,
+.timeline-detail:hover,
+.quiz-card:hover,
+.counter-card:hover,
+.blog-card:hover,
+.story-card:hover,
+.video-card:hover,
+.contact-item:hover,
+.social-card:hover,
+.resource-card:hover,
+.regulation-card:hover,
+.school-card:hover,
+.doctor-card:hover,
+.news-item:hover,
+.featured-article:hover{
+  transform: translateY(-5px);
+  border-color: rgba(224,144,0,0.35);
+  box-shadow: var(--hover-shadow);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn-gold{
+  background: #E09000 !important;
+  color: #ffffff !important;
+  border: none;
+  font-weight: 700;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(224,144,0,0.25);
+}
+
+.btn-gold:hover{
+  background: #0A1628 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(10,22,40,0.2);
+}
+
+.btn-outline-sky{
+  border: 2px solid #0A1628;
+  color: #0A1628;
+  background: transparent;
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+.btn-outline-sky:hover{
+  background: #0A1628;
+  color: #ffffff;
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge-gold{
+  
+  background: rgba(224,144,0,0.12);
+  color: #0A1628;
+  border: 1px solid rgba(224,144,0,0.3);
+  font-weight: 700;
+}
+
+/* =========================================================
+   DIVIDERS
+========================================================= */
+
+.divider-gold{
+  width: 90px;
+  height: 4px;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    #0A1628,
+    #E09000
+  );
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a,
+.reg-link,
+.read-more-btn{
+  color: #0A1628;
+  transition: all 0.3s ease;
+}
+
+a:hover,
+.reg-link:hover,
+.read-more-btn:hover{
+  color: #E09000;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline-tab{
+  background: #ffffff;
+  border: 1px solid rgba(10,22,40,0.08);
+  transition: all 0.3s ease;
+}
+
+.timeline-tab:hover{
+  border-color: rgba(224,144,0,0.35);
+}
+
+.timeline-tab.active{
+  border-color: #E09000;
+  box-shadow: 0 12px 30px rgba(224,144,0,0.12);
+}
+
+.tab-title,
+.tab-number,
+.detail-step-num{
+  color: #0A1628;
+}
+
+/* =========================================================
+   QUIZ + CALCULATOR OPTIONS
+========================================================= */
+
+.quiz-opt,
+.calc-opt,
+.interest-opt{
+  background: #ffffff;
+  border: 1px solid rgba(10,22,40,0.12);
+  color: #0A1628;
+  transition: all 0.3s ease;
+}
+
+.quiz-opt:hover,
+.calc-opt:hover,
+.interest-opt:hover{
+  border-color: #E09000;
+  background: rgba(224,144,0,0.06);
+}
+
+.quiz-opt.selected,
+.calc-opt.active,
+.interest-opt.active{
+  background: rgba(224,144,0,0.12);
+  border-color: #E09000;
+  color: #0A1628;
+  font-weight: 700;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.form-input{
+  background: #ffffff;
+  border: 1px solid rgba(10,22,40,0.12);
+  color: #0A1628;
+}
+
+.form-input:focus{
+  border-color: #E09000;
+  box-shadow: 0 0 0 4px rgba(224,144,0,0.12);
+  outline: none;
+}
+
+.form-label-sky,
+.calc-label,
+.quiz-label{
+  color: #0A1628;
+  font-weight: 600;
+}
+
+/* =========================================================
+   PROGRESS BARS
+========================================================= */
+
+.progress-track,
+.breakdown-bar{
+  background: rgba(10,22,40,0.08);
+}
+
+.progress-fill,
+.breakdown-bar div{
+  background: linear-gradient(
+    90deg,
+    #0A1628,
+    #E09000
+  ) !important;
+}
+
+/* =========================================================
+   META TAGS
+========================================================= */
+
+.meta-tag{
+  background: rgba(10,22,40,0.05);
+  color: #0A1628;
+  border: 1px solid rgba(10,22,40,0.08);
+}
+
+/* =========================================================
+   SOCIAL + CONTACT
+========================================================= */
+
+.social-platform,
+.ci-title,
+.author-name,
+.story-name,
+.news-body h6{
+  color: #0A1628;
+  font-weight: 600;
+}
+
+/* =========================================================
+   TESTIMONIALS
+========================================================= */
+
+.quote-icon svg{
+  fill: #E09000 !important;
+}
+
+.dot{
+  background: rgba(10,22,40,0.18);
+}
+
+.dot.active{
+  background: #E09000;
+}
+
+/* =========================================================
+   COUNTERS + STATS
+========================================================= */
+
+.counter-value,
+.stat-value,
+.cost-value,
+.f-stat-val{
+  color: #0A1628;
+  font-weight: 800;
+}
+
+.counter-label,
+.stat-label,
+.f-stat-label{
+  color: #42526b;
+}
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.scroll-indicator span{
+  color: #0A1628;
+}
+
+.scroll-line{
+  background: linear-gradient(
+    to bottom,
+    #E09000,
+    transparent
+  );
+}
+
+/* =========================================================
+   AIRPLANE SVG COLORS
+========================================================= */
+
+.airplane-svg .plane-group ellipse,
+.airplane-svg .plane-group path{
+  transition: all 0.3s ease;
+}
+
+/* =========================================================
+   SMOOTH TRANSITIONS
+========================================================= */
+
+*{
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+
+
+
+
+/* =========================================
+   TESTIMONIALS SECTION
+========================================= */
+
+.testimonials-section {
+  background: #ffffff;
+  position: relative;
+}
+
+/* CARD */
+
+.testimonial-card {
+  background: #ffffff;
+  border: 1px solid rgba(10, 22, 40, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: 0.35s ease;
+  box-shadow: 0 10px 30px rgba(10, 22, 40, 0.06);
+}
+
+/* GOLD TOP BORDER */
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #c49440;
+}
+
+/* HOVER EFFECT */
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 179, 0, 0.35);
+  box-shadow: 0 18px 45px rgba(10, 22, 40, 0.12);
+}
+
+/* ICON */
+
+.quote-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: rgba(255, 179, 0, 0.12);
+  border: 1px solid rgba(255, 179, 0, 0.22);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  color: #c49440;
+
+  margin-bottom: 24px;
+}
+
+/* TESTIMONIAL TEXT */
+
+.testimonial-text {
+  color: #0A1628;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+  min-height: 120px;
+  font-weight: 500;
+}
+
+/* FOOTER */
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* AVATAR */
+
+.student-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #FFB300,
+    #ffd666
+  );
+
+  color: #0A1628;
+
+  font-weight: 700;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+/* NAME */
+
+.student-name {
+  color: #0A1628;
+  font-size: 16px;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+/* ROLE */
+
+.student-role {
+  color: rgba(10, 22, 40, 0.65);
+  font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .testimonial-card {
+    padding: 24px;
+  }
+
+  .testimonial-text {
+    min-height: auto;
+  }
+
+}
+
+
+
+
+
+/* =========================================
+   SALARY CAROUSEL SECTION
+========================================= */
+/* =========================================================
+   SALARY SECTION
+========================================================= */
+
+.salary-carousel-section{
+  position: relative;
+
+  background:
+    radial-gradient(circle at top right,
+    rgba(196,148,64,0.08),
+    transparent 35%),
+
+    #ffffff;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   CAROUSEL CARD
+========================================================= */
+
+.salary-carousel-card{
+  position: relative;
+
+  background: #ffffff;
+
+  border-radius: 32px;
+
+  padding: 50px;
+
+  border: 1px solid rgba(10,22,40,0.08);
+
+  box-shadow:
+    0 10px 40px rgba(10,22,40,0.06);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  transition: all 0.35s ease;
+
+  overflow: hidden;
+}
+
+/* GOLD TOP BORDER EFFECT */
+.salary-carousel-card::before{
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #c49440,
+    #f4d08d,
+    #c49440
+  );
+}
+
+/* HOVER */
+.salary-carousel-card:hover{
+  transform: translateY(-8px);
+
+  border-color: rgba(196,148,64,0.35);
+
+  box-shadow:
+    0 20px 60px rgba(196,148,64,0.15);
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.salary-left{
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+
+  flex: 1;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.salary-logo{
+  min-width: 90px;
+  width: 90px;
+  height: 90px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff8eb,
+      #f7ecd6
+    );
+
+  border: 1px solid rgba(196,148,64,0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 42px;
+
+  color: #c49440;
+
+  box-shadow:
+    inset 0 2px 6px rgba(255,255,255,0.7),
+    0 10px 20px rgba(196,148,64,0.12);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.salary-content{
+  flex: 1;
+}
+
+.salary-stage{
+  display: inline-block;
+
+  padding: 8px 14px;
+
+  border-radius: 50px;
+
+  background: #f8f4eb;
+
+  color: #c49440;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  margin-bottom: 16px;
+}
+
+.salary-role{
+  font-size: 36px;
+  font-weight: 800;
+
+  color: #0A1628;
+
+  margin-bottom: 14px;
+
+  line-height: 1.2;
+}
+
+.salary-description{
+  font-size: 16px;
+
+  color: #64748b;
+
+  line-height: 1.9;
+
+  margin-bottom: 24px;
+
+  max-width: 650px;
+}
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.salary-features{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.salary-features span{
+  padding: 10px 16px;
+
+  border-radius: 50px;
+
+  background: rgba(196,148,64,0.08);
+
+  border: 1px solid rgba(196,148,64,0.14);
+
+  color: #0A1628;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.salary-features span:hover{
+  background: #c49440;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.salary-right{
+  min-width: 250px;
+
+  text-align: center;
+
+  padding: 40px 30px;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf0,
+      #f8f4eb
+    );
+
+  border: 1px solid rgba(196,148,64,0.12);
+
+  box-shadow:
+    inset 0 2px 10px rgba(255,255,255,0.8);
+}
+
+/* PRICE */
+.salary-price{
+  font-size: 54px;
+  font-weight: 900;
+
+  color: #c49440;
+
+  line-height: 1;
+
+  margin-bottom: 12px;
+
+  text-shadow:
+    0 4px 12px rgba(196,148,64,0.18);
+}
+
+/* MONTH */
+.salary-month{
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  color: #0A1628;
+}
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.carousel-control-prev,
+.carousel-control-next{
+  width: auto;
+
+  opacity: 1;
+}
+
+.carousel-control-prev{
+  left: -35px;
+}
+
+.carousel-control-next{
+  right: -35px;
+}
+
+.custom-arrow{
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(196,148,64,0.18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #c49440;
+
+  font-size: 42px;
+  font-weight: 400;
+
+  box-shadow:
+    0 10px 25px rgba(10,22,40,0.08);
+
+  transition: all 0.3s ease;
+}
+
+.custom-arrow:hover{
+  background: #c49440;
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 16px 35px rgba(196,148,64,0.24);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:991px){
+
+  .salary-carousel-card{
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 40px 30px;
+  }
+
+  .salary-left{
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .salary-right{
+    width: 100%;
+  }
+
+  .salary-role{
+    font-size: 30px;
+  }
+
+  .salary-price{
+    font-size: 42px;
+  }
+
+  .salary-features{
+    justify-content: center;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .salary-carousel-card{
+    padding: 30px 24px;
+
+    border-radius: 24px;
+  }
+
+  .salary-logo{
+    width: 76px;
+    height: 76px;
+
+    font-size: 34px;
+  }
+
+  .salary-role{
+    font-size: 26px;
+  }
+
+  .salary-description{
+    font-size: 15px;
+  }
+
+  .salary-price{
+    font-size: 36px;
+  }
+
+  .custom-arrow{
+    width: 50px;
+    height: 50px;
+
+    font-size: 30px;
+  }
+
+  .carousel-control-prev{
+    left: -10px;
+  }
+
+  .carousel-control-next{
+    right: -10px;
+  }
+
+}
+
+/* LIGHT BUTTON */
+.modern-arrow{
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(196,148,64,0.18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #c49440;
+
+  font-size: 34px;
+  font-weight: 500;
+
+  box-shadow: 0 8px 24px rgba(10,22,40,0.08);
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.modern-arrow:hover{
+  background: #f8f4eb;
+
+  border-color: #c49440;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 14px 30px rgba(196,148,64,0.14);
+}
+
+/* POSITION */
+.carousel-control-prev{
+  left: -30px;
+}
+
+.carousel-control-next{
+  right: -30px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .modern-salary-card{
+    padding: 28px;
+  }
+
+  .salary-top{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .salary-heading{
+    font-size: 28px;
+  }
+
+  .salary-amount{
+    font-size: 36px;
+  }
+
+  .carousel-control-prev{
+    left: -10px;
+  }
+
+  .carousel-control-next{
+    right: -10px;
+  }
+
+  .modern-arrow{
+    width: 46px;
+    height: 46px;
+
+    font-size: 28px;
+  }
+
+}
+.salary-amount{
+  font-size: 46px;
+  font-weight: 900;
+
+  color: #c49440;
+
+  line-height: 1;
+}
+.salary-amount{
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 1;
+
+  color: #c49440;
+}
+
+.salary-amount .currency{
+  color: #0e273d;
+}
+  .salary-amount{
+  color: #c49440;
+  text-shadow: 0 2px 10px rgba(196,148,64,0.18);
+}
+/* PRICE */
+.salary-amount{
+  font-size: 46px;
+  font-weight: 900;
+
+  color: #c49440 !important;
+
+  line-height: 1;
+}
+
+
+
+/* =========================================
+   WHY CHOOSE ACADEMY SECTION
+========================================= */
+
+.why-academy-section{
+  background: #ffffff;
+  position: relative;
+}
+
+/* Card */
+.academy-card{
+  background: #ffffff;
+  border-radius: 32px;
+
+  padding: 40px 28px;
+  text-align: center;
+  height: 100%;
+
+  border: 1px solid rgba(10,22,40,0.08);
+
+  box-shadow: 0 10px 35px rgba(10,22,40,0.05);
+
+  transition: all 0.35s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+.academy-card:hover{
+  transform: translateY(-8px);
+
+  border-color: #FFB300;
+
+  box-shadow: 0 20px 45px rgba(255,179,0,0.18);
+}
+
+/* Top Glow */
+.academy-card::before{
+  content: '';
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 80%;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #c49440,
+    transparent
+  );
+
+  border-radius: 50px;
+}
+
+/* Icon Circle */
+.academy-icon{
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #0A1628;
+  border: 3px solid #FFB300;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  color: #ffffff;
+
+  box-shadow: 0 10px 20px rgba(10,22,40,0.15);
+
+  transition: all 0.35s ease;
+}
+
+/* Icon Hover */
+.academy-card:hover .academy-icon{
+  transform: rotateY(180deg) scale(1.05);
+
+  background: #c49440;
+  color: #0A1628;
+}
+
+/* Title */
+.academy-title{
+  font-size: 22px;
+  font-weight: 800;
+
+  color: #0A1628;
+
+  margin-bottom: 16px;
+}
+
+/* Description */
+.academy-text{
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: #5B6472;
+
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+
+  .academy-card{
+    padding: 35px 24px;
+    border-radius: 26px;
+  }
+
+  .academy-icon{
+    width: 78px;
+    height: 78px;
+    font-size: 30px;
+  }
+
+  .academy-title{
+    font-size: 20px;
+  }
+
+}
+
+
+
+/* =========================================================
+   GLOBAL WHITE + NAVY + GOLD THEME
+   Background : #ffffff
+   Primary Text : #0e273d
+   Accent Gold : #c49440
+========================================================= */
+
+:root{
+  --primary-dark: #0e273d;
+  --accent-gold: #c49440;
+  --accent-light: #f7f1e7;
+
+  --border-light: rgba(14,39,61,0.08);
+
+  --card-shadow: 0 10px 30px rgba(14,39,61,0.05);
+  --hover-shadow: 0 22px 45px rgba(196,148,64,0.14);
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+body,
+section,
+.page-hero,
+.timeline-section,
+.eligibility-section,
+.salary-carousel-section,a
+.cost-calc-section,
+.why-academy-section,
+.testimonials-section,
+.pilot-faq-section{
+  background: #ffffff !important;
+  color: #0e273d !important;
+}
+
+/* =========================================================
+   TEXT COLORS
+========================================================= */
+
+h1,h2,h3,h4,h5,h6,
+.section-title,
+.display-hero,
+.timeline-content h4,
+.academy-title,
+.salary-role,
+.student-name,
+.faq-question,
+.quiz-title{
+  color: #0e273d !important;
+}
+
+p,
+span,
+label,
+div,
+.section-subtitle,
+.hero-sub,
+.salary-description,
+.testimonial-text,
+.faq-answer p{
+  color: #4f6172 !important;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.page-hero{
+  padding: 130px 0 100px;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff !important;
+  
+}
+
+.page-hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(circle at top right,
+  rgba(196,148,64,0.08),
+  transparent 35%);
+}
+
+.hero-grid{
+  opacity:.04;
+
+  background-image:
+    linear-gradient(rgba(196,148,64,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(196,148,64,0.06) 1px, transparent 1px);
+
+  background-size:60px 60px;
+}
+
+.gradient-text{
+  background: linear-gradient(135deg,#c49440,#d7aa5a);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge-gold,
+.meta-tag{
+  background: rgba(196,148,64,0.10);
+  color: #c49440 !important;
+
+  border: 1px solid rgba(196,148,64,0.20);
+
+  border-radius: 999px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider-gold{
+  width: 90px;
+  height: 4px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    to right,
+    #c49440,
+    #ddb66f
+  );
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.glass-card,
+.process-card,
+.timeline-detail,
+.quiz-card,
+.salary-carousel-card,
+.calc-form,
+.cost-breakdown,
+.academy-card,
+.testimonial-card,
+.faq-item{
+  background:#ffffff !important;
+
+  border:1px solid rgba(14,39,61,0.08);
+
+  border-radius:28px;
+
+  box-shadow: var(--card-shadow);
+
+  transition: all .35s ease;
+}
+
+.glass-card:hover,
+.process-card:hover,
+.salary-carousel-card:hover,
+.academy-card:hover,
+.testimonial-card:hover,
+.faq-item:hover{
+  transform: translateY(-8px);
+
+  border-color: rgba(196,148,64,0.25);
+
+  box-shadow: var(--hover-shadow);
+}
+
+/* =========================================================
+   ICONS
+========================================================= */
+
+.process-icon,
+.detail-icon,
+.salary-logo,
+.academy-icon,
+.quote-icon,
+.student-avatar,
+.placeholder-icon{
+  background: rgba(196,148,64,0.10);
+
+  color: #c49440;
+
+  border-radius: 20px;
+}
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline-tab{
+  background:#ffffff;
+
+  border:1px solid rgba(14,39,61,0.08);
+
+  border-radius:20px;
+
+  transition:.3s ease;
+}
+
+.timeline-tab.active{
+  border-color: rgba(196,148,64,0.35);
+
+  background:#fffaf2;
+}
+
+.tab-number,
+.detail-step-num,
+.detail-duration,
+.progress-pct{
+  color:#c49440 !important;
+  font-weight:700;
+}
+
+.progress-track{
+  background:#eef2f6;
+}
+
+.progress-fill{
+  background:#c49440 !important;
+}
+
+/* =========================================================
+   QUIZ BUTTONS
+========================================================= */
+
+.quiz-opt,
+.calc-opt{
+  border:1px solid rgba(14,39,61,0.10);
+
+  background:#ffffff;
+
+  color:#0e273d;
+
+  border-radius:14px;
+
+  transition:.3s ease;
+}
+
+.quiz-opt.selected,
+.calc-opt.active{
+  background:#c49440;
+  color:#ffffff !important;
+
+  border-color:#c49440;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn-gold{
+  background:#c49440 !important;
+
+  color:#ffffff !important;
+
+  border:none;
+
+  border-radius:16px;
+
+  padding:14px 26px;
+
+  font-weight:700;
+
+  transition: all .3s ease;
+}
+
+.btn-gold:hover{
+  background:#0e273d !important;
+
+  transform:translateY(-3px);
+
+  box-shadow:0 14px 30px rgba(14,39,61,0.18);
+}
+
+.btn-outline-sky{
+  background:#ffffff;
+
+  color:#0e273d !important;
+
+  border:2px solid #c49440;
+
+  border-radius:16px;
+
+  padding:13px 24px;
+
+  font-weight:700;
+
+  transition:.3s ease;
+}
+
+.btn-outline-sky:hover{
+  background:#c49440;
+
+  color:#ffffff !important;
+}
+
+/* =========================================================
+   SALARY SECTION
+========================================================= */
+
+.salary-price{
+  color:#c49440 !important;
+
+  font-size:42px;
+  font-weight:800;
+}
+
+.salary-stage,
+.salary-month{
+  color:#c49440 !important;
+  font-weight:700;
+}
+
+.salary-features span{
+  background:#faf6ef;
+
+  color:#0e273d;
+
+  border:1px solid rgba(196,148,64,0.18);
+
+  border-radius:999px;
+
+  padding:8px 14px;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-item{
+  overflow:hidden;
+}
+
+.faq-question{
+  color:#0e273d !important;
+  font-weight:700;
+}
+
+.faq-icon{
+  color:#c49440;
+}
+
+/* =========================================================
+   TESTIMONIALS
+========================================================= */
+
+.student-avatar{
+  width:54px;
+  height:54px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-weight:800;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+input,
+select,
+textarea{
+  background:#ffffff;
+
+  border:1px solid rgba(14,39,61,0.12);
+
+  color:#0e273d;
+
+  border-radius:14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:#c49440;
+
+  box-shadow:0 0 0 4px rgba(196,148,64,0.10);
+
+  outline:none;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+  .display-hero{
+    font-size:2.5rem;
+  }
+
+  .salary-carousel-card,
+  .academy-card,
+  .testimonial-card{
+    padding:24px;
+  }
+
+}
+
+
+.display-hero{
+  font-size: 4.5rem;   /* reduced size */
+  line-height: 1.05;
+  font-weight: 800;
+}
+.display-hero{
+  font-size: clamp(3rem, 7vw, 4.8rem);
+  line-height: 1.05;
+  font-weight: 800;
+}
+.display-hero{
+  font-size: clamp(2.6rem, 6vw, 4rem);
+}
+
+
+
+
+/* =========================================================
+   REMOVE TOP EXTRA SPACE FROM HERO SECTION
+========================================================= */
+
+// .page-hero{
+  
+//   padding: 110px 0 70px !important;
+//   margin-top: 0 !important;
+//   min-height: auto !important;
+//   overflow: hidden;
+// }
+
+// /* Remove bootstrap spacing */
+// .page-hero .container,
+// .page-hero .row{
+//   margin-top: 0 !important;
+//   padding-top: 0 !important;
+// }
+
+// /* Hero Heading */
+// .page-hero .display-hero{
+//   font-size: clamp(2.5rem, 5vw, 4.2rem);
+//   line-height: 1.08;
+//   font-weight: 700;
+//   margin-bottom: 14px;
+// }
+
+// /* Hero Subtitle */
+// .page-hero .hero-sub{
+//   font-size: 1.05rem;
+//   line-height: 1.8;
+//   max-width: 760px;
+//   margin-inline: auto;
+//   margin-top: 10px !important;
+// }
+
+// /* Meta Tags */
+// .hero-meta{
+//   margin-top: 22px !important;
+// }
+
+/* Reduce section spacing globally */
+// .section-pad{
+//   padding: 75px 0 !important;
+// }
+
+// /* Remove unnecessary top gap from cards */
+// .process-card,
+// .timeline-detail,
+// .quiz-card,
+// .salary-carousel-card,
+// .calc-form,
+// .academy-card,
+// .testimonial-card,
+// .faq-list{
+//   margin-top: 0 !important;
+// }
+
+// /* Remove large heading bottom gaps */
+// .text-center.mb-5{
+//   margin-bottom: 2.5rem !important;
+// }
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 767.98px){
+
+  .page-hero{
+    padding: 95px 0 50px !important;
+  }
+
+  .page-hero .display-hero{
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.12;
+  }
+
+  .page-hero .hero-sub{
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding-inline: 8px;
+  }
+
+  .section-pad{
+    padding: 55px 0 !important;
+  }
+
+  .text-center.mb-5{
+    margin-bottom: 2rem !important;
+  }
+}
+
+
+/* =========================================================
+   GLOBAL SECTION SPACING FIX
+========================================================= */
+
+/* Remove unwanted gaps between all sections */
+.page-hero,
+.timeline-section,
+.eligibility-section,
+.salary-carousel-section,
+.cost-calc-section,
+.why-academy-section,
+.testimonials-section,
+.pilot-faq-section,
+.section-pad,
+.section-pad-sm{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: none !important;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.page-hero{
+  position: relative;
+  padding-top: 120px !important;
+  padding-bottom: 70px !important;
+  overflow: hidden;
+}
+
+/* Hero container spacing */
+.page-hero .container{
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Hero heading */
+.page-hero .display-hero{
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  line-height: 1.08;
+  font-weight: 700;
+  margin-bottom: 14px !important;
+}
+
+/* Hero subtitle */
+.page-hero .hero-sub{
+  max-width: 760px;
+  margin-inline: auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-top: 12px !important;
+}
+
+/* Hero meta */
+.hero-meta{
+  margin-top: 20px !important;
+}
+
+/* =========================================================
+   SECTION PADDING
+========================================================= */
+
+.section-pad{
+  padding-top: 65px !important;
+  padding-bottom: 65px !important;
+}
+
+.section-pad-sm{
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+/* =========================================================
+   REMOVE EXTRA BOOTSTRAP SPACING
+========================================================= */
+
+.container,
+.container-fluid,
+.row{
+  margin-top: 0 !important;
+}
+
+/* Section heading spacing */
+.text-center.mb-5{
+  margin-bottom: 2.7rem !important;
+}
+
+/* Remove unnecessary top margins */
+.section-title,
+.section-subtitle,
+.divider-gold,
+.badge-gold{
+  margin-top: 0 !important;
+}
+
+/* =========================================================
+   CARD SPACING FIX
+========================================================= */
+
+.process-card,
+.timeline-detail,
+.quiz-card,
+.salary-carousel-card,
+.calc-form,
+.cost-breakdown,
+.academy-card,
+.testimonial-card,
+.faq-list{
+  margin-top: 0 !important;
+}
+
+/* Remove top gap inside cards */
+.process-card h5,
+.academy-title,
+.salary-role,
+.quiz-title,
+.student-name{
+  margin-top: 0 !important;
+}
+
+/* =========================================================
+   TIMELINE SECTION
+========================================================= */
+
+.timeline-wrapper{
+  margin-top: 10px !important;
+}
+
+.timeline-detail{
+  padding: 32px !important;
+}
+
+/* =========================================================
+   TESTIMONIAL SECTION
+========================================================= */
+
+.testimonial-card{
+  height: 100%;
+}
+
+/* =========================================================
+   FAQ SECTION
+========================================================= */
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media(max-width:768px){
+
+  .page-hero{
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
+  }
+
+  .page-hero .display-hero{
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.12;
+  }
+
+  .page-hero .hero-sub{
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding-inline: 6px;
+  }
+
+  .section-pad{
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+  }
+
+  .section-pad-sm{
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .text-center.mb-5{
+    margin-bottom: 2rem !important;
+  }
+
+  .timeline-detail,
+  .quiz-card,
+  .calc-form,
+  .academy-card,
+  .testimonial-card{
+    padding: 22px !important;
+  }
+
+  .salary-carousel-card{
+    padding: 20px !important;
+  }
+
+  .timeline-wrapper{
+    gap: 18px;
+  }
+}
+
+
+/* =========================================
+   REMOVE GAP BETWEEN NAVBAR & HERO
+========================================= */
+
+/* Remove browser default spacing */
+html,
+body{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Navbar */
+.navbar{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: 0 !important;
+  position: relative;
+  z-index: 999;
+}
+
+/* HERO SECTION */
+.page-hero{
+  margin-top: -100px !important;   /* adjust according navbar height */
+  padding-top: 140px !important; /* keeps content visible */
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .page-hero{
+    margin-top: -70px !important;
+    padding-top: 120px !important;
+  }
+
+}
+
+
+/* PROCESS CARD BORDER DESIGN */
+.process-card{
+  position: relative;
+
+  overflow: hidden;
+
+  /* ONLY RIGHT + BOTTOM BORDER */
+  border-right: 2px solid #c49440;
+  border-bottom: 2px solid #c49440;
+
+  border-left: none;
+  border-top: none;
+
+  border-radius: 0 0 18px 0;
+
+  transition: all .35s ease;
+
+  background: #fff;
+}
+
+/* HOVER EFFECT */
+.process-card:hover{
+  transform: translateY(-6px);
+
+  border-right-color: #d6a850;
+  border-bottom-color: #d6a850;
+
+  box-shadow:
+    0 12px 30px rgba(196,148,64,0.18);
+}
+
+/* GOLDEN BOTTOM GLOW */
+.process-card::after{
+  content: "";
+
+  position: absolute;
+
+  left: 15%;
+  bottom: 0;
+
+  width: 70%;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #c49440,
+    transparent
+  );
+}
+
+/* RIGHT SIDE GLOW */
+.process-card::before{
+  content: "";
+
+  position: absolute;
+
+  top: 15%;
+  right: 0;
+
+  width: 2px;
+  height: 70%;
+
+  background: linear-gradient(
+    180deg,
+    transparent,
+    #c49440,
+    transparent
+  );
+}
+
+
+.faq-card{
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(10,22,40,0.08);
+
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+
+  box-shadow:
+    0 8px 24px rgba(10,22,40,0.05);
+}
+
+/* ACTIVE CARD */
+.faq-card.active{
+  border-color: #c49440;
+
+  box-shadow:
+    0 16px 40px rgba(196,148,64,0.14);
+}
+
+/* QUESTION */
+.faq-question{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 26px 30px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.faq-question h5{
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #0A1628;
+
+  line-height: 1.5;
+}
+
+/* ICON */
+.faq-icon{
+  min-width: 42px;
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: #f8f4eb;
+
+  border: 1px solid rgba(196,148,64,0.18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #c49440;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+/* ACTIVE ICON */
+.faq-card.active .faq-icon{
+  background: #c49440;
+
+  color: #ffffff;
+
+  transform: rotate(180deg);
+}
+
+/* ANSWER */
+.faq-answer{
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition:
+    max-height 0.4s ease,
+    padding 0.3s ease;
+}
+
+/* OPEN ANSWER */
+.faq-card.active .faq-answer{
+  max-height: 300px;
+
+  padding:
+    0 30px 28px;
+}
+
+/* ANSWER TEXT */
+.faq-answer-inner p{
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+/* HOVER */
+.faq-card:hover{
+  transform: translateY(-3px);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .faq-question{
+    padding: 22px 20px;
+  }
+
+  .faq-question h5{
+    font-size: 16px;
+  }
+
+  .faq-card.active .faq-answer{
+    padding:
+      0 20px 24px;
+  }
+
+}
+
+
+
+
+.page-hero{
+  margin-top: -100px !important;
+}
+/* =========================================
+   DESKTOP GAP BETWEEN NAVBAR & HERO
+========================================= */
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #ffffff;
+}
+
+/* HERO SECTION */
+.page-hero{
+  margin-top: 90px !important;   /* space below navbar */
+  padding-top: 70px !important;
+  padding-bottom: 80px !important;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffdf9 0%,
+      #ffffff 100%
+    );
+}
+
+/* DESKTOP */
+@media (min-width: 992px){
+
+  .page-hero{
+    margin-top: 90px !important;
+    padding-top: 80px !important;
+  }
+
+}
+
+/* TABLET */
+@media (max-width: 991px){
+
+  .page-hero{
+    margin-top: 80px !important;
+    padding-top: 30px !important;
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 767px){
+
+  .page-hero{
+    margin-top: 72px !important;
+    padding-top: 40px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .badge-gold{
+    display: inline-flex !important;
+    margin-bottom: 16px !important;
+  }
+
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.page-hero{
+  margin-bottom: 0 !important;
+  padding-bottom: 40px !important;
+}
+
+/* =========================================
+   PROCESS CARD SECTION
+========================================= */
+
+.section-pad{
+  padding-top: 0px !important;   /* reduced gap */
+  padding-bottom: 60px !important;
+}
+
+/* Desktop */
+@media(min-width:992px){
+
+  .section-pad{
+    padding-top: 0px !important;
+  }
+
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+  .page-hero{
+    // padding-bottom: 25px !important;
+  }
+
+  .section-pad{
+    padding-top: 0px !important;
+    padding-bottom: 40px !important;
+  }
+
+}
+.badge-gold{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+.page-hero .badge-gold{
+  display: flex;
+  width: fit-content;
+
+  margin: 0 auto 18px auto !important;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================
+   HERO SECTION GRADIENT BACKGROUND
+========================================= */
+
+.page-hero{
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f8f4eb 35%,
+    #fffaf2 65%,
+    #ffffff 100%
+  ) !important;
+}
+
+/* Optional soft glow overlay */
+.page-hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(196,148,64,0.10),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(14,39,61,0.05),
+      transparent 40%
+    );
+
+  pointer-events: none;
+}
+
+
+
+/* =========================================
+   REDUCE HERO SECTION HEIGHT
+========================================= */
+
+.page-hero{
+  padding-top: 70px !important;
+  padding-bottom: 20px !important; /* reduced bottom height */
+  min-height: auto !important;
+}
+
+/* Remove extra spacing from content */
+.page-hero .display-hero{
+  margin-bottom: 12px !important;
+}
+
+.page-hero .hero-sub{
+  margin-top: 10px !important;
+  margin-bottom: 14px !important;
+}
+
+.page-hero .hero-meta{
+  margin-top: 12px !important;
+  padding-bottom: 60px !important;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .page-hero{
+    padding-top: 40px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .page-hero .hero-meta{
+    margin-top: 10px !important;
+  }
+
+}
+
+/* =========================================
+   PROCESS SECTION TOP SPACING
+========================================= */
+
+.section-pad{
+  margin-top: 80px !important;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .section-pad{
+    margin-top: 34px !important;
+  }
+
+}
+
+
+/* =========================================
+   PROCESS CARDS RESPONSIVE LAYOUT
+========================================= */
+
+/* MOBILE → 1 card per row */
+@media (max-width: 767px){
+
+  .section-pad .col-6{
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+}
+
+/* TABLET → 2 cards per row */
+@media (min-width: 768px) and (max-width: 991px){
+
+  .section-pad .col-lg-3{
+    width: 50% !important;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+
+}
+
+/* DESKTOP → 4 cards per row (default) */
+@media (min-width: 992px){
+
+  .section-pad .col-lg-3{
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+}
+
+
+/* =====================================
+   EMI LAYOUT WRAPPER
+===================================== */
+
+.emi-layout-wrapper {
+
+  display: grid;
+
+  grid-template-columns: 1.2fr 0.8fr;
+
+  gap: 35px;
+
+  align-items: stretch;
+}
+
+/* =====================================
+   LEFT PANEL
+===================================== */
+
+.emi-left-panel {
+
+  background: white;
+
+  border-radius: 32px;
+
+  padding: 45px;
+
+  border: 1px solid rgba(196,148,64,0.15);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* =====================================
+   BADGE
+===================================== */
+
+.badge-gold-custom {
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 24px;
+
+  border-radius: 50px;
+
+  background: rgba(196,148,64,0.12);
+
+  border: 1px solid rgba(196,148,64,0.35);
+
+  color: #c49440;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  margin-bottom: 24px;
+}
+
+/* =====================================
+   TITLE
+===================================== */
+
+.emi-main-heading {
+
+  color:#0e273d ;
+
+  font-size: 48px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  margin-bottom: 18px;
+}
+
+.emi-main-desc {
+
+  color: rgba(255,255,255,0.72);
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+
+  max-width: 680px;
+}
+
+/* =====================================
+   FORM BOX
+===================================== */
+
+.emi-form-box {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.emi-input-group label {
+
+  display: block;
+
+  color:#0e273d ;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  margin-bottom: 10px;
+}
+
+.emi-input-wrap {
+
+  position: relative;
+}
+
+.emi-input-icon {
+
+  position: absolute;
+
+  top: 50%;
+  left: 18px;
+
+  transform: translateY(-50%);
+
+  color: #c49440;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.emi-modern-input {
+
+  width: 100%;
+
+  height: 62px;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(255,255,255,0.05);
+
+  padding: 0 20px 0 52px;
+
+  color: #0e273d;
+
+  font-size: 16px;
+
+  transition: all 0.3s ease;
+}
+
+.emi-modern-input:focus {
+
+  outline: none;
+
+  border-color: #c49440;
+
+  background: rgba(255,255,255,0.08);
+}
+
+.emi-modern-input::placeholder {
+
+  color: rgba(255,255,255,0.42);
+}
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.emi-calculate-btn {
+
+  height: 62px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: #c49440;
+
+  color: #0e273d;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.emi-calculate-btn:hover {
+
+  transform: translateY(-3px);
+
+  background: #d9a953;
+}
+
+/* =====================================
+   RIGHT PANEL
+===================================== */
+
+.emi-right-panel {
+  height: 100%;
+}
+
+.emi-summary-card {
+
+  height: 100%;
+
+  background: linear-gradient(
+    180deg,
+    #c49440,
+    #b8862f
+  );
+
+  border-radius: 32px;
+
+  padding: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* =====================================
+   SUMMARY TOP
+===================================== */
+
+.summary-top {
+
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+.summary-icon {
+
+  width: 88px;
+  height: 88px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto auto 20px;
+
+  font-size: 34px;
+
+  color: #0e273d ;
+
+  font-weight: 700;
+}
+
+.summary-top h3 {
+
+  color:#0e273d ;
+
+  font-size: 34px;
+
+  font-weight: 800;
+}
+
+/* =====================================
+   SUMMARY ITEMS
+===================================== */
+
+.summary-item {
+
+  background :#c49440;
+
+  border-radius: 18px;
+
+  padding: 22px 24px;
+
+  margin-bottom: 18px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.summary-item span {
+
+  color: rgba(255,255,255,0.8);
+
+  font-size: 15px;
+}
+
+.summary-item strong {
+
+  color: #0e273d ;
+
+  font-size: 26px;
+
+  font-weight: 800;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:991px){
+
+  .emi-layout-wrapper {
+
+    grid-template-columns: 1fr;
+  }
+
+  .emi-left-panel,
+  .emi-summary-card {
+
+    padding: 30px;
+  }
+
+  .emi-main-heading {
+
+    font-size: 38px;
+  }
+
+}
+
+@media(max-width:576px){
+
+  .emi-main-heading {
+
+    font-size: 30px;
+  }
+
+  .summary-item {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .summary-item strong {
+
+    font-size: 22px;
+  }
+
+}
+
+
+
+
+/* =====================================
+   FINANCE HUB SECTION
+===================================== */
+/* =====================================
+   LOAN COMPARISON WRAPPER
+===================================== */
+
+.loan-comparison-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* =====================================
+   LOAN STRIP
+===================================== */
+
+.loan-strip {
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border: 1px solid rgba(196,148,64,0.18);
+
+  transition: all 0.35s ease;
+}
+
+.loan-strip:hover {
+
+  transform: translateY(-4px);
+
+  border-color: #c49440;
+
+  box-shadow:
+    0 16px 35px rgba(0,0,0,0.22);
+}
+
+/* =====================================
+   LEFT SIDE
+===================================== */
+
+.loan-bank {
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  min-width: 280px;
+}
+
+.loan-icon {
+
+  width: 60px;
+  height: 62px;
+
+  border-radius: 22px;
+
+  background: #c49440;
+
+  color: #0e273d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  flex-shrink: 0;
+}
+
+.loan-bank-info h4 {
+
+  color:#0e273d ;
+
+  margin-bottom: 6px;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.loan-bank-info p {
+
+  margin: 0;
+
+  color: rgba(255,255,255,0.68);
+
+  font-size: 14px;
+}
+
+/* =====================================
+   CENTER DETAILS
+===================================== */
+
+.loan-details {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(130px, 1fr));
+
+  gap: 18px;
+
+  flex: 1;
+}
+
+.loan-detail-box {
+
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 16px;
+
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.loan-detail-box span {
+
+  display: block;
+
+  color: rgba(255,255,255,0.65);
+
+  font-size: 13px;
+
+  margin-bottom: 8px;
+}
+
+.loan-detail-box strong {
+
+  color:#0e273d ;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.loan-action {
+  min-width: 170px;
+}
+
+.loan-btn {
+
+  width: 80%;
+
+  border: none;
+
+  background: #c49440;
+
+  color: #0e273d;
+
+  border-radius: 14px;
+
+  padding: 15px 18px;
+
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.loan-btn:hover {
+
+  transform: translateY(-2px);
+
+  background: #ddb15b;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media(max-width:1199px){
+
+  .loan-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .loan-details {
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .loan-action {
+    width: 100%;
+  }
+
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:576px){
+
+  .loan-strip {
+    padding: 22px;
+  }
+
+  .loan-bank {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .loan-details {
+    grid-template-columns: 1fr;
+  }
+
+  .loan-bank-info h4 {
+    font-size: 20px;
+  }
+
+  .loan-icon {
+    width: 74px;
+    height: 74px;
+  }
+
+}
+
+
+
+.finance-hub {
+  background: #081321;
+  position: relative;
+  overflow: hidden;
+}
+
+.finance-subtitle {
+  max-width: 850px;
+  margin: auto;
+}
+
+/* =====================================
+   FINANCE CARD
+===================================== */
+
+.finance-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 24px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  transition: 0.4s ease;
+  height: 100%;
+}
+
+.finance-card:hover {
+  transform: translateY(-8px);
+  border-color: #c49440;
+}
+
+.bank-badge {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,#d4af37,#f6d365);
+  color: #000;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.finance-card h4 {
+  color: #0e273d ;
+  margin-bottom: 20px;
+}
+
+.finance-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.finance-list li {
+  color: #0e273d ;
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+.finance-list strong {
+  color: #0e273d ;
+}
+
+.btn-finance {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#d4af37,#f6d365);
+  color: #000;
+  font-weight: 700;
+}
+
+/* =====================================
+   EMI CALCULATOR
+===================================== */
+
+.loan-calculator-box {
+  background: rgba(255,255,255,0.04);
+  border-radius: 30px;
+  padding: 50px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.calculator-title {
+  color:#0e273d ;
+  margin-bottom: 18px;
+}
+
+.calculator-desc {
+  color:#0e273d ;
+  margin-bottom: 25px;
+}
+
+.calc-field {
+  margin-bottom: 22px;
+}
+
+.calc-field label {
+  color:#0e273d ;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.finance-input {
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  color:#0e273d ;
+}
+
+.finance-input:focus {
+  box-shadow: none;
+  border-color: #d4af37;
+  background: rgba(255,255,255,0.1);
+}
+
+.emi-result-card {
+  background: rgba(255,255,255,0.06);
+  padding: 35px;
+  border-radius: 24px;
+}
+
+.emi-result-card h4 {
+  color: #0e273d #0e273d ;
+  margin-bottom: 25px;
+}
+
+.emi-result-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.emi-result-item span {
+  color: #0e273d ;
+}
+
+.emi-result-item strong {
+  color: #d4af37;
+  font-size: 20px;
+}
+
+/* =====================================
+   TCS SECTION
+===================================== */
+
+.tcs-section {
+  background: rgba(255,255,255,0.04);
+  padding: 45px;
+  border-radius: 28px;
+}
+
+.tcs-section h3 {
+  color:#0e273d;
+}
+
+.tcs-section p,
+.tcs-list li {
+  color:#0e273d;
+  line-height: 1.8;
+}
+
+.tcs-list {
+  padding-left: 20px;
+}
+
+.tcs-card {
+  background: rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.tcs-card h5 {
+  color:#0e273d;
+}
+
+.tcs-card p {
+  color: #0e273d;
+}
+
+/* =====================================
+   SCHOLARSHIP CARD
+===================================== */
+
+.scholarship-card {
+  background: rgba(255,255,255,0.05);
+  padding: 35px;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.4s ease;
+  height: 100%;
+}
+
+.scholarship-card:hover {
+  transform: translateY(-8px);
+  border-color: #d4af37;
+}
+
+.scholarship-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  background: rgba(212,175,55,0.15);
+  color: #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+
+.scholarship-card h4 {
+  color: #0e273d;
+  margin-bottom: 15px;
+}
+
+.scholarship-card p {
+  color:#0e273d;
+  line-height: 1.8;
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:768px){
+
+  .loan-calculator-box,
+  .tcs-section {
+    padding: 25px;
+  }
+
+  .finance-card,
+  .scholarship-card {
+    padding: 24px;
+  }
+
+  
+
+}
+
+
+
+
+
+
+
+
+  /* =========================================
+   SCHOLARSHIP SECTION
+========================================= */
+
+.aviation-support-section {
+    padding: 90px 0;
+    background: #f7f8fc;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.support-heading {
+    max-width: 850px;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.support-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #c49440, #c49440);
+    color: white;
+    padding: 10px 28px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+}
+
+.support-heading h2 {
+    font-size: 56px;
+    font-weight: 800;
+    color: #0e273d ;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.heading-line {
+    width: 90px;
+    height: 4px;
+    background: #c49440;
+    margin: 0 auto 25px;
+    border-radius: 50px;
+}
+
+.support-heading p {
+    font-size: 20px;
+    color: white ;
+    line-height: 1.9;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.support-card {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.06);
+    height: 100%;
+    transition: 0.4s ease;
+}
+
+.support-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-top {
+    height: 8px;
+    width: 100%;
+}
+
+.gold-top {
+    background: linear-gradient(90deg, #c49440, #c49440);
+}
+
+.navy-top {
+    background: linear-gradient(90deg, #0e273d , #0e273d );
+}
+
+.card-body-custom {
+    padding: 35px;
+}
+
+/* =========================================
+   TAGS
+========================================= */
+
+.mini-tag {
+    display: inline-block;
+    background: #c49440;
+    color: #ffffff !important;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.navy-tag {
+    background: #0e273d ;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.support-card h3 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0e273d ;
+    margin-bottom: 18px;
+    line-height: 1.3;
+}
+
+.small-line {
+    width: 55px;
+    height: 4px;
+    background: #c49440;
+    border-radius: 50px;
+    margin-bottom: 24px;
+}
+
+.navy-line {
+    background:#0e273d ;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.card-desc {
+    font-size: 18px;
+    color:white;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+/* =========================================
+   INFO BOXES
+========================================= */
+
+.info-box {
+    background: #faf7ef;
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 22px;
+}
+
+.navy-box {
+    background: #f3f6fc;
+}
+
+.light-box {
+    // background: #f9f9fb;
+}
+
+.info-box h5 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0b2558;
+    margin-bottom: 18px;
+}
+
+.info-box ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.info-box ul li {
+    font-size: 17px;
+    color: #30343b;
+    margin-bottom: 14px;
+    line-height: 1.7;
+}
+
+.info-box p {
+    font-size: 17px;
+    color: white;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* =========================================
+   NOTE
+========================================= */
+
+.support-note {
+    margin-top: 50px;
+    background: #fff;
+    border: 1px solid #d7dce8;
+    padding: 22px 30px;
+    border-radius: 18px;
+    text-align: center;
+    font-size: 17px;
+    color: #4e5663;
+    line-height: 1.8;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.support-note strong {
+    color: #0b2558;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+
+    .support-heading h2 {
+        font-size: 42px;
+    }
+
+    .support-heading p {
+        font-size: 18px;
+    }
+
+    .support-card h3 {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .aviation-support-section {
+        padding: 70px 0;
+    }
+
+    .support-heading h2 {
+        font-size: 34px;
+    }
+
+    .support-heading p {
+        font-size: 16px;
+    }
+
+    .card-body-custom {
+        padding: 28px;
+    }
+
+    .support-card h3 {
+        font-size: 24px;
+    }
+
+    .card-desc,
+    .info-box ul li,
+    .info-box p {
+        font-size: 15px;
+    }
+
+}
+
+
+
+
+.extra-options{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-top:15px;
+}
+
+.extra-check{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:14px 16px;
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:14px;
+    cursor:pointer;
+    transition:0.3s;
+    background:rgba(255,255,255,0.03);
+}
+
+.extra-check:hover{
+    border-color:#d4af37;
+    transform:translateY(-2px);
+}
+
+.extra-check input{
+    width:18px;
+    height:18px;
+    accent-color:#d4af37;
+}
+
+.extra-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+}
+
+.extra-title{
+    color:#fff;
+    font-weight:500;
+}
+
+.extra-price{
+    color:#d4af37;
+    font-size:14px;
+    font-weight:600;
+}

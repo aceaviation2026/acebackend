@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
       right: 24px;
       width: 46px;
       height: 46px;
-      background: linear-gradient(135deg, #FFB300, #FF8C00);
+      background: linear-gradient(135deg, #c49440, #c49440);
       color: #0A1628;
       border: none;
       border-radius: 12px;

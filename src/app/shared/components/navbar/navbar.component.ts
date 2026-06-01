@@ -23,18 +23,18 @@ interface NavLink {
           <!-- Brand -->
           <a routerLink="/" class="nav-brand" (click)="closeMenu()">
             <div class="brand-logo">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <circle cx="18" cy="18" r="18" fill="#FFB300" opacity="0.15"/>
-                <path d="M6 20L18 8L30 20" stroke="#FFB300" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M10 20L18 12L26 20" stroke="#FFB300" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-                <rect x="15" y="20" width="6" height="8" rx="1" fill="#FFB300"/>
-                <circle cx="18" cy="18" r="2" fill="#FFB300"/>
-              </svg>
+              
             </div>
-            <div class="brand-text">
-              <span class="brand-name">SkyPilot</span>
-              <span class="brand-sub">Academy</span>
-            </div>
+           <div class="brand-text">
+          <a routerLink="/" class="nav-brand" (click)="closeMenu()">
+  <img
+    src="assets/images/ace_aviator_logo-removebg-preview.png"
+    class="logo-img"
+    alt="Ace Aviator Logo">
+</a>
+   </div>
+           
+
           </a>
 
           <!-- Desktop Nav Links -->
@@ -69,7 +69,6 @@ interface NavLink {
               <span></span><span></span><span></span>
             </button>
           </div>
-
         </div>
       </div>
 

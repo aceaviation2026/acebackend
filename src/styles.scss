@@ -232,7 +232,8 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--color-navy); }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-gold);
+  // background: var(--color-gold);
+  background-color: #c49440;
   border-radius: 99px;
 }
 

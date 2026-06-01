@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,FormsModule],
   template: `
+
+
+  
+
+
+
     <footer class="site-footer">
       <!-- Top Gradient Line -->
       <div class="footer-accent-line"></div>
@@ -18,15 +25,16 @@ import { RouterLink } from '@angular/router';
             <div class="col-lg-4">
               <div class="footer-brand">
                 <div class="footer-logo">
-                  <svg width="40" height="40" viewBox="0 0 36 36" fill="none">
-                    <circle cx="18" cy="18" r="18" fill="#FFB300" opacity="0.15"/>
-                    <path d="M6 20L18 8L30 20" stroke="#FFB300" stroke-width="2.5" stroke-linecap="round"/>
-                    <path d="M10 20L18 12L26 20" stroke="#FFB300" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-                    <rect x="15" y="20" width="6" height="8" rx="1" fill="#FFB300"/>
-                  </svg>
+                 
                   <div>
-                    <div class="footer-brand-name">SkyPilot Academy</div>
-                    <div class="footer-brand-sub">Premium Aviation Education</div>
+              <div class="brand-text">
+             <a class="navbar-brand" href="/">
+              <img style="height:150px"
+              src  ="assets/images/ace_aviator_logo-removebg-preview.png"
+              class="logo-img">
+          </a>
+            </div>
+                <div class="footer-brand-sub">Premium Aviation Education</div>
                   </div>
                 </div>
                 <p class="footer-desc">
@@ -88,23 +96,38 @@ import { RouterLink } from '@angular/router';
                   <svg width="16" height="16" fill="none" stroke="#FFB300" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
                   </svg>
-                  <span>info&#64;skypilotacademy.in</span>
+                
+                    <span>admin&#64;theaceaviator.com</span>
+                    
+
+                </div>
+
+                 <div class="contact-item">
+                  <svg width="16" height="16" fill="none" stroke="#FFB300" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                
+                <span>support&#64;theaceaviator.com</span>
+                     
+
                 </div>
                 <div class="contact-item">
                   <svg width="16" height="16" fill="none" stroke="#FFB300" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
                   </svg>
-                  <span>Connaught Place, New Delhi — 110001</span>
+                  <span>Dadar: 400014</span>
                 </div>
               </div>
               <div class="footer-newsletter">
                 <p>Get aviation updates in your inbox</p>
                 <div class="newsletter-form">
-                  <input type="email" placeholder="your&#64;email.com" id="footerEmailInput">
-                  <button class="btn-gold" style="padding:10px 20px;font-size:0.82rem;">Subscribe</button>
+                  <input class="col-75" type="email" placeholder="your&#64;email.com" id="footerEmailInput">
+                  <button class="btn-gold"style="padding:10px 20px;font-size:0.82rem;">Subscribe</button>
                 </div>
               </div>
             </div>
+
+            
 
           </div>
         </div>
@@ -114,7 +137,10 @@ import { RouterLink } from '@angular/router';
       <div class="footer-bottom">
         <div class="container">
           <div class="footer-bottom-inner">
-            <span>© 2025 SkyPilot Academy. All rights reserved.</span>
+           <span>
+                 © 2025 THE ACE AVIATOR Academy, developed and operated by Ambi Elite Pvt. Ltd. All rights reserved.
+            </span>
+            
             <div class="footer-legal">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Use</a>

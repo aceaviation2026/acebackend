@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   roadmapSteps = [
     { step: '01', title: 'Eligibility',      desc: 'Check age, education & medical requirements for CPL India.', icon: '📋' },
-    { step: '02', title: 'Medical Test',      desc: 'DGCA Class 1 medical from authorised AME doctors.',          icon: '🏥' },
+    { step: '02', title: 'Medical Test',      desc: ' Medical from DGCA-authorised AME doctors (required before CPL issuance).',          icon: '🏥' },
     { step: '03', title: 'Ground School',     desc: '14 DGCA subjects — met, nav, ATF, tech gen, air law & more.', icon: '📚' },
     { step: '04', title: 'Flight Training',   desc: '200 hours of flight training at DGCA-approved flight schools.', icon: '✈️' },
     { step: '05', title: 'CPL License',       desc: 'Clear DGCA CPL exams and receive your Commercial Pilot License.', icon: '🪪' },
@@ -72,21 +72,21 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       name: 'Arjun Mehta',
       role: 'First Officer – IndiGo',
-      text: 'SkyPilot Academy\'s roadmap clarity saved me months of confusion. From CPL prep to airline interviews — their guidance was spot-on. I cleared my IndiGo assessment on the first attempt!',
+      text: 'THE ACE AVIATOR EDUCATION\'s roadmap clarity saved me months of confusion. From CPL prep to airline interviews — their guidance was spot-on. I cleared my IndiGo assessment on the first attempt!',
       avatar: 'AM',
       rating: 5
     },
     {
       name: 'Priya Sharma',
       role: 'Cadet Pilot – Air India',
-      text: 'As a girl from a tier-2 city, I had zero idea where to start. SkyPilot\'s consultation helped me get into a reputed DGCA-approved flight school with a scholarship. Life-changing!',
+      text: 'As a girl from a tier-2 city, I had zero idea where to start. THE ACE AVIATOR\'s consultation helped me get into a reputed DGCA-approved flight school with a scholarship. Life-changing!',
       avatar: 'PS',
       rating: 5
     },
     {
       name: 'Karan Patel',
       role: 'CPL Holder – Abroad Training',
-      text: 'The cost calculator and school comparisons on this platform are incredibly accurate. I completed my 200 hours in the USA and the SkyPilot team guided every step of the process.',
+      text: 'The cost calculator and school comparisons on this platform are incredibly accurate. I completed my 200 hours in the USA and THE ACE AVIATOR EDUCATION team guided every step of the process.',
       avatar: 'KP',
       rating: 5
     }
@@ -103,11 +103,32 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     { name: 'Indigo Airways', short: 'IndiGo' },
     { name: 'Air India', short: 'Air India' },
     { name: 'SpiceJet', short: 'SpiceJet' },
-    { name: 'Go First', short: 'GoFirst' },
-    { name: 'Vistara', short: 'Vistara' },
+    // { name: 'Go First', short: 'GoFirst' },
+    // { name: 'Vistara', short: 'Vistara' }, 
     { name: 'Akasa Air', short: 'Akasa' },
   ];
 
+
+   processCards = [
+    { icon: '🎓', title: 'Ground Study', desc: 'Master 6 DGCA subjects with expert study material and mock tests.', color: '#FFB300' },
+       { icon: '📝', title: 'DGCA Exams', desc: 'Clear RTR and all 6 written papers at DGCA examination centers.', color: '#10B981' },
+    { icon: '🛩️', title: 'Flight Hours', desc: 'Log 200+ hours with dual and solo flights at DGCA-approved schools.', color: '#4A90E2' },
+    // { icon: '📝', title: 'DGCA Exams', desc: 'Clear RTR and all 6 written papers at DGCA examination centers.', color: '#10B981' },
+    { icon: '🏆', title: 'Get Your CPL', desc: 'Receive your Commercial Pilot License from DGCA, India.', color: '#EC4899' },
+  ];
+
+
+  leFaq(index: number): void {
+
+  this.faqs.forEach((faq, i) => {
+
+    faq.open = i === index
+      ? !faq.open
+      : false;
+
+  });
+
+}
   activeTestimonial = 0;
   private counterAnimated = false;
   private observer!: IntersectionObserver;

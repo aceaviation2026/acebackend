@@ -1,6 +1,6 @@
 .page-hero {
   position: relative; padding: 160px 0 100px; background: var(--gradient-hero); overflow: hidden;
-  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,179,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,179,0,0.04) 1px, transparent 1px); background-size: 60px 60px; }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(233, 231, 228, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,179,0,0.04) 1px, transparent 1px); background-size: 60px 60px; }
   .hero-sub { font-size: 1.05rem; color: var(--color-text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; }
 }
 
@@ -139,3 +139,604 @@
 .faq-question { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; gap: 16px; font-family: var(--font-primary); font-weight: 600; font-size: 0.95rem; color: var(--color-white); }
 .faq-icon { flex-shrink: 0; width: 32px; height: 32px; background: var(--glass-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--color-text-muted); transition: all 0.3s; }
 .faq-answer { max-height: 0; padding: 0 24px; overflow: hidden; transition: all 0.4s cubic-bezier(0.4,0,0.2,1); p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.8; margin: 0; } }
+
+
+
+
+
+
+/* =========================================================
+   CONTACT PAGE - WHITE + NAVY THEME
+   Primary Navy: #0A1628
+   Accent Gold: #E09000
+========================================================= */
+
+:root{
+  --primary: #0A1628;
+  --accent: #E09000;
+  --white: #ffffff;
+  --text: #0A1628;
+  --text-light: #42526b;
+  --border: rgba(10,22,40,0.08);
+  --shadow: 0 12px 40px rgba(10,22,40,0.08);
+}
+
+/* =========================================================
+   GLOBAL BACKGROUND
+========================================================= */
+
+body,
+.page-hero,
+.section-pad,
+.map-section,
+.cta-top-banner{
+  background: #ffffff !important;
+  color: #0A1628;
+}
+
+/* Remove dark backgrounds */
+[style*="var(--color-navy-mid)"]{
+  background: #ffffff !important;
+}
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.hero-grid{
+  opacity: 0.05;
+  background-image:
+    linear-gradient(rgba(10,22,40,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,22,40,0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* =========================================================
+   HEADINGS & TEXT
+========================================================= */
+
+.display-hero,
+.section-title,
+.form-heading,
+h1,h2,h3,h4,h5,h6{
+  color: #0A1628 !important;
+  font-weight: 700;
+}
+
+.hero-sub,
+.section-subtitle,
+p,
+label,
+.form-note,
+.ci-sub,
+.story-text,
+.faq-answer p{
+  color: #0A1628 !important;
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+/* Gradient text */
+.gradient-text{
+  background: linear-gradient(135deg, #0A1628 0%, #E09000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================================
+   GLASS CARDS -> WHITE CARDS
+========================================================= */
+
+.glass-card,
+.contact-item,
+.social-card,
+.contact-form,
+.form-success,
+.faq-item,
+.map-wrapper,
+.cta-top-inner{
+  background: #ffffff !important;
+  border: 1px solid rgba(10,22,40,0.08);
+  box-shadow: 0 12px 40px rgba(10,22,40,0.08);
+  backdrop-filter: none;
+  border-radius: 20px;
+}
+
+/* =========================================================
+   HOVER EFFECTS
+========================================================= */
+
+.contact-item:hover,
+.social-card:hover,
+.faq-item:hover,
+.contact-form:hover,
+.cta-top-inner:hover{
+  transform: translateY(-4px);
+  transition: all 0.35s ease;
+  box-shadow: 0 18px 50px rgba(10,22,40,0.12);
+  border-color: rgba(224,144,0,0.35);
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge-gold{
+  background: rgba(224,144,0,0.12);
+  color: #0A1628;
+  border: 1px solid rgba(224,144,0,0.25);
+  font-weight: 700;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn-gold{
+  background: #E09000 !important;
+  color: #ffffff !important;
+  border: none;
+  font-weight: 700;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(224,144,0,0.25);
+}
+
+.btn-gold:hover{
+  background: #c97d00 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 35px rgba(224,144,0,0.35);
+}
+
+/* Outline Button */
+.btn-outline-sky{
+  border: 2px solid #0A1628;
+  color: #0A1628;
+  background: transparent;
+}
+
+.btn-outline-sky:hover{
+  background: #0A1628;
+  color: #ffffff;
+}
+
+/* =========================================================
+   CONTACT ITEMS
+========================================================= */
+
+.contact-item{
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  color: #0A1628;
+}
+
+.contact-item:hover .ci-icon{
+  background: #0A1628;
+  color: #ffffff;
+}
+
+.ci-title{
+  color: #0A1628;
+  font-weight: 700;
+}
+
+.ci-value{
+  color: #0A1628;
+  font-weight: 600;
+}
+
+.ci-icon{
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: rgba(224,144,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0A1628;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+/* =========================================================
+   SOCIAL LINKS
+========================================================= */
+
+.social-card{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: #0A1628;
+}
+
+.social-platform{
+  font-weight: 700;
+  color: #0A1628;
+}
+
+.social-handle{
+  color: #42526b;
+}
+
+/* =========================================================
+   FORM STYLING
+========================================================= */
+
+.form-label-sky{
+  color: #0A1628;
+  font-weight: 600;
+}
+
+.form-input{
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(10,22,40,0.12);
+  border-radius: 14px;
+  padding: 14px 16px;
+  color: #0A1628;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus{
+  outline: none;
+  border-color: #E09000;
+  box-shadow: 0 0 0 4px rgba(224,144,0,0.12);
+}
+
+.form-input::placeholder{
+  color: #6B7280;
+}
+
+/* =========================================================
+   INTEREST OPTIONS
+========================================================= */
+
+.interest-opt{
+  background: #ffffff;
+  border: 1px solid rgba(10,22,40,0.12);
+  color: #0A1628;
+  border-radius: 12px;
+  padding: 10px 16px;
+  transition: all 0.3s ease;
+}
+
+.interest-opt:hover{
+  border-color: #E09000;
+}
+
+.interest-opt.active{
+  background: rgba(224,144,0,0.12);
+  border-color: #E09000;
+  color: #0A1628;
+  font-weight: 700;
+}
+
+/* =========================================================
+   FAQ SECTION
+========================================================= */
+
+.faq-item{
+  overflow: hidden;
+}
+
+.faq-question{
+  color: #0A1628;
+  font-weight: 700;
+}
+
+.faq-icon svg{
+  stroke: #0A1628;
+}
+
+/* =========================================================
+   MAP SECTION
+========================================================= */
+
+.map-wrapper{
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.map-wrapper iframe{
+  filter: grayscale(0%) contrast(1);
+}
+
+/* =========================================================
+   CTA TOP BANNER
+========================================================= */
+
+.cta-top-inner{
+  padding: 1.2rem 1.5rem;
+}
+
+.cta-top-text{
+  color: #0A1628;
+  font-weight: 600;
+}
+
+.pulse-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #E09000;
+  margin-right: 10px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{ transform: scale(1); opacity:1; }
+  50%{ transform: scale(1.4); opacity:0.5; }
+  100%{ transform: scale(1); opacity:1; }
+}
+
+/* =========================================================
+   SUCCESS STATE
+========================================================= */
+
+.success-icon{
+  font-size: 4rem;
+}
+
+.form-success h3{
+  color: #0A1628;
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a{
+  color: #0A1628;
+}
+
+a:hover{
+  color: #E09000;
+}
+
+/* =========================================================
+   SMOOTH UI
+========================================================= */
+
+*{
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================================
+   GLOBAL WHITE + NAVY + GOLD THEME
+========================================= */
+
+:root{
+  --primary-text: #0e273d;
+  --gold: #c49440;
+  --white: #ffffff;
+  --light-bg: #f8fafc;
+  --border-light: #e6ecf2;
+}
+
+/* BODY */
+body{
+  background: #ffffff;
+  color: var(--primary-text);
+}
+
+/* ALL SECTIONS WHITE */
+.page-hero,
+.section-pad,
+.section-pad-sm,
+.quick-info-section,
+.dgca-news-section,
+.pilot-lifestyle-section,
+.aviation-glossary-section,
+.timeline-reality-section,
+.map-section,
+.cta-top-banner{
+  background: #ffffff !important;
+}
+
+/* REMOVE DARK BACKGROUNDS */
+[style*="background: var(--color-navy-mid)"]{
+  background: #ffffff !important;
+}
+
+/* TEXT COLORS */
+h1,h2,h3,h4,h5,h6,
+.section-title,
+.display-hero,
+.hero-sub,
+.section-subtitle,
+p,
+span,
+label,
+.contact-item,
+.ci-title,
+.ci-value,
+.ci-sub,
+.social-platform,
+.social-handle,
+.form-note,
+.faq-question,
+.faq-answer,
+.timeline-content,
+.timeline-duration{
+  color: var(--primary-text);
+}
+
+/* GOLD GRADIENT TEXT */
+.gradient-text{
+  color: var(--gold) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* CARDS */
+.glass-card,
+.quick-info-card,
+.dgca-news-card,
+.lifestyle-card,
+.glossary-card,
+.contact-item,
+.social-card,
+.contact-form,
+.form-success,
+.faq-item{
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 24px rgba(14,39,61,0.06);
+  border-radius: 18px;
+}
+
+/* BADGES */
+.badge-gold{
+  background: rgba(196,148,64,0.12);
+  color: var(--gold);
+  border: 1px solid rgba(196,148,64,0.35);
+}
+
+/* DIVIDER */
+.divider-gold{
+  background: var(--gold);
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn-gold,
+.btn-outline-sky,
+.btn-sm-wa,
+.download-btn,
+.interest-opt.active{
+  background: #c49440 !important;
+  border: 1px solid #c49440 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(196,148,64,0.25);
+  transition: 0.3s ease;
+}
+
+.btn-gold:hover,
+.btn-outline-sky:hover,
+.btn-sm-wa:hover,
+.download-btn:hover,
+.interest-opt.active:hover{
+  background: #ae8136 !important;
+  border-color: #ae8136 !important;
+  transform: translateY(-2px);
+}
+
+/* NORMAL BUTTONS */
+.interest-opt{
+  border: 1px solid #d7dee6;
+  background: #ffffff;
+  color: var(--primary-text);
+}
+
+/* LINKS */
+a,
+.news-link,
+.reg-link{
+  color: var(--gold);
+}
+
+a:hover,
+.news-link:hover,
+.reg-link:hover{
+  color: #ae8136;
+}
+
+/* INPUTS */
+.form-input,
+.search-box{
+  background: #ffffff;
+  border: 1px solid #d7dee6;
+  color: var(--primary-text);
+}
+
+.form-input:focus{
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(196,148,64,0.15);
+}
+
+/* SEARCH BOX */
+.search-box svg{
+  stroke: var(--gold);
+}
+
+/* FAQ */
+.faq-item.open{
+  border-color: var(--gold);
+}
+
+/* TIMELINE */
+.timeline-dot{
+  background: var(--gold);
+  color: #fff;
+}
+
+.timeline-line{
+  background: rgba(196,148,64,0.4);
+}
+
+/* ICON COLORS */
+.info-icon,
+.lifestyle-icon,
+.glossary-letter,
+.news-icon,
+.ci-icon,
+.social-emoji{
+  color: var(--gold);
+}
+
+/* CONTACT ITEMS */
+.contact-item:hover,
+.social-card:hover,
+.quick-info-card:hover,
+.dgca-news-card:hover,
+.lifestyle-card:hover,
+.glossary-card:hover{
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+/* MAP */
+.map-wrapper iframe{
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* WHATSAPP BUTTON */
+.wa-item{
+  border-color: rgba(196,148,64,0.3);
+}
+
+/* HERO */
+.page-hero{
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* CTA TOP */
+.cta-top-inner{
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 20px 30px;
+  box-shadow: 0 10px 25px rgba(14,39,61,0.06);
+}
+
+/* PULSE DOT */
+.pulse-dot{
+  background: var(--gold);
+}
+
+/* FAQ ICON */
+.faq-icon svg{
+  stroke: var(--gold);
+}
