@@ -3580,3 +3580,25 @@ button:hover,
     width: 42px;       /* optional */
     height: 42px;      /* optional */
 }
+
+/* Glossary Letter Box */
+.glossary-letter{
+    width: 50px;              /* Reduced size */
+    height: 50px;
+    background: #c49440;      /* Gold background */
+    color: #fff;
+    font-size: 20px;          /* Smaller text */
+    font-weight: 700;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Remove Navy Blue Hover */
+.glossary-card:hover .glossary-letter{
+    background: #c49440;      /* Stay gold on hover */
+    transform: translateY(-3px);
+}
