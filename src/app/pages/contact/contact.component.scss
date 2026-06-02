@@ -33,7 +33,7 @@
   text-decoration: none; color: inherit; transition: all 0.25s;
 
   &.wa-item {
-    background: rgba(37,211,102,0.05) !important;
+    // background: rgba(37,211,102,0.05) !important;
     border-color: rgba(37,211,102,0.2) !important;
     &:hover { border-color: rgba(37,211,102,0.4) !important; }
   }
@@ -739,4 +739,135 @@ a:hover,
 /* FAQ ICON */
 .faq-icon svg{
   stroke: var(--gold);
+}
+
+
+
+
+
+.validation-error{
+  display:block;
+  margin-top:8px;
+  color:#c49440;
+  font-weight:700;
+  font-size:0.9rem;
+}
+.validation-error{
+  display:block;
+  margin-top:8px;
+  color:#c49440;
+  font-weight:700;
+  font-size:0.9rem;
+}
+.validation-error{
+  display:block;
+  margin-top:8px;
+  color:#c49440;
+  font-weight:700;
+  font-size:0.9rem;
+}
+.validation-error{
+    display:block;
+    margin-top:8px;
+    color:#c49440;
+    font-weight:700;
+    font-size:0.9rem;
+}
+
+
+
+
+
+
+
+
+.page-hero{
+    position:relative;
+    overflow:hidden;
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(
+        90deg,
+        #f3efe8 0%,
+        #f8f5ef 25%,
+        #fffdf9 50%,
+        #f8f5ef 75%,
+        #f3efe8 100%
+    );
+
+    color:#0a1f3c;
+}
+
+.page-hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(
+        circle at center,
+        rgba(196,148,64,0.12) 0%,
+        rgba(196,148,64,0.06) 35%,
+        transparent 70%
+      );
+    pointer-events:none;
+}
+
+.page-hero::after{
+    display:none;
+}
+
+.display-hero{
+    color:#0b2342;
+    font-size:clamp(2.4rem,5vw,4.5rem); /* Reduced size */
+    font-weight:800;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.gradient-text{
+    color:#c49440; /* Consultation color */
+    background:none;
+    -webkit-text-fill-color:#c49440;
+}
+
+.hero-sub{
+    max-width:800px;
+    margin:auto;
+    color:#5f6f84;
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+.badge-gold{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:30px;
+    background:rgba(196,148,64,0.08);
+    border:1px solid rgba(196,148,64,0.25);
+    color:#c49440;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.hero-meta{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.meta-tag{
+    padding:10px 18px;
+    border-radius:30px;
+    background:rgba(196,148,64,0.08);
+    border:1px solid rgba(196,148,64,0.25);
+    color:#c49440;
+    font-weight:600;
+}
+
+.hero-grid{
+    display:none;
 }

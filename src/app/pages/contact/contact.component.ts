@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import emailjs from '@emailjs/browser';
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -10,6 +10,9 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+openLink(arg0: string) {
+throw new Error('Method not implemented.');
+}
 
   form = {
     name: '',
@@ -31,7 +34,7 @@ export class ContactComponent {
       title: 'Call Us',
       value: '+91  98337 97999',
       sub: 'Mon–Sat, 9 AM – 7 PM IST',
-      link: 'tel:+919876543210'
+      link: 'tel:+919833797999'
     },
     {
       icon: '📧',
@@ -48,12 +51,12 @@ export class ContactComponent {
       link: '#map'
     },
     {
-      icon: '💬',
-      title: 'WhatsApp',
-      value: '+91  98337 97999',
-      sub: 'Fastest response',
-      link: 'https://wa.me/919876543210'
-    }
+    icon: '💬',
+    title: 'WhatsApp',
+    value: '+91 98337 97999',
+    sub: 'Fastest Response',
+    link: 'https://wa.me/919833797999?text=Hi%20Vinay%20Salve!%20I%20would%20like%20to%20know%20more%20about%20pilot%20training.'
+  }
   ];
 
   socialLinks = [
@@ -70,14 +73,34 @@ export class ContactComponent {
     { q: 'Can I book a consultation for a family member?', a: 'Absolutely. Parents and guardians are encouraged to join too. We regularly counsel families together on aviation career planning.', open: false },
   ];
 
-  submitForm(): void {
-    if (!this.form.name || !this.form.email || !this.form.phone) return;
-    this.loading = true;
-    setTimeout(() => {
-      this.loading = false;
-      this.submitted = true;
-    }, 1800);
-  }
+  // submitForm(): void {
+  //   if (!this.form.name || !this.form.email || !this.form.phone) return;
+  //   this.loading = true;
+  //   setTimeout(() => {
+  //     this.loading = false;
+  //     this.submitted = true;
+  //   }, 1800);
+  // }
+
+submitForm(): void {
+  if (!this.form.name || !this.form.email || !this.form.phone) return;
+
+  this.loading = true;
+
+  emailjs.send(
+    'vitthalkhedekar77@gmail.com',
+    'TEMPLATE_ID',
+    {
+      name: this.form.name,
+      email: this.form.email,
+      phone: this.form.phone
+    },
+    'PUBLIC_KEY'
+  ).then(() => {
+    this.loading = false;
+    this.submitted = true;
+  });
+}
 
   resetForm(): void {
     this.form = { name: '', email: '', phone: '', interest: '', education: '', message: '' };

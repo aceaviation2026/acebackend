@@ -1477,3 +1477,69 @@ p,
     line-height: 1;
 }
 
+.page-hero{
+    position:relative;
+    overflow:hidden;
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(
+        90deg,
+        #f3efe8 0%,
+        #f8f5ef 25%,
+        #fffdf9 50%,
+        #f8f5ef 75%,
+        #f3efe8 100%
+    );
+
+    color:#0a1f3c;
+}
+.page-hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+      radial-gradient(
+        circle at center,
+        rgba(196,148,64,0.12) 0%,
+        rgba(196,148,64,0.06) 35%,
+        transparent 70%
+      );
+
+    pointer-events:none;
+}
+
+.page-hero::after{
+    display:none;
+}
+.display-hero{
+    color:#0b2342;
+    font-size:clamp(3rem,6vw,5.5rem);
+    font-weight:800;
+    line-height:1.1;
+}
+.gradient-text{
+    background:linear-gradient(
+        135deg,
+        #e8c56a 0%,
+        #c49440 50%,
+        #d9ae52 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+.badge-gold,
+.meta-tag{
+    background:rgba(196,148,64,0.08);
+    border:1px solid rgba(196,148,64,0.25);
+    color:#c49440;
+    border-radius:30px;
+}
+.hero-grid{
+    display:none;
+} 

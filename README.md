@@ -1,4 +1,4 @@
-# ✈️ SkyPilot Academy - Premium Aviation Education Platform
+# ✈️ THE-ACE-AVIATOR Premium Aviation Education Platform
 
 ![SkyPilot Platform](src/assets/images/hero-airplane.jpg)
 

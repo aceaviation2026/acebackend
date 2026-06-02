@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-whatsapp-button',
   standalone: true,
   template: `
-  <a href="https://wa.me/917796240277?text=Hi%20Vinay%20Salve,%20The%20Ace%20Aviator!%20I'd%20like%20to%20know%20more%20about%20pilot%20training."
+  <a href="https://wa.me/919833797999?text=Hi%20Vinay%20Salve,%20The%20Ace%20Aviator!%20I'd%20like%20to%20know%20more%20about%20pilot%20training."
    target="_blank"
    class="whatsapp-fab"
    aria-label="Chat on WhatsApp">
