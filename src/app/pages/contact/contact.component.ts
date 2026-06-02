@@ -29,38 +29,38 @@ export class ContactComponent {
     {
       icon: '📞',
       title: 'Call Us',
-      value: '+91 98765 43210',
+      value: '+91  98337 97999',
       sub: 'Mon–Sat, 9 AM – 7 PM IST',
       link: 'tel:+919876543210'
     },
     {
       icon: '📧',
       title: 'Email',
-      value: 'info@skypilotacademy.in',
+      value: 'admin@theaceaviator.com',
       sub: 'Reply within 24 hours',
-      link: 'mailto:info@skypilotacademy.in'
+      link: 'mailto:admin@theaceaviator.com'
     },
     {
       icon: '📍',
       title: 'Visit Us',
-      value: 'Connaught Place, New Delhi',
+      value: 'Mumbai, Dadar 400014',
       sub: 'By appointment only',
       link: '#map'
     },
     {
       icon: '💬',
       title: 'WhatsApp',
-      value: '+91 98765 43210',
+      value: '+91  98337 97999',
       sub: 'Fastest response',
       link: 'https://wa.me/919876543210'
     }
   ];
 
   socialLinks = [
-    { icon: '📺', platform: 'YouTube', handle: '@SkyPilotAcademy', url: '#', color: '#FF0000' },
-    { icon: '📸', platform: 'Instagram', handle: '@skypilot_india', url: '#', color: '#E1306C' },
-    { icon: '💼', platform: 'LinkedIn', handle: 'SkyPilot Academy', url: '#', color: '#0A66C2' },
-    { icon: '🐦', platform: 'Twitter/X', handle: '@SkyPilotAcademy', url: '#', color: '#1DA1F2' },
+    { icon: '📺', platform: 'YouTube', handle: '@Theaceaviator', url: '#', color: '#FF0000' },
+    { icon: '📸', platform: 'Instagram', handle: '@acepilot_india', url: '#', color: '#E1306C' },
+    { icon: '💼', platform: 'LinkedIn', handle: '@theaceaviator', url: '#', color: '#0A66C2' },
+    { icon: '🐦', platform: 'Twitter/X', handle: '@Theaceaviator', url: '#', color: '#1DA1F2' },
   ];
 
   faqs = [
@@ -84,7 +84,19 @@ export class ContactComponent {
     this.submitted = false;
   }
 
-  toggleFaq(i: number): void {
-    this.faqs[i].open = !this.faqs[i].open;
-  }
+ toggleFaq(index: number): void {
+
+  this.faqs.forEach((faq, i) => {
+
+    if (i === index) {
+      faq.open = !faq.open; // Toggle clicked FAQ
+    } else {
+      faq.open = false; // Close all others
+    }
+
+  });
+
+}
+
+  
 }

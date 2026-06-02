@@ -33,7 +33,7 @@
 .art-category {
   padding: 3px 10px;
   background: rgba(255,179,0,0.15);
-  color: #FFB300;
+  color: #c49440;
   border-radius: var(--radius-pill);
   font-weight: 700;
   font-size: 0.75rem;
@@ -62,7 +62,7 @@
 
 .featured-emoji { font-size: 5rem; animation: float-gentle 4s ease-in-out infinite; }
 .featured-stat { text-align: center; margin-top: 16px; }
-.f-stat-val { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; color: #FFB300; }
+.f-stat-val { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; color: #c49440; }
 .f-stat-label { font-size: 0.82rem; color: var(--color-text-muted); }
 
 // Blog Cards
@@ -1476,3 +1476,4 @@ p,
     font-weight: 700;
     line-height: 1;
 }
+
