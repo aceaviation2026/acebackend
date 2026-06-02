@@ -16,6 +16,10 @@ selectedType: any;
 cities: any;
 filteredDoctors(): any {
 throw new Error('Method not implemented.');
+
+
+
+
 }
 
   searchQuery = '';
@@ -425,10 +429,9 @@ const resources = [
 
 
 
+  // existing variables
 
 
+  // existing methods
 
-
-
-
-
+ 

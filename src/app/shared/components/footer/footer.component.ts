@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+// import { FormsModule,} from '@angular/forms';
+import { NgIf } from '@angular/common';
+import { FormsModule,NgForm, NgModel  }from '@angular/forms';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink,FormsModule],
+  imports: [RouterLink,FormsModule,NgIf],
   template: `
 
 
@@ -119,11 +121,49 @@ import { FormsModule } from '@angular/forms';
                 </div>
               </div>
               <div class="footer-newsletter">
-                <p>Get aviation updates in your inbox</p>
-                <div class="newsletter-form">
-                  <input class="col-75" type="email" placeholder="your&#64;email.com" id="footerEmailInput">
-                  <button class="btn-gold"style="padding:10px 20px;font-size:0.82rem;">Subscribe</button>
-                </div>
+  <p>Get aviation updates in your inbox</p>
+
+  <form #newsletterForm="ngForm" (ngSubmit)="subscribeNewsletter(newsletterForm)">
+    
+    <div class="newsletter-form">
+
+      <input
+        class="col-75"
+        type="email"
+        id="footerEmailInput"
+        name="email"
+        placeholder="admin@theaceaviator.com"
+        ngModel
+        #email="ngModel"
+        required
+        email>
+
+      <button
+        type="submit"
+        class="btn-gold"
+        style="padding:10px 20px;font-size:0.82rem;"
+        [disabled]="newsletterForm.invalid">
+        Subscribe
+      </button>
+
+    </div>
+
+    <small
+      *ngIf="email.invalid && email.touched"
+      class="text-danger d-block mt-2">
+
+      <span *ngIf="email.errors?.['required']">
+        Email address is required.
+      </span>
+
+      <span *ngIf="email.errors?.['email']">
+        Please enter a valid email address.
+      </span>
+
+    </small>
+
+  </form>
+</div>
               </div>
             </div>
 
@@ -131,7 +171,7 @@ import { FormsModule } from '@angular/forms';
 
           </div>
         </div>
-      </div>
+      <!-- </div> -->
 
       <!-- Bottom Bar -->
       <div class="footer-bottom">
@@ -151,6 +191,15 @@ import { FormsModule } from '@angular/forms';
       </div>
     </footer>
   `,
+  
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent {}
+export class FooterComponent {
+  subscribeNewsletter(form: NgForm): void {
+    if (form.valid) {
+      console.log('Newsletter subscription:', form.value.email);
+      form.reset();
+    }
+  }
+}
+
