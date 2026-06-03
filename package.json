@@ -21,6 +21,7 @@
     "@emailjs/browser": "^4.4.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
+    "firebase": "^12.14.0",
     "lucide-angular": "^1.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

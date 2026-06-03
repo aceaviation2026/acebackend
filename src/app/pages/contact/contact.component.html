@@ -76,184 +76,187 @@
         </div>
       </div>
 
-      <!-- Right: Form -->
-      <div class="col-lg-8" data-aos="fade-left">
-        <!-- Success State -->
-        <div class="form-success glass-card p-5 text-center" *ngIf="submitted">
-          <div class="success-icon">✅</div>
-          <h3>Consultation Booked!</h3>
-          <p class="section-subtitle mx-auto mt-3">
-            Thank you, <strong>{{ form.name }}</strong>! Our team will reach you at <strong>{{ form.phone }}</strong>
-            within 24 hours to confirm your slot.
-          </p>
-          <button class="btn-gold mt-4" (click)="resetForm()">Book Another Consultation</button>
-        </div>
+        <!-- Right: Form -->
+        <div class="col-lg-8" data-aos="fade-left">
+          <!-- Success State -->
+          <div class="form-success glass-card p-5 text-center" *ngIf="submitted">
+            <div class="success-icon">✅</div>
+            <h3>Consultation Booked!</h3>
+            <p class="section-subtitle mx-auto mt-3">
+              Thank you, <strong>{{ form.name }}</strong>! Our team will reach you at <strong>{{ form.phone }}</strong>
+              within 24 hours to confirm your slot.
+            </p>
+            <button class="btn-gold mt-4" (click)="resetForm()">Book Another Consultation</button>
+          </div>
 
-        <!-- Form -->
-        <div class="contact-form glass-card p-4 p-md-5" *ngIf="!submitted">
-          <h3 class="form-heading mb-4">
-            📋 Consultation Request Form
-          </h3>
+          <!-- Form -->
+          <div class="contact-form glass-card p-4 p-md-5" *ngIf="!submitted">
+            <h3 class="form-heading mb-4">
+              📋 Consultation Request Form
+            </h3>
 
-          <form (ngSubmit)="submitForm()" #contactForm="ngForm">
-            <div class="row g-4">
+            <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+              <div class="row g-4">
 
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="form-label-sky" for="nameInput">Full Name *</label>
-                  <input id="nameInput" type="text" class="form-input" placeholder="Enter Your Full Name"
-                    [(ngModel)]="form.name" name="name" required #name="ngModel">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label-sky" for="nameInput">Full Name *</label>
+                    <input id="nameInput" type="text" class="form-input" placeholder="Enter Your Full Name"
+                      [(ngModel)]="form.name" name="name" required #name="ngModel">
 
-                  <small *ngIf="name.invalid && (name.touched || contactForm.submitted)" class="validation-error">
+                    <small *ngIf="name.invalid && (name.touched || contactForm.submitted)" class="validation-error">
 
-                    Full Name is required.
-                  </small>
+                      Full Name is required.
+                    </small>
 
+                  </div>
                 </div>
-              </div>
 
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="form-label-sky" for="emailInput">Email Address *</label>
-                  <input id="emailInput" type="email" class="form-input" placeholder="Enter Your Email Address"
-                    [(ngModel)]="form.email" name="email" required email #email="ngModel">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label-sky" for="emailInput">Email Address *</label>
+                    <input id="emailInput" type="email" class="form-input" placeholder="Enter Your Email Address"
+                      [(ngModel)]="form.email" name="email" required email #email="ngModel">
 
-                  <small *ngIf="email.invalid && (email.touched || contactForm.submitted)" class="validation-error">
+                    <small *ngIf="email.invalid && (email.touched || contactForm.submitted)" class="validation-error">
 
-                    <span *ngIf="email.errors?.['required']">
-                      Email Address is required.
-                    </span>
+                      <span *ngIf="email.errors?.['required']">
+                        Email Address is required.
+                      </span>
 
-                    <span *ngIf="email.errors?.['email']">
-                      Please enter a valid Email Address.
-                    </span>
+                      <span *ngIf="email.errors?.['email']">
+                        Please enter a valid Email Address.
+                      </span>
 
-                  </small>
+                    </small>
 
+                  </div>
                 </div>
-              </div>
 
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="form-label-sky" for="phoneInput">Phone / WhatsApp *</label>
-                  <input id="phoneInput" type="tel" class="form-input" placeholder="Enter Your Phone Number"
-                    [(ngModel)]="form.phone" name="phone" required minlength="10" #phone="ngModel">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label-sky" for="phoneInput">Phone / WhatsApp *</label>
+                    <input id="phoneInput" type="tel" class="form-input" placeholder="Enter Your Phone Number"
+                      [(ngModel)]="form.phone" name="phone" required minlength="10" #phone="ngModel">
 
-                  <small *ngIf="phone.invalid && (phone.touched || contactForm.submitted)" class="validation-error">
+                    <small *ngIf="phone.invalid && (phone.touched || contactForm.submitted)" class="validation-error">
 
-                    <span *ngIf="phone.errors?.['required']">
-                      Phone Number is required.
-                    </span>
+                      <span *ngIf="phone.errors?.['required']">
+                        Phone Number is required.
+                      </span>
 
-                    <span *ngIf="phone.errors?.['minlength']">
-                      Enter a valid Phone Number.
-                    </span>
+                      <span *ngIf="phone.errors?.['minlength']">
+                        Enter a valid Phone Number.
+                      </span>
 
-                  </small>
+                    </small>
+                  </div>
                 </div>
-              </div>
 
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label class="form-label-sky" for="educationInput">
-                    Current Education *
-                  </label>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-label-sky" for="educationInput">
+                      Current Education *
+                    </label>
 
-                  <select id="educationInput" class="form-input" [(ngModel)]="form.education" name="education" required
-                    #education="ngModel">
+                    <select id="educationInput" class="form-input" [(ngModel)]="form.education" name="education" required
+                      #education="ngModel">
 
-                    <option value="">Select level</option>
-                    <option>10th Studying</option>
-                    <option>10th Pass</option>
-                    <option>12th PCM Studying</option>
-                    <option>12th PCM Pass</option>
-                    <option>Graduate</option>
-                    <option>Post Graduate</option>
+                      <option value="">Select level</option>
+                      <option>10th Studying</option>
+                      <option>10th Pass</option>
+                      <option>12th PCM Studying</option>
+                      <option>12th PCM Pass</option>
+                      <option>Graduate</option>
+                      <option>Post Graduate</option>
 
-                  </select>
+                    </select>
 
-                  <small *ngIf="education.invalid && (education.touched || contactForm.submitted)"
-                    class="validation-error">
+                    <small *ngIf="education.invalid && (education.touched || contactForm.submitted)"
+                      class="validation-error">
 
-                    Current Education is required.
+                      Current Education is required.
 
-                  </small>
+                    </small>
 
+                  </div>
                 </div>
-              </div>
 
-              <div class="col-12">
-                <div class="form-group">
-                  <label class="form-label-sky">Area of Interest *</label>
+                <div class="col-12">
+                  <div class="form-group">
+                    <label class="form-label-sky">Area of Interest *</label>
 
-                  <div class="interest-options">
-                    <button type="button" *ngFor="let opt of interests" class="interest-opt"
-                      [class.active]="form.interest === opt" (click)="form.interest = opt">
+                    <div class="interest-options">
+                      <button type="button" *ngFor="let opt of interests" class="interest-opt"
+                        [class.active]="form.interest === opt" (click)="form.interest = opt">
 
-                      {{ opt }}
+                        {{ opt }}
 
-                    </button>
+                      </button>
+                    </div>
+
+                    <small *ngIf="!form.interest && contactForm.submitted" class="validation-error">
+
+                      Please select an Area of Interest.
+
+                    </small>
+
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <label class="form-label-sky" for="messageInput">
+                      Message / Your Questions *
+                    </label>
+
+                    <textarea id="messageInput" class="form-input form-textarea" rows="4"
+                      placeholder="Tell us about your current situation and what you'd like guidance on..."
+                      [(ngModel)]="form.message" name="message" required #message="ngModel">
+      </textarea>
+  <!-- 
+                    <small *ngIf="message.invalid && (message.touched || contactForm.submitted)" class="validation-error">
+
+                      Please enter your message or question.
+
+                    </small> -->
+
+                  </div>
+                </div>
+
+                <div class="col-12">
+
+                  <div *ngIf="contactForm.submitted && (!contactForm.valid || !form.interest)"
+                    class="validation-error text-center mb-3">
+
+                    Please fill all required fields before submitting the form.
+
                   </div>
 
-                  <small *ngIf="!form.interest && contactForm.submitted" class="validation-error">
+                <button
+    type="submit"
+    class="btn-gold w-100"
+    [disabled]="loading">
 
-                    Please select an Area of Interest.
+    <span *ngIf="!loading">
+      Book Free Consultation →
+    </span>
 
-                  </small>
+    <span *ngIf="loading">
+      Sending...
+    </span>
 
-                </div>
-              </div>
+  </button>
 
-              <div class="col-12">
-                <div class="form-group">
-                  <label class="form-label-sky" for="messageInput">
-                    Message / Your Questions *
-                  </label>
-
-                  <textarea id="messageInput" class="form-input form-textarea" rows="4"
-                    placeholder="Tell us about your current situation and what you'd like guidance on..."
-                    [(ngModel)]="form.message" name="message" required #message="ngModel">
-    </textarea>
-
-                  <small *ngIf="message.invalid && (message.touched || contactForm.submitted)" class="validation-error">
-
-                    Please enter your message or question.
-
-                  </small>
-
-                </div>
-              </div>
-
-              <div class="col-12">
-
-                <div *ngIf="contactForm.submitted && (!contactForm.valid || !form.interest)"
-                  class="validation-error text-center mb-3">
-
-                  Please fill all required fields before submitting the form.
+                  <p class="form-note mt-3 text-center">
+                    🔒 Your information is completely secure and never shared.
+                  </p>
 
                 </div>
 
-                <button type="submit" class="btn-gold w-100" [disabled]="loading">
-
-                  <span *ngIf="!loading">
-                    Book Free Consultation →
-                  </span>
-
-                  <span *ngIf="loading" class="loading-dots">
-                    Submitting<span>.</span><span>.</span><span>.</span>
-                  </span>
-
-                </button>
-
-                <p class="form-note mt-3 text-center">
-                  🔒 Your information is completely secure and never shared.
-                </p>
-
               </div>
-
-            </div>
-          </form>
-        </div>
+            </form>
+          </div>
       </div>
 
     </div>

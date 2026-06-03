@@ -25,9 +25,9 @@
                 Explore by <span class="gradient-text">Category</span>
             </h2>
 
-            <p class="section-subtitle">
-                Browse aviation articles by topic and quickly find the information most relevant to your pilot journey.
-            </p>
+           <p class="section-subtitle text-center">
+    Browse aviation articles by topic and quickly find the information most relevant to your pilot journey.
+</p>
 
         </div>
 
@@ -174,122 +174,122 @@
   </div>
 </section>
 
-<!-- Aviation News Ticker/List -->
-<section class="section-pad">
 
-  <div class="container">
+    <!-- <section class="section-pad">
 
-    <div class="row g-5">
+    <div class="container">
 
-      <!-- Aviation Updates -->
+        <div class="row g-5">
 
-      <div class="col-lg-7" data-aos="fade-right">
+        
 
-        <div class="badge-gold mb-3">
-          Latest Updates
-        </div>
+        <div class="col-lg-7" data-aos="fade-right">
 
-        <h2 class="section-title mb-4">
-          Aviation
-          <span class="gradient-text">
-            Updates
-          </span>
-        </h2>
+            <div class="badge-gold mb-3">
+            
+            </div>
 
-        <div class="news-list">
-
-          <div
-            class="news-item glass-card"
-            *ngFor="let n of newsItems; let i = index"
-            data-aos="fade-up"
-            [attr.data-aos-delay]="i*60">
-
-            <span class="news-icon">
-              {{ n.icon }}
+            <h2 class="section-title mb-4">
+            Aviation
+            <span class="gradient-text">
+                Updates
             </span>
+            </h2>
 
-            <div class="news-body">
+            <div class="news-list">
 
-              <h6>
-                {{ n.title }}
-              </h6>
+            <div
+                class="news-item glass-card"
+                *ngFor="let n of newsItems; let i = index"
+                data-aos="fade-up"
+                [attr.data-aos-delay]="i*60">
 
-              <div class="news-meta">
-
-                <span class="news-date">
-                  {{ n.date }}
+                <span class="news-icon">
+                {{ n.icon }}
                 </span>
 
-                <span class="news-tag">
-                  {{ n.tag }}
-                </span>
+                <div class="news-body">
 
-              </div>
+                <h6>
+                    {{ n.title }}
+                </h6>
+
+                <div class="news-meta">
+
+                    <span class="news-date">
+                    {{ n.date }}
+                    </span>
+
+                    <span class="news-tag">
+                    {{ n.tag }}
+                    </span>
+
+                </div>
+
+                </div>
 
             </div>
 
-          </div>
+            </div>
 
         </div>
 
-      </div>
+        
 
-      <!-- Industry Watch -->
+        <div class="col-lg-5" data-aos="fade-left">
 
-      <div class="col-lg-5" data-aos="fade-left">
+            <div class="badge-gold mb-3">
+            Industry Watch
+            </div>
 
-        <div class="badge-gold mb-3">
-          Industry Watch
-        </div>
+            <h2 class="section-title mb-4">
+            Aviation
+            <span class="gradient-text">
+                Industry
+            </span>
+            </h2>
 
-        <h2 class="section-title mb-4">
-          Aviation
-          <span class="gradient-text">
-            Industry
-          </span>
-        </h2>
+            <div class="stories-list">
 
-        <div class="stories-list">
+            <div
+                class="story-card glass-card p-4"
+                *ngFor="let item of industryUpdates">
 
-          <div
-            class="story-card glass-card p-4"
-            *ngFor="let item of industryUpdates">
+                <div class="story-header">
 
-            <div class="story-header">
-
-              <div class="story-avatar">
-                {{ item.icon }}
-              </div>
-
-              <div>
-
-                <div class="story-name">
-                  {{ item.title }}
+                <div class="story-avatar">
+                    {{ item.icon }}
                 </div>
 
-                <div class="story-city">
-                  {{ item.source }}
+                <div>
+
+                    <div class="story-name">
+                    {{ item.title }}
+                    </div>
+
+                    <div class="story-city">
+                    {{ item.source }}
+                    </div>
+
                 </div>
 
-              </div>
+                </div>
+
+                <p class="story-text">
+                {{ item.description }}
+                </p>
 
             </div>
 
-            <p class="story-text">
-              {{ item.description }}
-            </p>
-
-          </div>
+            </div>
 
         </div>
 
-      </div>
+        </div>
 
     </div>
 
-  </div>
-
-</section>
+    </section> -->
 
 <!-- YouTube Videos -->
 <section class="section-pad" style="background: var(--color-navy-mid)">
@@ -335,225 +335,7 @@
 </section>
 
 
-<section class="section-pad aviation-news-hub">
 
-    <div class="container">
-
-        <div class="text-center mb-5">
-
-            <div class="badge-gold">
-                Industry Updates
-            </div>
-
-            <h2 class="section-title mt-3">
-                Aviation Industry
-                <span class="gradient-text">
-                    News Hub
-                </span>
-            </h2>
-
-            <p class="section-subtitle news-subtitle">
-                Track important aviation developments from regulators,
-                airlines, aircraft manufacturers, and industry leaders.
-            </p>
-
-        </div>
-
-        <div class="news-list">
-
-            <!-- DGCA -->
-
-            <div class="news-row">
-
-                <div class="news-left">
-                    <span class="news-source dgca">
-                        DGCA
-                    </span>
-                </div>
-
-                <div class="news-center">
-
-                    <h3>
-                        Regulatory Updates & Circulars
-                    </h3>
-
-                    <p>
-                        Latest notifications, licensing procedures,
-                        examination updates and regulatory announcements.
-                    </p>
-
-                </div>
-
-                <div class="news-right">
-
-                    <a href="#">
-                        View Updates →
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- AIR INDIA -->
-
-            <div class="news-row">
-
-                <div class="news-left">
-                    <span class="news-source airline">
-                        Air India
-                    </span>
-                </div>
-
-                <div class="news-center">
-
-                    <h3>
-                        Fleet Expansion & Recruitment
-                    </h3>
-
-                    <p>
-                        Pilot hiring, cadet programs,
-                        aircraft deliveries and operational growth.
-                    </p>
-
-                </div>
-
-                <div class="news-right">
-                    <a href="#">
-                        View Updates →
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- INDIGO -->
-
-            <div class="news-row">
-
-                <div class="news-left">
-                    <span class="news-source airline">
-                        IndiGo
-                    </span>
-                </div>
-
-                <div class="news-center">
-
-                    <h3>
-                        Pilot Hiring & New Routes
-                    </h3>
-
-                    <p>
-                        Recruitment drives, route expansion
-                        and airline growth initiatives.
-                    </p>
-
-                </div>
-
-                <div class="news-right">
-                    <a href="#">
-                        View Updates →
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- AKASA -->
-
-            <div class="news-row">
-
-                <div class="news-left">
-                    <span class="news-source airline">
-                        Akasa Air
-                    </span>
-                </div>
-
-                <div class="news-center">
-
-                    <h3>
-                        Airline Growth & Opportunities
-                    </h3>
-
-                    <p>
-                        Fleet growth, expansion plans
-                        and future pilot opportunities.
-                    </p>
-
-                </div>
-
-                <div class="news-right">
-                    <a href="#">
-                        View Updates →
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- BOEING -->
-
-            <div class="news-row">
-
-                <div class="news-left">
-                    <span class="news-source manufacturer">
-                        Boeing
-                    </span>
-                </div>
-
-                <div class="news-center">
-
-                    <h3>
-                        Aircraft Deliveries & Technology
-                    </h3>
-
-                    <p>
-                        Commercial aircraft developments,
-                        training innovations and pilot demand outlook.
-                    </p>
-
-                </div>
-
-                <div class="news-right">
-                    <a href="#">
-                        View Updates →
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- AIRBUS -->
-
-            <div class="news-row">
-
-                <div class="news-left">
-                    <span class="news-source manufacturer">
-                        Airbus
-                    </span>
-                </div>
-
-                <div class="news-center">
-
-                    <h3>
-                        Aviation Innovation & Sustainability
-                    </h3>
-
-                    <p>
-                        Future aircraft programs,
-                        sustainability initiatives and aviation trends.
-                    </p>
-
-                </div>
-
-                <div class="news-right">
-                    <a href="#">
-                        View Updates →
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 
 <section class="section-pad aviation-jobs-section">
 
@@ -581,7 +363,6 @@
 
         <div class="row g-4">
 
-            <!-- Card 1 -->
 
             <div class="col-lg-4 col-md-6">
 

@@ -4153,3 +4153,162 @@ body{
     letter-spacing:1.5px;
     text-transform:uppercase;
 }
+
+
+
+
+.aviation-support-section {
+  padding: 100px 0;
+  background: #f8f9fb;
+}
+
+.support-heading {
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+.support-heading h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0e273d;
+  margin: 15px 0;
+}
+
+.support-heading p {
+  color: #6b7280;
+  font-size: 17px;
+}
+
+.support-badge {
+  background: rgba(196,148,64,.12);
+  color: #c49440;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.support-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.support-timeline::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #c49440;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #c49440;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  z-index: 2;
+}
+
+.timeline-content {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  flex: 1;
+  box-shadow: 0 15px 40px rgba(0,0,0,.06);
+}
+
+.timeline-tag {
+  display: inline-block;
+  background: #fff4df;
+  color: #c49440;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.timeline-tag.navy {
+  background: #eaf1f8;
+  color: #0e273d;
+}
+
+.timeline-content h3 {
+  color: #0e273d;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.timeline-content p {
+  color: #555;
+}
+
+.timeline-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.timeline-details ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.timeline-details li {
+  margin-bottom: 8px;
+}
+
+.support-note {
+  margin-top: 50px;
+  text-align: center;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 5px solid #c49440;
+}
+
+@media (max-width: 768px) {
+
+  .timeline-details {
+    grid-template-columns: 1fr;
+  }
+
+  .support-heading h2 {
+    font-size: 32px;
+  }
+
+}
+.gold-text{
+    color: #c49440;
+}
+
+/* Content paragraphs inside cards/divs */
+.timeline-content p,
+.dgca-news-card p,
+.academy-card p,
+.salary-description,
+.detail-desc,
+.point-card p,
+.cost-note,
+.support-note p,
+.loan-bank-info p {
+    text-align: justify;
+}

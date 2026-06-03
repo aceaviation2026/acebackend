@@ -281,7 +281,7 @@
     font-family: var(--font-heading);
     font-size: 1.6rem;
     font-weight: 700;
-    color: #FFB300;
+    color: #c49440;
   }
 
   .counter-label {
@@ -312,7 +312,7 @@
   border: 1px solid #0e273d;
     border-radius: 14px;
     margin-bottom: 20px;
-    color: var(--feat-color, #FFB300);
+    color: var(--feat-color,#c49440);
     transition: all 0.3s ease;
   }
 
@@ -807,7 +807,7 @@
 
   .counter-number{
     // color: #0A1628;
-    color: #e09000; 
+    color: #c49440 !important; 
   }
 
   .counter-suffix{
@@ -2332,5 +2332,48 @@ a:hover{
 }
 
 
+
+
+/* Apply justify only to content inside div blocks/cards */
+.process-card p,
+.timeline-content p,
+.after-cpl-text,
+.cadet-program-content p,
+.cadet-cost-box p,
+.testimonial-text,
+.faq-answer p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+.timeline-content p,
+.after-cpl-box p,
+.cadet-program-content p,
+.cadet-cost-box p,
+.process-card p {
+    text-align: justify;
+}
+.section-subtitle,
+.hero-subtext,
+.partners-label,
+.cta-content .section-subtitle {
+    text-align: center;
+} 
+/* Content paragraphs */
+.glass-card p,
+.timeline-content p,
+.after-cpl-box p,
+.cadet-program-content p,
+.cadet-cost-box p,
+.faq-answer p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Heading section descriptions remain centered */
+.section-subtitle,
+.hero-subtext,
+.partners-label {
+    text-align: center !important;
+}
 
 

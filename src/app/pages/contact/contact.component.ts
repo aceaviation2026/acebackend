@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import emailjs from '@emailjs/browser';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HttpClientModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  constructor(private http: HttpClient) {}
 openLink(arg0: string) {
 throw new Error('Method not implemented.');
+
 }
 
   form = {
@@ -73,33 +76,54 @@ throw new Error('Method not implemented.');
     { q: 'Can I book a consultation for a family member?', a: 'Absolutely. Parents and guardians are encouraged to join too. We regularly counsel families together on aviation career planning.', open: false },
   ];
 
-  // submitForm(): void {
-  //   if (!this.form.name || !this.form.email || !this.form.phone) return;
-  //   this.loading = true;
-  //   setTimeout(() => {
-  //     this.loading = false;
-  //     this.submitted = true;
-  //   }, 1800);
-  // }
 
 submitForm(): void {
-  if (!this.form.name || !this.form.email || !this.form.phone) return;
+
+  if (
+    !this.form.name ||
+    !this.form.email ||
+    !this.form.phone ||
+    !this.form.education ||
+    !this.form.interest ||
+    !this.form.message
+  ) {
+    alert('Please fill all required fields');
+    return;
+  }
 
   this.loading = true;
 
   emailjs.send(
-    'vitthalkhedekar77@gmail.com',
-    'TEMPLATE_ID',
+    'service_m3kqppq',
+    'template_34h9wff',
     {
       name: this.form.name,
       email: this.form.email,
-      phone: this.form.phone
+      phone: this.form.phone,
+      education: this.form.education,
+      interest: this.form.interest,
+      message: this.form.message
     },
-    'PUBLIC_KEY'
-  ).then(() => {
+    'Bu6CSxHm7MCX8DEnr'
+  )
+  .then((response) => {
+
+    console.log('SUCCESS!', response);
+
     this.loading = false;
     this.submitted = true;
+
+  })
+  .catch((error) => {
+
+    console.error('FAILED...', error);
+
+    this.loading = false;
+
+    alert('Email sending failed. Check console for details.');
+
   });
+
 }
 
   resetForm(): void {
