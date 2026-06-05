@@ -35,9 +35,9 @@ throw new Error('Method not implemented.');
     {
       icon: '📞',
       title: 'Call Us',
-      value: '+91  98337 97999',
+      value: '+91  7796240277',
       sub: 'Mon–Sat, 9 AM – 7 PM IST',
-      link: 'tel:+919833797999'
+      link: 'tel:+77962402779'
     },
     {
       icon: '📧',
@@ -56,9 +56,9 @@ throw new Error('Method not implemented.');
     {
     icon: '💬',
     title: 'WhatsApp',
-    value: '+91 98337 97999',
+    value: '+91 7796240277',
     sub: 'Fastest Response',
-    link: 'https://wa.me/919833797999?text=Hi%20Vinay%20Salve!%20I%20would%20like%20to%20know%20more%20about%20pilot%20training.'
+link: 'https://wa.me/7796240277?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20pilot%20training.'
   }
   ];
 

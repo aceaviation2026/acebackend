@@ -320,7 +320,8 @@ doctorCities: any;
       s.location.toLowerCase().includes(this.searchQuery.toLowerCase())
     );
   }
-  dgcaFleet = [
+
+dgcaFleet = [
 
   {
     school: 'Indira Gandhi Rashtriya Uran Akademi',
@@ -328,7 +329,8 @@ doctorCities: any;
     type: 'Central Govt',
     se: '13 Aircraft',
     me: '2 Aircraft',
-    aircraft: 'Diamond DA-40 / DA-42'
+    aircraft: 'Diamond DA-40 / DA-42',
+    logo: 'assets/images/images.png'
   },
 
   {
@@ -337,7 +339,8 @@ doctorCities: any;
     type: 'Private Ltd',
     se: '12 Aircraft',
     me: '2 Aircraft',
-    aircraft: 'Diamond DA40 / DA42'
+    aircraft: 'Diamond DA40 / DA42',
+    logo: 'assets/images/cae-logo-contextual.png'
   },
 
   {
@@ -346,7 +349,8 @@ doctorCities: any;
     type: 'Private Ltd',
     se: '45 Aircraft',
     me: '3 Aircraft',
-    aircraft: 'Tecnam P2008JC'
+    aircraft: 'Tecnam P2008JC',
+    logo: 'assets/images/Alps_logo-3.webp   '
   },
 
   {
@@ -355,7 +359,8 @@ doctorCities: any;
     type: 'Private Ltd',
     se: '8 Aircraft',
     me: '2 Aircraft',
-    aircraft: 'Cessna 172R'
+    aircraft: 'Cessna 172R',
+    logo: 'assets/images/OFAA-logo-new4.png'
   },
 
   {
@@ -364,7 +369,8 @@ doctorCities: any;
     type: 'State Govt',
     se: '4 Aircraft',
     me: '1 Aircraft',
-    aircraft: 'Cessna 172R'
+    aircraft: 'Cessna 172R',
+    logo: 'assets/images/images (1).png'
   },
 
   {
@@ -373,7 +379,8 @@ doctorCities: any;
     type: 'Private Ltd',
     se: '9 Aircraft',
     me: '2 Aircraft',
-    aircraft: 'Cessna 172'
+    aircraft: 'Cessna 172',
+    logo: 'assets/images/logo-BTc3VskW6.png'
   }
 
 ];

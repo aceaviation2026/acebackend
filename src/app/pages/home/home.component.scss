@@ -2469,3 +2469,70 @@ h4,
 .after-cpl-section .highlight-item {
     justify-content: unset !important;
 }
+
+
+
+// .partner-logo {
+//   width: 180px;
+//   height: 100px;
+//   background:rgba(255, 179, 0, 0.04);
+//   border-radius: 12px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 10px;
+//   margin: 0 12px;
+//   flex-shrink: 0;
+//   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+// }
+.partner-logo {
+  width: 180px;
+  height: 100px;
+  background:
+    linear-gradient(rgba(255, 179, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 179, 0, 0.04) 1px, transparent 1px),
+    rgba(255, 179, 0, 0.04);
+
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0 12px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  
+}
+
+.partner-logo img {
+  max-width: 120px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
+.partner-logo {
+  width: 180px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.partner-logo img {
+  max-width: 85%;
+  max-height: 70%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+
+
+

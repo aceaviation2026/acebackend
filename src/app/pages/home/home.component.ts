@@ -99,14 +99,33 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     { q: 'How long does it take to become a commercial pilot?', a: 'The entire journey typically takes 3–4 years including eligibility, medical, ground school (12–18 months), and 200 hours of flying training.', open: false },
   ];
 
-  partners = [
-    { name: 'Indigo Airways', short: 'IndiGo' },
-    { name: 'Air India', short: 'Air India' },
-    { name: 'SpiceJet', short: 'SpiceJet' },
-    // { name: 'Go First', short: 'GoFirst' },
-    // { name: 'Vistara', short: 'Vistara' }, 
-    { name: 'Akasa Air', short: 'Akasa' },
-  ];
+  // partners = [
+  //   { name: 'Indigo Airways', short: 'IndiGo' },
+  //   { name: 'Air India', short: 'Air India' },
+  //   { name: 'SpiceJet', short: 'SpiceJet' },
+  //   // { name: 'Go First', short: 'GoFirst' },
+  //   // { name: 'Vistara', short: 'Vistara' }, 
+  //   { name: 'Akasa Air', short: 'Akasa' },
+  // ];
+
+ part = [
+  {
+    logo: 'assets/images/indigo.avif',
+  alt: 'IndiGo'
+  },
+  {
+    logo: 'assets/images/Air_India-Logo.wine.svg',
+    alt: 'Air India'
+  },
+  {
+    logo: 'assets/images/SpiceJet-Logo.png',
+    alt: 'SpiceJet'
+  },
+  {
+    logo: 'assets/images/akasa-air-logo.webp',
+    alt: 'Akasa Air'
+  }
+];
 
 
    processCards = [

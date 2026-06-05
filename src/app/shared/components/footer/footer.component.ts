@@ -52,7 +52,7 @@ import { FormsModule,NgForm, NgModel  }from '@angular/forms';
                   <a href="#" class="social-btn" aria-label="LinkedIn">
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                   </a>
-                  <a href="https://wa.me/919833797999?text=Hi%20Vinay%20Salve!%20I'd%20like%20to%20know%20more%20about%20pilot%20training."
+                  <a href="https://wa.me/7796240277?text=Hi!%20I'd%20like%20to%20know%20more%20about%20pilot%20training."
    target="_blank"
    class="social-btn social-wa"
    aria-label="WhatsApp">
@@ -97,7 +97,7 @@ import { FormsModule,NgForm, NgModel  }from '@angular/forms';
                   <svg width="16" height="16" fill="none" stroke="#FFB300" stroke-width="2" viewBox="0 0 24 24">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 9.7 19.79 19.79 0 011.45 1.1 2 2 0 013.43.01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.99 14l-.07 2.92z"/>
                   </svg>
-                  <span>+91 98337 97999</span>
+                  <span>+91 7796240277</span>
                 </div>
                 <div class="contact-item">
                   <svg width="16" height="16" fill="none" stroke="#FFB300" stroke-width="2" viewBox="0 0 24 24">
