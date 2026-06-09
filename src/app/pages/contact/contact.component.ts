@@ -165,35 +165,73 @@ link: 'https://wa.me/7796240277?text=Hello!%20I%20would%20like%20to%20know%20mor
 
 
 
+// submitForm() {
+
+//   this.http.post(
+//     this.apiUrl,
+//     this.form
+//   ).subscribe({
+//     next: (res) => {
+
+//       alert('Form submitted successfully');
+
+//     },
+//     error: (err) => {
+
+//       alert('Error');
+
+//     }
+//   });
+
+// }
+// apiUrl = 'http://localhost:3000/api/enquiry';
+
+// submitted = false;
+// loading = false;
+
+apiUrl = 'http://localhost:3000/api/enquiry';
+
 submitForm() {
 
-  this.http.post(
-    this.apiUrl,
-    this.form
-  ).subscribe({
+  this.loading = true;
+
+  this.http.post(this.apiUrl, this.form).subscribe({
+
     next: (res) => {
 
-      alert('Form submitted successfully');
+      this.loading = false;
+
+      // Hide form and show success message
+      this.submitted = true;
 
     },
+
     error: (err) => {
 
-      alert('Error');
+      this.loading = false;
+
+      alert('Something went wrong. Please try again.');
 
     }
+
   });
 
 }
-apiUrl = 'http://localhost:3000/api/enquiry';
 
+resetForm(): void {
 
+  this.form = {
+    name: '',
+    email: '',
+    phone: '',
+    interest: '',
+    education: '',
+    message: ''
+  };
 
+  this.submitted = false;
 
-
-
-
-
-
+}
 // submitForm(): void {
 
 //   if (
@@ -300,10 +338,6 @@ apiUrl = 'http://localhost:3000/api/enquiry';
 
 // }
 
-  resetForm(): void {
-    this.form = { name: '', email: '', phone: '', interest: '', education: '', message: '' };
-    this.submitted = false;
-  }
 
  toggleFaq(index: number): void {
 

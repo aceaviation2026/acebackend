@@ -42,17 +42,24 @@ app.post('/api/enquiry', (req, res) => {
             }
 
             await transporter.sendMail({
-                from: 'yourgmail@gmail.com',
+                from: email,
                 to: 'aceaviation2026@gmail.com',
-                subject: 'New Enquiry',
+                subject: 'New Consultation Request - The Ace Aviator',
                 html: `
-                Name: ${name}<br>
-                Email: ${email}<br>
-                Phone: ${phone}<br>
-                Education: ${education}<br>
-                Interest: ${interest}<br>
-                Message: ${message}
-                `
+      <h2>New Consultation Request</h2>
+
+        <p><strong>Name:</strong> ${name}</p>
+
+        <p><strong>Email:</strong> ${email}</p>
+
+        <p><strong>Phone:</strong> ${phone}</p>
+
+        <p><strong>Education:</strong> ${education}</p>
+
+        <p><strong>Interest:</strong> ${interest}</p>
+
+        <p><strong>Message:</strong> ${message}</p>
+    `
             });
 
             res.json({
