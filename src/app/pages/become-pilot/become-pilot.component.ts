@@ -411,7 +411,7 @@ extraOptions: any;
 
     const emi =
       (principal * monthlyRate *
-        Math.pow(1 + monthlyRate, months)) /
+        Math.pow(1 + monthlyRate, months)) /  
       (Math.pow(1 + monthlyRate, months) - 1);
 
     this.monthlyEMI = emi;

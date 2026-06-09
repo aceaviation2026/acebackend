@@ -4806,3 +4806,116 @@ h4,
   object-fit: contain;
   
 }
+
+
+
+
+ .your-section p,
+  .your-section span,
+  .your-section li,
+  .your-section a,
+  .your-section div:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+      font-size: 13px;
+      font-weight: 700;
+  }.your-section p,
+  .your-section span,
+  .your-section li {
+      font-size: 13px;
+      font-weight: 700;
+  }.your-section span {
+      font-size: 13px;
+      font-weight: 700;
+  }
+
+  .your-section h1 span,
+  .your-section h2 span,
+  .your-section h3 span,
+  .your-section h4 span,
+  .your-section h5 span,
+  .your-section h6 span {
+      font-size: inherit;
+      font-weight: inherit;
+  }.timeline-reality-section span {
+      font-size: 13px;
+      font-weight: 700;
+  }
+
+  .timeline-reality-section h1 span,
+  .timeline-reality-section h2 span,
+  .timeline-reality-section h3 span,
+  .timeline-reality-section h4 span,
+  .timeline-reality-section h5 span,
+  .timeline-reality-section h6 span {
+      font-size: inherit;
+      font-weight: inherit;
+  }
+
+    .your-section p,
+  .your-section span,
+  .your-section li,
+  .your-section a,
+  .your-section div:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+      font-size: 13px;
+      font-weight: 700;
+  }.your-section p,
+  .your-section span,
+  .your-section li {
+      font-size: 13px;
+      font-weight: 700;
+  }.your-section span {
+      font-size: 13px;
+      font-weight: 700;
+  }
+
+  .your-section h1 span,
+  .your-section h2 span,
+  .your-section h3 span,
+  .your-section h4 span,
+  .your-section h5 span,
+  .your-section h6 span {
+      font-size: inherit;
+      font-weight: inherit;
+  }.timeline-reality-section span {
+      font-size: 13px;
+      font-weight: 700;
+  }
+
+  .timeline-reality-section h1 span,
+  .timeline-reality-section h2 span,
+  .timeline-reality-section h3 span,
+  .timeline-reality-section h4 span,
+  .timeline-reality-section h5 span,
+  .timeline-reality-section h6 span {
+      font-size: inherit;
+      font-weight: inherit;
+  }span {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+    font-size: inherit;
+    font-weight: inherit;
+}.timeline-reality-section span {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.page-hero .display-hero {
+    font-size: clamp(3rem, 7vw, 4.8rem);
+    line-height: 1.05;
+    font-weight: 800;
+}
+.display-hero {
+    font-size: clamp(3rem, 7vw, 4.8rem) !important;
+    line-height: 1.05;
+    font-weight: 800 !important;
+}
+
+

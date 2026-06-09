@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import emailjs from '@emailjs/browser';
+
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -12,9 +13,8 @@ import emailjs from '@emailjs/browser';
 })
 export class ContactComponent {
   constructor(private http: HttpClient) {}
-openLink(arg0: string) {
-throw new Error('Method not implemented.');
-
+openLink(url: string): void {
+  window.open(url, '_blank');
 }
 
   form = {
@@ -28,6 +28,7 @@ throw new Error('Method not implemented.');
 
   submitted = false;
   loading = false;
+  googleScriptUrl = 'https://script.google.com/macros/s/KfycbxSPU03-meGmoEDk9V0WQl-Ig8YAFmjMKidcjJoK_eQOiPWu1n4bswanNz1j8FsOdLTAKfycbxCXk4vhiEFPHLXs3c1XziRoEyUQyXJ8UsICdvKnuMuCCaFxiGvJn7rqGsKzfMZFtz1/exec';
 
   interests = ['CPL Training Guidance', 'DGCA Exam Help', 'School Selection', 'Flight Abroad', 'Financial Planning', 'Career Counseling', 'Other'];
 
@@ -77,54 +78,227 @@ link: 'https://wa.me/7796240277?text=Hello!%20I%20would%20like%20to%20know%20mor
   ];
 
 
-submitForm(): void {
+  saveToGoogleSheet(): void {
 
-  if (
-    !this.form.name ||
-    !this.form.email ||
-    !this.form.phone ||
-    !this.form.education ||
-    !this.form.interest ||
-    !this.form.message
-  ) {
-    alert('Please fill all required fields');
-    return;
-  }
+  const formData = {
+    name: this.form.name,
+    email: this.form.email,
+    phone: this.form.phone,
+    education: this.form.education,
+    interest: this.form.interest,
+    message: this.form.message
+  };
 
-  this.loading = true;
-
-  emailjs.send(
-    'service_m3kqppq',
-    'template_34h9wff',
-    {
-      name: this.form.name,
-      email: this.form.email,
-      phone: this.form.phone,
-      education: this.form.education,
-      interest: this.form.interest,
-      message: this.form.message
+  this.http.post(
+    'https://script.google.com/home/projects/14KVgn_ZlHnggr8pgnTzK-nK77Ref9ARu5cxfN8nF8NxfM43grizOyIwL/edit',
+    formData
+  ).subscribe({
+    next: (res) => {
+      console.log('Saved to Google Sheet', res);
     },
-    'Bu6CSxHm7MCX8DEnr'
-  )
-  .then((response) => {
+    error: (err) => {
+      console.error('Google Sheet Error:', err);
+    }
+  });
+  
 
-    console.log('SUCCESS!', response);
+}
 
-    this.loading = false;
-    this.submitted = true;
+// submitForm(): void {
 
-  })
-  .catch((error) => {
+// if (
+// !this.form.name ||
+// !this.form.email ||
+// !this.form.phone ||
+// !this.form.education ||
+// !this.form.interest ||
+// !this.form.message
+// ) {
+// alert('Please fill all required fields');
+// return;
+// }
 
-    console.error('FAILED...', error);
+// this.loading = true;
 
-    this.loading = false;
+// const leadData = {
+// name: this.form.name,
+// email: this.form.email,
+// phone: this.form.phone,
+// education: this.form.education,
+// interest: this.form.interest,
+// message: this.form.message
+// };
 
-    alert('Email sending failed. Check console for details.');
+// this.http.post(
+// this.googleScriptUrl,
+// JSON.stringify(leadData),
+// {
+// headers: {
+// 'Content-Type': 'application/json'
+// }
+// }
 
+// ).subscribe({
+// next: (response) => {
+//   console.log('Lead Saved', response);
+
+//   this.loading = false;
+//   this.submitted = true;
+
+//   alert('Thank you! Your enquiry has been submitted.');
+
+//   this.resetForm();
+// },
+// error: (error) => {
+//   console.error(error);
+
+//   this.loading = false;
+
+//   alert('Submission failed. Please try again.');
+// }
+// });
+
+// }
+
+
+
+
+
+
+submitForm() {
+
+  this.http.post(
+    this.apiUrl,
+    this.form
+  ).subscribe({
+    next: (res) => {
+
+      alert('Form submitted successfully');
+
+    },
+    error: (err) => {
+
+      alert('Error');
+
+    }
   });
 
 }
+apiUrl = 'http://localhost:3000/api/enquiry';
+
+
+
+
+
+
+
+
+
+// submitForm(): void {
+
+//   if (
+//     !this.form.name ||
+//     !this.form.email ||
+//     !this.form.phone ||
+//     !this.form.education ||
+//     !this.form.interest ||
+//     !this.form.message
+//   ) {
+//     alert('Please fill all required fields');
+//     return;
+//   }
+
+//   this.loading = true;
+
+//   emailjs.send(
+//     'service_m3kqppq',
+//     'template_34h9wff',
+//     {
+//       name: this.form.name,
+//       email: this.form.email,
+//       phone: this.form.phone,
+//       education: this.form.education,
+//       interest: this.form.interest,
+//       message: this.form.message
+//     },
+//     'Bu6CSxHm7MCX8DEnr'
+//   )
+//   .then(() => {
+
+//     this.loading = false;
+//     this.submitted = true;
+
+//     alert('Enquiry submitted successfully!');
+
+//     this.resetForm();
+
+//   })
+//   .catch((error) => {
+
+//     console.error(error);
+
+//     this.loading = false;
+
+//     alert('Email sending failed.');
+
+//   });
+
+// }
+
+
+
+
+
+
+
+// submitForm(): void {
+
+//   if (
+//     !this.form.name ||
+//     !this.form.email ||
+//     !this.form.phone ||
+//     !this.form.education ||
+//     !this.form.interest ||
+//     !this.form.message
+//   ) {
+//     alert('Please fill all required fields');
+//     return;
+//   }
+
+//   this.loading = true;
+
+//   emailjs.send(
+//     'service_m3kqppq',
+//     'template_34h9wff',
+//     {
+//       name: this.form.name,
+//       email: this.form.email,
+//       phone: this.form.phone,
+//       education: this.form.education,
+//       interest: this.form.interest,
+//       message: this.form.message
+//     },
+//     'Bu6CSxHm7MCX8DEnr'
+//   )
+//   .then((response) => {
+
+//     console.log('SUCCESS!', response);
+
+//     this.loading = false;
+//     this.submitted = true;
+
+//   })
+//   .catch((error) => {
+
+//     console.error('FAILED...', error);
+
+//     this.loading = false;
+
+//     alert('Email sending failed. Check console for details.');
+
+//   });
+
+// }
 
   resetForm(): void {
     this.form = { name: '', email: '', phone: '', interest: '', education: '', message: '' };
@@ -144,6 +318,7 @@ submitForm(): void {
   });
 
 }
+
 
   
 }
