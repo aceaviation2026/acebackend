@@ -11,11 +11,11 @@ app.use(express.json());
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        // user: 'aceaviation2026@gmail.com',
-        // pass: 'ogrr sjzt rhps viyb'
+        user: 'aceaviation2026@gmail.com',
+        pass: 'ogrr sjzt rhps viyb'
 
-        user: process.env.EMAIL_USER,
-pass: process.env.EMAIL_PASS
+//         user: process.env.EMAIL_USER,
+// pass: process.env.EMAIL_PASS
     }
 });
 
