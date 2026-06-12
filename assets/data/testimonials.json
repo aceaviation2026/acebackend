@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Sneha Verma",
+    "city": "Lucknow",
+    "current": "First Officer at IndiGo",
+    "avatar": "SV",
+    "rating": 5,
+    "text": "Coming from a small city with zero aviation background, SkyPilot Academy changed everything. Their structured approach and mentor access helped me clear all 6 DGCA papers in one attempt. I'm now flying the A320 at IndiGo!",
+    "image": null
+  },
+  {
+    "id": 2,
+    "name": "Rahul Krishnan",
+    "city": "Kochi",
+    "current": "Cadet Pilot — Akasa Air",
+    "avatar": "RK",
+    "rating": 5,
+    "text": "The cost calculator and school comparison tools were invaluable. I selected Orient Flying School on their recommendation and completed my 200 hours in 18 months. Now a proud Akasa Air cadet!",
+    "image": null
+  },
+  {
+    "id": 3,
+    "name": "Aditya Bhatt",
+    "city": "Ahmedabad",
+    "current": "CPL Holder — Training in USA",
+    "avatar": "AB",
+    "rating": 5,
+    "text": "I was confused about training abroad vs India. SkyPilot's experts helped me choose the USA route, guided me through the visa process, and helped with DGCA license conversion planning. Best decision of my life.",
+    "image": null
+  },
+  {
+    "id": 4,
+    "name": "Priya Nair",
+    "city": "Kochi → Dubai",
+    "current": "First Officer — Air Arabia",
+    "avatar": "PN",
+    "rating": 5,
+    "text": "As a female pilot, I had many doubts about the industry. The mentors at SkyPilot gave me the confidence and the roadmap I needed. Three years later, I'm flying internationally!",
+    "image": null
+  },
+  {
+    "id": 5,
+    "name": "Vikram Sharma",
+    "city": "Jaipur",
+    "current": "CPL Holder — IGRUA Graduate",
+    "avatar": "VS",
+    "rating": 5,
+    "text": "The IGRUA application strategy session with SkyPilot was game-changing. I cracked the entrance exam and saved nearly ₹30 Lakhs compared to private schools. Cleared all DGCA papers first attempt.",
+    "image": null
+  },
+  {
+    "id": 6,
+    "name": "Ananya Gupta",
+    "city": "Delhi",
+    "current": "Trainee Pilot — NFTI Gondia",
+    "avatar": "AG",
+    "rating": 5,
+    "text": "SkyPilot helped me get an SBI aviation loan at 9.5% interest. Their finance counselor prepared all the documents and even connected me with an AME for my medical. Exceptional end-to-end support.",
+    "image": null
+  }
+]

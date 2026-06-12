@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "company": "IndiGo",
+    "logo": "🔵",
+    "position": "First Officer (A320 Family)",
+    "location": "Delhi / Mumbai / Bangalore",
+    "experience": "200+ TT hrs CPL holder",
+    "salary": "₹1.8 – 2.4 LPM",
+    "type": "Full Time",
+    "deadline": "2025-06-30",
+    "color": "#0066CC",
+    "highlights": ["A320 Type Rating Sponsored", "Cabin Crew Allowance", "Medical Benefits", "Annual Increments"]
+  },
+  {
+    "id": 2,
+    "company": "Air India",
+    "logo": "🔴",
+    "position": "Junior First Officer (B787 Dreamliner)",
+    "location": "Delhi Hub",
+    "experience": "500+ TT hrs with IR",
+    "salary": "₹2.5 – 3.2 LPM",
+    "type": "Full Time",
+    "deadline": "2025-07-15",
+    "color": "#C8102E",
+    "highlights": ["Wide-body experience", "International routes", "Expat allowance", "Provident Fund"]
+  },
+  {
+    "id": 3,
+    "company": "Akasa Air",
+    "logo": "🟠",
+    "position": "Cadet First Officer (B737 MAX)",
+    "location": "Mumbai / Delhi",
+    "experience": "CPL + 200 hrs minimum",
+    "salary": "₹1.5 – 2.0 LPM",
+    "type": "Cadet",
+    "deadline": "2025-08-01",
+    "color": "#FF7A00",
+    "highlights": ["Cadet Program", "Accelerated growth", "Modern fleet", "Performance Bonus"]
+  },
+  {
+    "id": 4,
+    "company": "SpiceJet",
+    "logo": "🌶️",
+    "position": "First Officer (Q400 Turboprop)",
+    "location": "Delhi / Chennai / Kolkata",
+    "experience": "CPL with Multi-Engine Rating",
+    "salary": "₹1.2 – 1.8 LPM",
+    "type": "Full Time",
+    "deadline": "2025-06-15",
+    "color": "#E8242B",
+    "highlights": ["Regional network", "Quick command", "Training support", "Overtime pay"]
+  },
+  {
+    "id": 5,
+    "company": "Air Asia India",
+    "logo": "🔴",
+    "position": "First Officer (A320neo)",
+    "location": "Bangalore",
+    "experience": "200+ hrs CPL IR holder",
+    "salary": "₹1.6 – 2.2 LPM",
+    "type": "Full Time",
+    "deadline": "2025-07-30",
+    "color": "#FF0000",
+    "highlights": ["LCC career track", "Pan-Asia network", "Pilot scholarship", "Profit sharing"]
+  },
+  {
+    "id": 6,
+    "company": "Vistara (Air India SIA)",
+    "logo": "🟣",
+    "position": "First Officer (A321)",
+    "location": "Delhi",
+    "experience": "500+ TT hrs",
+    "salary": "₹2.2 – 2.8 LPM",
+    "type": "Full Time",
+    "deadline": "2025-09-01",
+    "color": "#6B0F9E",
+    "highlights": ["Premium airline", "SIA standards", "International upgrade", "ESOP options"]
+  }
+]
