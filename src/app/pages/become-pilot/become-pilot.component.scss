@@ -4400,6 +4400,10 @@ body{
     font-weight: 700;
 }
 
+.iconse{
+  font-size: 30px;
+    font-weight: 700;
+}
 h1 span,
 h2 span,
 h3 span,
@@ -4409,7 +4413,7 @@ h6 span {
     font-size: inherit;
     font-weight: inherit;
 }.timeline-reality-section span {
-    font-size: 13px;
+    font-size: 30pxpx;
     font-weight: 700;
 }
 
@@ -4423,3 +4427,237 @@ h6 span {
     line-height: 1.05;
     font-weight: 800 !important;
 }
+.error-text {
+  display: block;
+  margin-top: 8px;
+  color: #c49440;
+  font-size: 13px;
+  font-weight: 500;
+}
+.field-error {
+  border-left: 3px solid #c49440;
+  padding-left: 12px;
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   MOBILE RESPONSIVE (0-768px)
+========================================== */
+
+@media (max-width:768px){
+
+html,
+body{
+    width:100%;
+    margin:0;
+    padding:0;
+    overflow-x:hidden !important;
+}
+
+/* Universal */
+*{
+    box-sizing:border-box;
+}
+
+/* Containers */
+.container,
+.container-fluid{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:12px !important;
+    padding-right:12px !important;
+    margin:0 !important;
+}
+
+/* Bootstrap rows */
+.row{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+
+/* Remove side spaces */
+section{
+    overflow-x:hidden;
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+/* Hero section */
+.page-hero{
+    padding-top:90px !important;
+    padding-bottom:50px !important;
+}
+
+.display-hero{
+    font-size:2rem !important;
+    line-height:1.2;
+}
+
+.hero-sub{
+    font-size:15px;
+    line-height:1.8;
+}
+
+.hero-meta{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.meta-tag{
+    width:100%;
+}
+
+/* Gold badge */
+.badge-gold{
+    display:inline-block;
+    max-width:100%;
+    padding:10px 15px;
+    font-size:12px;
+    text-align:center;
+    white-space:normal;
+    word-break:break-word;
+}
+
+/* Timeline */
+.timeline-wrapper{
+    flex-direction:column !important;
+    gap:25px;
+}
+
+.timeline-nav,
+.timeline-detail{
+    width:100% !important;
+}
+
+/* Quiz */
+.quiz-card{
+    padding:20px !important;
+}
+
+.quiz-options{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.quiz-opt{
+    width:100%;
+}
+
+/* Salary cards */
+.salary-carousel-card{
+    flex-direction:column;
+    padding:20px;
+    gap:25px;
+}
+
+.salary-left,
+.salary-right{
+    width:100%;
+    text-align:center;
+}
+
+/* Cost calculator */
+.calc-form,
+.cost-result,
+.cost-breakdown,
+.emi-bank-result{
+    width:100%;
+}
+
+.calc-options{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.calc-opt{
+    width:100%;
+}
+
+/* Loan comparison cards */
+.loan-strip{
+    flex-direction:column;
+    gap:20px;
+    padding:20px;
+}
+
+.loan-details{
+    width:100%;
+}
+
+.loan-detail-box{
+    width:100%;
+    margin-bottom:15px;
+}
+
+/* EMI section */
+.emi-layout-wrapper{
+    flex-direction:column;
+    gap:30px;
+}
+
+.emi-left-panel,
+.emi-right-panel{
+    width:100%;
+}
+
+/* Scholarship section */
+.timeline-item{
+    flex-direction:column;
+}
+
+.timeline-content{
+    width:100%;
+}
+
+/* Academy cards */
+.academy-card{
+    width:100%;
+    margin-bottom:20px;
+}
+
+/* Columns */
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-md-6,
+.col-md-4,
+.col-md-3{
+    width:100% !important;
+    flex:0 0 100% !important;
+    max-width:100% !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+/* Images */
+img,
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+/* AOS */
+[data-aos]{
+    transform:none !important;
+}
+
+/* Carousel arrows */
+.carousel-control-prev,
+.carousel-control-next{
+    display:none;
+}
+
+} 

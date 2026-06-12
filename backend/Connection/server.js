@@ -1,7 +1,8 @@
 const express = require('express');
-const cors = require('cors');
+const cors = require('cors');    
 const db = require('./connectiondb');
 const nodemailer = require('nodemailer');
+// const db = require('./connectiondb');
 
 const app = express();
 
@@ -19,8 +20,8 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.get('/', (req,res)=>{
-   res.send('Backend Running');
+app.get('/', (req, res) => {
+    res.send('Ace Aviator Backend Running');
 });
 app.post('/api/enquiry', (req, res) => {
 

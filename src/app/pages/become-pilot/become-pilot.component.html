@@ -164,20 +164,24 @@
             <h5 class="quiz-title mb-4">Quick Eligibility Check</h5>
 
             <!-- Age -->
-            <div class="quiz-field">
-              <label class="quiz-label">Your Age</label>
+           <div class="quiz-field">
+  <label class="quiz-label">Your Age</label>
 
-              <div class="quiz-options">
-                <button
-                  *ngFor="let opt of ageOptions"
-                  class="quiz-opt"
-                  [class.selected]="quiz.age === opt"
-                  (click)="quiz.age = opt">
+  <div class="quiz-options">
+    <button
+      *ngFor="let opt of ageOptions"
+      class="quiz-opt"
+      [class.selected]="quiz.age === opt"
+      (click)="quiz.age = opt">
 
-                  {{ opt }}
-                </button>
-              </div>
-            </div>
+      {{ opt }}
+    </button>
+  </div>
+
+  <small class="error-text" *ngIf="errors.age">
+    {{ errors.age }}
+  </small>
+</div>
 
             <!-- Education -->
             <div class="quiz-field">
@@ -193,6 +197,9 @@
                   {{ opt }}
                 </button>
               </div>
+              <small class="error-text" *ngIf="errors.education">
+  {{ errors.education }}
+</small>
             </div>
 
             <!-- Science / Non Science -->
@@ -209,6 +216,9 @@
                   {{ opt }}
                 </button>
               </div>
+              <small class="error-text" *ngIf="errors.stream">
+  {{ errors.stream }}
+</small>
             </div>
 
             <!-- Height -->
@@ -225,6 +235,10 @@
                   {{ opt }}
                 </button>
               </div>
+
+<small class="error-text" *ngIf="errors.height">
+  {{ errors.height }}
+</small>
             </div>
 
             <!-- Vision -->
@@ -241,6 +255,9 @@
                   {{ opt }}
                 </button>
               </div>
+              <small class="error-text" *ngIf="errors.vision">
+  {{ errors.vision }}
+</small>
             </div>
 
             <!-- Nationality -->
@@ -257,6 +274,9 @@
                   {{ opt }}
                 </button>
               </div>
+              <small class="error-text" *ngIf="errors.citizenship">
+  {{ errors.citizenship }}
+</small>
             </div>
 
             <!-- English -->
@@ -273,12 +293,18 @@
                   {{ opt }}
                 </button>
               </div>
+
+<small class="error-text" *ngIf="errors.english">
+  {{ errors.english }}
+</small>
             </div>
 
-            <button class="btn-gold w-100 mt-4"
-                    (click)="checkEligibility()">
-              Check My Eligibility →
-            </button>
+         <button
+  type="button"
+  class="btn-gold w-100 mt-4"
+  (click)="checkEligibilit()">
+  Check My Eligibility →
+</button>
 
           </ng-container>
 
@@ -286,9 +312,9 @@
           <div *ngIf="quizResult" class="quiz-result">
 
             <div class="result-icon" [class]="quizResult">
-              <span *ngIf="quizResult === 'eligible'">✅</span>
-              <span *ngIf="quizResult === 'partial'">⚠️</span>
-              <span *ngIf="quizResult === 'not-eligible'">❌</span>
+              <span class="iconse" *ngIf="quizResult === 'eligible'">✅</span>
+              <span class="iconse" *ngIf="quizResult === 'partial'">⚠️</span>
+              <span class="iconse" *ngIf="quizResult === 'not-eligible'">❌</span>
             </div>
 
             <h4 *ngIf="quizResult === 'eligible'"

@@ -1893,3 +1893,188 @@ h6 span {
     line-height: 1.05;
     font-weight: 800 !important;
 }
+
+
+
+
+/* =====================================================
+   BLOG PAGE MOBILE RESPONSIVE
+===================================================== */
+
+@media only screen and (max-width:768px){
+
+html,
+body{
+    overflow-x:hidden !important;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+/* Containers */
+.container{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:15px !important;
+    padding-right:15px !important;
+}
+
+/* Remove side spaces */
+.row{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+
+section{
+    overflow:hidden;
+}
+
+/* Hero */
+.page-hero{
+    padding-top:0px !important;
+    padding-bottom:50px !important;
+}
+
+.display-hero{
+    font-size:2rem !important;
+    line-height:1.2;
+}
+
+.hero-sub{
+    font-size:15px;
+    line-height:1.8;
+}
+
+/* Badge */
+.badge-gold{
+    display:inline-block;
+    max-width:100%;
+    text-align:center;
+    font-size:12px;
+    padding:10px 15px;
+}
+
+/* Categories */
+.categories-grid{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.category-card{
+    width:100%;
+}
+
+/* Featured Article */
+.featured-article{
+    flex-direction:column;
+    padding:20px !important;
+}
+
+.featured-content,
+.featured-visual{
+    width:100%;
+}
+
+.featured-title{
+    font-size:1.6rem;
+}
+
+.featured-footer{
+    flex-direction:column;
+    gap:15px;
+}
+
+.btn-gold{
+    width:100%;
+    justify-content:center;
+}
+
+/* Blog cards */
+.blog-card{
+    width:100%;
+    margin-bottom:20px;
+}
+
+/* Videos */
+.video-card{
+    width:100%;
+    margin-bottom:20px;
+}
+
+.video-thumb img{
+    width:100%;
+    height:auto;
+}
+
+/* Recruitment Banner */
+.recruitment-banner{
+    flex-direction:column;
+    text-align:center;
+    gap:20px;
+}
+
+/* Airline Job Cards */
+.job-card{
+    width:100%;
+    margin-bottom:20px;
+}
+
+.job-logo img{
+    max-width:100px;
+    height:auto;
+}
+
+/* Pilot Shortage Section */
+.pilot-shortage-box{
+    padding:25px 20px;
+}
+
+.shortage-stats{
+    margin-top:30px;
+}
+
+.stat-item{
+    width:100%;
+    margin-bottom:20px;
+}
+
+/* All Bootstrap Columns */
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-md-6,
+.col-md-4,
+.col-md-3{
+    width:100% !important;
+    max-width:100% !important;
+    flex:0 0 100% !important;
+
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+/* Images */
+img,
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+/* Remove AOS issue */
+[data-aos]{
+    transform:none !important;
+}
+
+/* Prevent carousel overflow */
+.carousel{
+    overflow:hidden;
+}
+
+}

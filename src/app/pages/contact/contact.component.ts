@@ -193,6 +193,7 @@ apiUrl = 'http://localhost:3000/api/enquiry';
 
 submitForm() {
 
+  
   this.loading = true;
 
   this.http.post(this.apiUrl, this.form).subscribe({

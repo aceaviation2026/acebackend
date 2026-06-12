@@ -27,7 +27,62 @@ toggleExtra(arg0: any) {
 throw new Error('Method not implemented.');
 }
 
+errors: any = {};
 
+checkEligibilit(): void {
+
+  this.errors = {};
+
+  // Validation
+  if (!this.quiz.age) {
+    this.errors.age = 'Please select your age';
+  }
+
+  if (!this.quiz.education) {
+    this.errors.education = 'Please select your education';
+  }
+
+  if (!this.quiz.stream) {
+    this.errors.stream = 'Please select your academic stream';
+  }
+
+  if (!this.quiz.height) {
+    this.errors.height = 'Please select your height';
+  }
+
+  if (!this.quiz.vision) {
+    this.errors.vision = 'Please select your vision status';
+  }
+
+  if (!this.quiz.citizenship) {
+    this.errors.citizenship = 'Please select your nationality';
+  }
+
+  if (!this.quiz.english) {
+    this.errors.english = 'Please select your English proficiency';
+  }
+
+  // Stop if validation fails
+  if (Object.keys(this.errors).length > 0) {
+    return;
+  }
+
+  // Eligibility Logic
+  const eligible =
+    this.quiz.education === '10+2 PCM' &&
+    this.quiz.stream === 'Science' &&
+    this.quiz.citizenship === 'Indian Citizen';
+
+  const partial =
+    this.quiz.education === '10+2 PCM' ||
+    this.quiz.stream === 'Science';
+
+  this.quizResult = eligible
+    ? 'eligible'
+    : partial
+    ? 'partial'
+    : 'not-eligible';
+} 
 
 
   // Eligibility Quiz
@@ -293,6 +348,7 @@ extraOptions: any;
   setActiveStep(i: number): void {
     this.activeStep = i;
   }
+  
 
   checkEligibility(): void {
     const { age, education, vision, citizenship, english } = this.quiz;
@@ -312,10 +368,20 @@ extraOptions: any;
     this.quizResult = eligible ? 'eligible' : partial ? 'partial' : 'not-eligible';
   }
 
-  resetQuiz(): void {
-    this.quiz = { age: '', education: '', vision: '', citizenship: '', english: '' };
-    this.quizResult = null;
-  }
+ resetQuiz(): void {
+  this.quiz = {
+    age: '',
+    education: '',
+    stream: '',
+    height: '',
+    vision: '',
+    citizenship: '',
+    english: ''
+  };
+
+  this.quizResult = null;
+  this.errors = {};
+}
 
   calculateCost(): void {
     const baseCosts: Record<string, [number, number]> = {
@@ -448,7 +514,10 @@ extraOptions: any;
 
 
 
+  
+
 }
+
 
 
 
@@ -489,6 +558,7 @@ const extraOptions = [
 
   
 ];
+
 
 
 

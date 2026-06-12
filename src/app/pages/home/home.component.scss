@@ -2633,3 +2633,276 @@ h6 span {
     font-size: 13px;
     font-weight: 700;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media only screen and (max-width:768px){
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden !important;
+    margin:0;
+    padding:0;
+}
+
+/* Remove side spaces everywhere */
+.container,
+.container-fluid{
+    width:100% !important;
+    max-width:100% !important;
+    padding-left:15px !important;
+    padding-right:15px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+}
+
+.row{
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+
+/* Sections */
+section{
+    padding-left:0 !important;
+    padding-right:0 !important;
+    overflow:hidden;
+}
+
+/* Hero */
+.hero-section{
+    min-height:auto !important;
+    padding-top:90px;
+    padding-bottom:50px;
+}
+
+.hero-content{
+    text-align:center;
+}
+
+.display-hero{
+    font-size:2.3rem !important;
+    line-height:1.2;
+}
+
+.hero-subtext{
+    font-size:15px;
+    line-height:1.8;
+}
+
+/* Badge */
+.badge-gold{
+    width:fit-content;
+    max-width:100%;
+    margin:auto;
+    font-size:12px;
+    padding:10px 15px;
+}
+
+/* Buttons */
+.hero-ctas{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.btn-gold,
+.btn-outline-sky{
+    width:100%;
+    justify-content:center;
+}
+
+/* Trust badges */
+.hero-trust{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.trust-item{
+    width:100%;
+    justify-content:center;
+}
+
+/* Hero image */
+.hero-visual{
+    margin-top:40px;
+}
+
+.hero-visual-inner{
+    width:100%;
+}
+
+.airplane-container{
+    width:100%;
+}
+
+.airplane-svg{
+    width:100%;
+    height:auto;
+}
+
+/* Floating cards */
+.stat-card{
+    position:relative !important;
+    top:auto !important;
+    left:auto !important;
+    right:auto !important;
+    bottom:auto !important;
+
+    width:100%;
+    margin-bottom:15px;
+}
+
+/* Hide scroll text */
+.scroll-indicator{
+    display:none;
+}
+
+/* Cards */
+.counter-card,
+.process-card,
+.testimonial-card{
+    margin-bottom:20px;
+    width:100%;
+}
+
+/* Timeline */
+.timeline-reality-item{
+    flex-direction:column;
+}
+
+.timeline-dot{
+    margin-bottom:20px;
+}
+
+.timeline-content{
+    width:100%;
+}
+
+/* After CPL */
+.after-cpl-highlight{
+    display:flex;
+    flex-direction:column;
+}
+
+.highlight-divider{
+    display:none;
+}
+
+.highlight-item{
+    width:100%;
+    margin-bottom:20px;
+}
+
+/* Cadet section */
+.cadet-program-wrapper{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.cadet-program-content,
+.cadet-cost-box{
+    width:100%;
+}
+
+/* FAQ */
+.faq-section .row{
+    gap:30px;
+}
+
+/* CTA */
+.cta-actions{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.cta-actions a{
+    width:100%;
+}
+
+/* Images */
+img,
+svg{
+    max-width:100%;
+    height:auto;
+}
+
+/* Remove AOS overflow */
+[data-aos]{
+    overflow:hidden;
+}
+
+/* Prevent horizontal scroll */
+*{
+    max-width:100%;
+    box-sizing:border-box;
+    // overflow: hidden;
+}
+
+
+} 
+
+
+
+@media (max-width:768px){
+
+.hero-badge{
+    display:flex;
+
+    width:100%;
+    max-width:100%;
+
+    padding:30px 14px;
+    // margin-top: ;
+
+    // margin:0 auto 18px;
+margin-top: 70px;
+    justify-content:center;
+
+    border-radius:30px;
+    // background: #c49440;   
+}
+
+.badge-text{
+    font-size:10px;
+    line-height:1.4;
+
+    text-align:center;
+
+    white-space:normal;
+    word-break:break-word;
+}
+
+.badge-icon{
+    font-size:11px;
+}
+
+}
+.hero-section{
+   overflow-x:hidden;
+   overflow-y:visible;
+}
+
+
+
+
+
+
