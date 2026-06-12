@@ -594,7 +594,7 @@
 
   .cta-banner {
     position: relative;
-    padding: 80px 40px;
+    // padding: 40px 40px;
     border-radius: var(--radius-xl);
     background: var(--glass-bg);
     border: 1px solid rgba(255,179,0,0.2);
@@ -2759,10 +2759,10 @@ section{
 
 /* Floating cards */
 .stat-card{
-    position:relative !important;
-    top:auto !important;
-    left:auto !important;
-    right:auto !important;
+    // position:relative !important;
+    // top:auto !important;
+    // left:auto !important;
+    // right:auto !important;
     bottom:auto !important;
 
     width:100%;
@@ -2900,6 +2900,7 @@ margin-top: 70px;
    overflow-x:hidden;
    overflow-y:visible;
 }
+
 
 
 
